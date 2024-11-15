@@ -24,15 +24,17 @@ const Card = (props: any) => {
 			</h2>
 
 			<div>
-				<p className="font-sans text-sm px-1">{props.lecture["sub-heading"]}</p>
-				<p className="font-sans text-sm px-1">
+				<p className="font-sans text-base px-1">
+					{props.lecture["sub-heading"]}
+				</p>
+				<p className="font-sans text-base px-1">
 					No. of Questions - {props.lecture.count}
 				</p>
 			</div>
 
 			<Link
 				href={{
-					pathname: "/assessments/interface",
+					pathname: "/assesbaseents/interface",
 					query: {
 						lecture: props.lecture,
 					},

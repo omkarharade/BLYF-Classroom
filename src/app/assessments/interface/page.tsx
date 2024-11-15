@@ -8,7 +8,7 @@ export default function Interface() {
 
 	return (
 		<>
-			<div className=" min-w-[40rem] w-[97%] bg-slate-100 min-h-[100rem] h-max mx-auto mt-[2rem] py-[1.5rem] px-[1.5rem]">
+			<div className=" min-w-[40rem] w-[97%] bg-slate-100 h-fit mx-auto mt-[2rem] py-[1.5rem] px-[1.5rem]">
 				<Display data={data[0]} />
 			</div>
 		</>
@@ -94,7 +94,7 @@ const Display = (props: any) => {
 
 	return (
 		<div>
-			<div className="w-full bg-orange-100 min-h-[40rem] mx-auto flex flex-col justify-between">
+			<div className="w-full bg-orange-100  mx-auto flex flex-col justify-between">
 				<div>
 					{/* question sub header */}
 					<div className="w-[100%] px-[1rem] py-2 flex flex-row justify-between bg-sky-200 border-2 border-sky-500 ">
@@ -183,7 +183,7 @@ const Display = (props: any) => {
 				<div className="flex flex-row justify-between h-[2rem] mx-[2.5rem] my-[2rem]">
 					<div>
 						<a
-							className="py-2 px-2 bg-red-500 hover:bg-red-700 text-white text-lg text-center font-mono font-bold rounded-md"
+							className="py-2 px-[1.5rem] bg-red-500 hover:bg-red-700 text-white text-lg text-center font-mono font-bold rounded-md border-2 border-red-600"
 							href="/assessments"
 						>
 							Exit
@@ -193,14 +193,14 @@ const Display = (props: any) => {
 					<div className="">
 						<a
 							onClick={prevPage}
-							className="mx-[1rem]  py-2 px-2 w-[3rem] bg-slate-200 hover:bg-sky-800 hover:text-white  text-black text-lg text-center font-mono font-bold rounded-md border-2 border-sky-600"
+							className="mx-[1rem]  py-2 px-2  bg-slate-200 hover:bg-sky-800 hover:text-white  text-black text-lg text-center font-mono font-bold rounded-md border-2 border-sky-600"
 						>
 							previous
 						</a>
 
 						<a
 							onClick={nextPage}
-							className="py-2 px-2 bg-sky-600 hover:bg-sky-800 text-white text-lg text-center font-mono font-bold rounded-md "
+							className="py-2 px-[1.5rem] bg-sky-600 hover:bg-sky-800 text-white text-lg text-center font-mono font-bold rounded-md border-2 border-sky-600"
 						>
 							Next
 						</a>
