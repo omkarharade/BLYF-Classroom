@@ -1,25 +1,5 @@
 import React from "react";
 import Link from "next/link";
-
-interface CardType {
-	lecture: any;
-	classNumber: number;
-}
-
-interface Question {
-	questionNumber: number;
-	questionText: string;
-	options: string[];
-	correctAnswer: string;
-}
-
-interface Lesson {
-	name: string;
-	"sub-heading": string;
-	questions: Question[];
-	count: number;
-}
-
 import assesmentJson from "../../../public/questions.json";
 
 export default function Quizzes() {
@@ -36,7 +16,7 @@ export default function Quizzes() {
 	);
 }
 
-const Card = (props: CardType) => {
+const Card = (props: any) => {
 	return (
 		<div className=" flex flex-col justify-between m-[1rem]  w-[15rem] h-[12rem] p-4 bg-orange-100 border-2 border-orange-300">
 			<h2 className="text-xl font-mono font-bold bg-yellow-300 w-fit px-2">
