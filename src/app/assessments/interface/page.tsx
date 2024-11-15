@@ -30,13 +30,6 @@ const Display = (props: any) => {
 	const [optionJudge3, setOptionJudge3] = useState(optionColorBlue);
 	const [optionJudge4, setOptionJudge4] = useState(optionColorBlue);
 
-	useEffect(() => {
-		setOptionJudge1(optionColorBlue);
-		setOptionJudge2(optionColorBlue);
-		setOptionJudge3(optionColorBlue);
-		setOptionJudge4(optionColorBlue);
-	}, [qNumber]);
-
 	function prevPage() {
 		if (qNumber === 0) return;
 		else {
@@ -48,6 +41,31 @@ const Display = (props: any) => {
 		if (qNumber >= 14) return;
 		else setQNumber((prev) => prev + 1);
 	}
+
+	const handleKeyDown = (event: KeyboardEvent) => {
+		console.log(event.key);
+
+		if (event.key === "ArrowRight") {
+			nextPage();
+		} else if (event.key === "ArrowLeft") {
+			prevPage();
+		} else {
+			return;
+		}
+	};
+
+	useEffect(() => {
+		setOptionJudge1(optionColorBlue);
+		setOptionJudge2(optionColorBlue);
+		setOptionJudge3(optionColorBlue);
+		setOptionJudge4(optionColorBlue);
+
+		window.addEventListener("keydown", handleKeyDown);
+
+		return () => {
+			window.removeEventListener("keydown", handleKeyDown);
+		};
+	}, [qNumber]);
 
 	function optionCheck1(selectedAnswer: string, rightAnswer: string) {
 		if (optionJudge1 !== optionColorBlue) return;
