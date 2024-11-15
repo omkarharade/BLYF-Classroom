@@ -228,7 +228,7 @@ const Display = (props: any) => {
 					<div>
 						<a
 							className="py-2 px-2 bg-red-500 hover:bg-red-700 text-white text-lg text-center font-mono font-bold rounded-md"
-							href=""
+							href="/assessments"
 						>
 							Exit
 						</a>
