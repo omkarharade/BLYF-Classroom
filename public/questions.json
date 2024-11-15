@@ -1,0 +1,529 @@
+{
+    "heading": "blyf classroom assesments",
+    "assessments" : [
+        {
+            "book": "Bhagvat Geeta",
+            "classes" : [
+                {
+                    "name" : "BG : Class - 1",
+                    "sub-heading": "BG 1.1 to 1.25",
+                    "questions" : [
+
+                        {
+                            "questionNumber": 1,
+                            "questionText": "Who asked Sañjaya about the events at Kurukṣetra?",
+                            "options": [
+                              "Bhīṣma",
+                              "Arjuna",
+                              "Dhṛtarāṣṭra",
+                              "Duryodhana"
+                            ],
+                            "correctAnswer": "Dhṛtarāṣṭra"
+                        },
+                        {
+                            "questionNumber": 2,
+                            "questionText": "Who did Duryodhana speak to after observing the army of the Pāṇḍavas?",
+                            "options": [
+                              "Kṛṣṇa",
+                              "Bhīma",
+                              "His teacher - Droṇa",
+                              "His father - Dhṛtarāṣṭra"
+                            ],
+                            "correctAnswer": "His teacher - Droṇa"
+                        },
+                        {
+                            "questionNumber": 3,
+                            "questionText": "Who arranged the Pāṇḍava army in military formation?",
+                            "options": [
+                              "Bhīma",
+                              "Drupada's son - Dhrishtadyumna",
+                              "Kṛṣṇa",
+                              "Yudhāmanyu"
+                            ],
+                            "correctAnswer": "Drupada's son - Dhrishtadyumna"
+                        },
+                        {
+                            "questionNumber": 4,
+                            "questionText": "Which warrior did Duryodhana mention as powerful and heroic, like Bhīma and Arjuna?",
+                            "options": [
+                              "Yuyudhāna",
+                              "Nakula",
+                              "Sañjaya",
+                              "Yudhāmanyu"
+                            ],
+                            "correctAnswer": "Yuyudhāna"
+                        },
+                        {
+                            "questionNumber": 5,
+                            "questionText": "TEXT-10 : \"Our strength is immeasurable, and we are perfectly protected by Grandfather Bhīṣma, whereas the strength of the Pāṇḍavas, carefully protected by _________, is limited\"",
+                            "options": [
+                              "Kṛṣṇa",
+                              "Bhīma",
+                              "Droṇa",
+                              "Bhīṣma"
+                            ],
+                            "correctAnswer": "Bhīma"
+                        },
+                        {
+                            "questionNumber": 6,
+                            "questionText": "Who blew his conchshell loudly, causing joy to Duryodhana?",
+                            "options": [
+                              "Bhīṣma",
+                              "Karṇa",
+                              "Aśvatthāmā",
+                              "Sañjaya"
+                            ],
+                            "correctAnswer": "Bhīṣma"
+                        },
+                        {
+                            "questionNumber": 7,
+                            "questionText": "What was the name of Nakula's  conchshell?",
+                            "options": [
+                              "Maṇipuṣpaka",
+                              "Pauṇḍra",
+                              "Sughoṣa",
+                              "Devadatta"
+                            ],
+                            "correctAnswer": "Sughoṣa"
+                        },
+                        {
+                            "questionNumber": 8,
+                            "questionText": "Which conchshell did Lord Kṛṣṇa, Arjuna, Bhima, Yudhiṣṭhira blow respectively?",
+                            "options": [
+                              "Pāñcajanya, Pauṇḍra, Devadatta, Ananta-vijaya",
+                              "Ananta-vijaya, Pāñcajanya, Pauṇḍra, Devadatta",
+                              "Pāñcajanya, Devadatta, Pauṇḍra, Ananta-vijaya",
+                              "Pauṇḍra, Ananta-vijaya, Pāñcajanya, Devadatta"
+                            ],
+                            "correctAnswer": "Pāñcajanya, Devadatta, Pauṇḍra, Ananta-vijaya"
+                        },
+                        {
+                            "questionNumber": 9,
+                            "questionText": "Which warrior had a chariot with a flag bearing the mark of Hanumān?",
+                            "options": [
+                              "Duryodhana",
+                              "Yudhiṣṭhira",
+                              "Bhīma",
+                              "Arjuna"
+                            ],
+                            "correctAnswer": "Arjuna"
+                        },
+                        {
+                            "questionNumber": 10,
+                            "questionText": "Which sound is said to have shattered the hearts of Dhṛtarāṣṭra's sons?",
+                            "options": [
+                              "Roar of a lion",
+                              "Bhīṣma’s conchshell",
+                              "Combined conchshells of the Pāṇḍavas",
+                              "Sound of trumpets and bugles"
+                            ],
+                            "correctAnswer": "Combined conchshells of the Pāṇḍavas"
+                        },
+                        {
+                            "questionNumber": 11,
+                            "questionText": "What did Arjuna request Kṛṣṇa to do with his chariot?",
+                            "options": [
+                              "Take it to the back",
+                              "Withdraw it from the battlefield",
+                              "Place it between the two armies",
+                              "His father - Dhṛtarāṣṭra"
+                            ],
+                            "correctAnswer": "Place it between the two armies"
+                        },
+                        {
+                            "questionNumber": 12,
+                            "questionText": "Who is referred to as the \"infallible one\"",
+                            "options": [
+                              "Bhīṣma",
+                              "Kṛṣṇa",
+                              "Yudhiṣṭhira",
+                              "Sañjaya"
+                            ],
+                            "correctAnswer": "Kṛṣṇa"
+                        },
+                        {
+                            "questionNumber": 13,
+                            "questionText": "What effect did the blowing of the Pāṇḍavas' conchshells have on the sons of Dhṛtarāṣṭra?",
+                            "options": [
+                              "It boosted their morale",
+                              "It shattered their hearts",
+                              "It made them retreat",
+                              "It caused confusion in their ranks"
+                            ],
+                            "correctAnswer": "It shattered their hearts"
+                        },
+                        {
+                            "questionNumber": 14,
+                            "questionText": "What was the sound made by Bhīṣma’s conchshell compared to?",
+                            "options": [
+                              "Roar of a tiger",
+                              "Thunder",
+                              "Roar of a lion",
+                              "Echoing mountains"
+                            ],
+                            "correctAnswer": "Roar of a lion"
+                        },
+                        {
+                            "questionNumber": 15,
+                            "questionText": "Why did Arjuna want to see those gathered to fight?",
+                            "options": [
+                              "To analyze their weaponry",
+                              "To see who wanted to support Dhṛtarāṣṭra’s son",
+                              "To pay respects",
+                              "To admire their bravery"
+                            ],
+                            "correctAnswer": "To see who wanted to support Dhṛtarāṣṭra’s son"
+                        }
+                    ],
+                    "count" : 15
+                },
+                {
+                    "name" : "BG : Class - 2",
+                    "sub-heading": "BG 1.25 to BG 1.48",
+                    "questions" : [
+
+                        {
+                            "questionNumber": 1,
+                            "questionText": "Who asked Sañjaya about the events at Kurukṣetra?",
+                            "options": [
+                              "Bhīṣma",
+                              "Arjuna",
+                              "Dhṛtarāṣṭra",
+                              "Duryodhana"
+                            ],
+                            "correctAnswer": "Dhṛtarāṣṭra"
+                        },
+                        {
+                            "questionNumber": 2,
+                            "questionText": "Who did Duryodhana speak to after observing the army of the Pāṇḍavas?",
+                            "options": [
+                              "Kṛṣṇa",
+                              "Bhīma",
+                              "His teacher - Droṇa",
+                              "His father - Dhṛtarāṣṭra"
+                            ],
+                            "correctAnswer": "His teacher - Droṇa"
+                        },
+                        {
+                            "questionNumber": 3,
+                            "questionText": "Who arranged the Pāṇḍava army in military formation?",
+                            "options": [
+                              "Bhīma",
+                              "Drupada's son - Dhrishtadyumna",
+                              "Kṛṣṇa",
+                              "Yudhāmanyu"
+                            ],
+                            "correctAnswer": "Drupada's son - Dhrishtadyumna"
+                        },
+                        {
+                            "questionNumber": 4,
+                            "questionText": "Which warrior did Duryodhana mention as powerful and heroic, like Bhīma and Arjuna?",
+                            "options": [
+                              "Yuyudhāna",
+                              "Nakula",
+                              "Sañjaya",
+                              "Yudhāmanyu"
+                            ],
+                            "correctAnswer": "Yuyudhāna"
+                        },
+                        {
+                            "questionNumber": 5,
+                            "questionText": "TEXT-10 : \"Our strength is immeasurable, and we are perfectly protected by Grandfather Bhīṣma, whereas the strength of the Pāṇḍavas, carefully protected by _________, is limited\"",
+                            "options": [
+                              "Kṛṣṇa",
+                              "Bhīma",
+                              "Droṇa",
+                              "Bhīṣma"
+                            ],
+                            "correctAnswer": "Bhīma"
+                        },
+                        {
+                            "questionNumber": 6,
+                            "questionText": "Who blew his conchshell loudly, causing joy to Duryodhana?",
+                            "options": [
+                              "Bhīṣma",
+                              "Karṇa",
+                              "Aśvatthāmā",
+                              "Sañjaya"
+                            ],
+                            "correctAnswer": "Bhīṣma"
+                        },
+                        {
+                            "questionNumber": 7,
+                            "questionText": "What was the name of Nakula's  conchshell?",
+                            "options": [
+                              "Maṇipuṣpaka",
+                              "Pauṇḍra",
+                              "Sughoṣa",
+                              "Devadatta"
+                            ],
+                            "correctAnswer": "Sughoṣa"
+                        },
+                        {
+                            "questionNumber": 8,
+                            "questionText": "Which conchshell did Lord Kṛṣṇa, Arjuna, Bhima, Yudhiṣṭhira blow respectively?",
+                            "options": [
+                              "Pāñcajanya, Pauṇḍra, Devadatta, Ananta-vijaya",
+                              "Ananta-vijaya, Pāñcajanya, Pauṇḍra, Devadatta",
+                              "Pāñcajanya, Devadatta, Pauṇḍra, Ananta-vijaya",
+                              "Pauṇḍra, Ananta-vijaya, Pāñcajanya, Devadatta"
+                            ],
+                            "correctAnswer": "Pāñcajanya, Devadatta, Pauṇḍra, Ananta-vijaya"
+                        },
+                        {
+                            "questionNumber": 9,
+                            "questionText": "Which warrior had a chariot with a flag bearing the mark of Hanumān?",
+                            "options": [
+                              "Duryodhana",
+                              "Yudhiṣṭhira",
+                              "Bhīma",
+                              "Arjuna"
+                            ],
+                            "correctAnswer": "Arjuna"
+                        },
+                        {
+                            "questionNumber": 10,
+                            "questionText": "Which sound is said to have shattered the hearts of Dhṛtarāṣṭra's sons?",
+                            "options": [
+                              "Roar of a lion",
+                              "Bhīṣma’s conchshell",
+                              "Combined conchshells of the Pāṇḍavas",
+                              "Sound of trumpets and bugles"
+                            ],
+                            "correctAnswer": "Combined conchshells of the Pāṇḍavas"
+                        },
+                        {
+                            "questionNumber": 11,
+                            "questionText": "What did Arjuna request Kṛṣṇa to do with his chariot?",
+                            "options": [
+                              "Take it to the back",
+                              "Withdraw it from the battlefield",
+                              "Place it between the two armies",
+                              "His father - Dhṛtarāṣṭra"
+                            ],
+                            "correctAnswer": "Place it between the two armies"
+                        },
+                        {
+                            "questionNumber": 12,
+                            "questionText": "Who is referred to as the \"infallible one\"",
+                            "options": [
+                              "Bhīṣma",
+                              "Kṛṣṇa",
+                              "Yudhiṣṭhira",
+                              "Sañjaya"
+                            ],
+                            "correctAnswer": "Kṛṣṇa"
+                        },
+                        {
+                            "questionNumber": 13,
+                            "questionText": "What effect did the blowing of the Pāṇḍavas' conchshells have on the sons of Dhṛtarāṣṭra?",
+                            "options": [
+                              "It boosted their morale",
+                              "It shattered their hearts",
+                              "It made them retreat",
+                              "It caused confusion in their ranks"
+                            ],
+                            "correctAnswer": "It shattered their hearts"
+                        },
+                        {
+                            "questionNumber": 14,
+                            "questionText": "What was the sound made by Bhīṣma’s conchshell compared to?",
+                            "options": [
+                              "Roar of a tiger",
+                              "Thunder",
+                              "Roar of a lion",
+                              "Echoing mountains"
+                            ],
+                            "correctAnswer": "Roar of a lion"
+                        },
+                        {
+                            "questionNumber": 15,
+                            "questionText": "Why did Arjuna want to see those gathered to fight?",
+                            "options": [
+                              "To analyze their weaponry",
+                              "To see who wanted to support Dhṛtarāṣṭra’s son",
+                              "To pay respects",
+                              "To admire their bravery"
+                            ],
+                            "correctAnswer": "To see who wanted to support Dhṛtarāṣṭra’s son"
+                        }
+                    ],
+                    "count" : 15
+                },
+                {
+                    "name" : "BG : Class - 3",
+                    "sub-heading": "BG 1.25 to BG 1.48",
+                    "questions" : [
+
+                        {
+                            "questionNumber": 1,
+                            "questionText": "Who asked Sañjaya about the events at Kurukṣetra?",
+                            "options": [
+                              "Bhīṣma",
+                              "Arjuna",
+                              "Dhṛtarāṣṭra",
+                              "Duryodhana"
+                            ],
+                            "correctAnswer": "Dhṛtarāṣṭra"
+                        },
+                        {
+                            "questionNumber": 2,
+                            "questionText": "Who did Duryodhana speak to after observing the army of the Pāṇḍavas?",
+                            "options": [
+                              "Kṛṣṇa",
+                              "Bhīma",
+                              "His teacher - Droṇa",
+                              "His father - Dhṛtarāṣṭra"
+                            ],
+                            "correctAnswer": "His teacher - Droṇa"
+                        },
+                        {
+                            "questionNumber": 3,
+                            "questionText": "Who arranged the Pāṇḍava army in military formation?",
+                            "options": [
+                              "Bhīma",
+                              "Drupada's son - Dhrishtadyumna",
+                              "Kṛṣṇa",
+                              "Yudhāmanyu"
+                            ],
+                            "correctAnswer": "Drupada's son - Dhrishtadyumna"
+                        },
+                        {
+                            "questionNumber": 4,
+                            "questionText": "Which warrior did Duryodhana mention as powerful and heroic, like Bhīma and Arjuna?",
+                            "options": [
+                              "Yuyudhāna",
+                              "Nakula",
+                              "Sañjaya",
+                              "Yudhāmanyu"
+                            ],
+                            "correctAnswer": "Yuyudhāna"
+                        },
+                        {
+                            "questionNumber": 5,
+                            "questionText": "TEXT-10 : \"Our strength is immeasurable, and we are perfectly protected by Grandfather Bhīṣma, whereas the strength of the Pāṇḍavas, carefully protected by _________, is limited\"",
+                            "options": [
+                              "Kṛṣṇa",
+                              "Bhīma",
+                              "Droṇa",
+                              "Bhīṣma"
+                            ],
+                            "correctAnswer": "Bhīma"
+                        },
+                        {
+                            "questionNumber": 6,
+                            "questionText": "Who blew his conchshell loudly, causing joy to Duryodhana?",
+                            "options": [
+                              "Bhīṣma",
+                              "Karṇa",
+                              "Aśvatthāmā",
+                              "Sañjaya"
+                            ],
+                            "correctAnswer": "Bhīṣma"
+                        },
+                        {
+                            "questionNumber": 7,
+                            "questionText": "What was the name of Nakula's  conchshell?",
+                            "options": [
+                              "Maṇipuṣpaka",
+                              "Pauṇḍra",
+                              "Sughoṣa",
+                              "Devadatta"
+                            ],
+                            "correctAnswer": "Sughoṣa"
+                        },
+                        {
+                            "questionNumber": 8,
+                            "questionText": "Which conchshell did Lord Kṛṣṇa, Arjuna, Bhima, Yudhiṣṭhira blow respectively?",
+                            "options": [
+                              "Pāñcajanya, Pauṇḍra, Devadatta, Ananta-vijaya",
+                              "Ananta-vijaya, Pāñcajanya, Pauṇḍra, Devadatta",
+                              "Pāñcajanya, Devadatta, Pauṇḍra, Ananta-vijaya",
+                              "Pauṇḍra, Ananta-vijaya, Pāñcajanya, Devadatta"
+                            ],
+                            "correctAnswer": "Pāñcajanya, Devadatta, Pauṇḍra, Ananta-vijaya"
+                        },
+                        {
+                            "questionNumber": 9,
+                            "questionText": "Which warrior had a chariot with a flag bearing the mark of Hanumān?",
+                            "options": [
+                              "Duryodhana",
+                              "Yudhiṣṭhira",
+                              "Bhīma",
+                              "Arjuna"
+                            ],
+                            "correctAnswer": "Arjuna"
+                        },
+                        {
+                            "questionNumber": 10,
+                            "questionText": "Which sound is said to have shattered the hearts of Dhṛtarāṣṭra's sons?",
+                            "options": [
+                              "Roar of a lion",
+                              "Bhīṣma’s conchshell",
+                              "Combined conchshells of the Pāṇḍavas",
+                              "Sound of trumpets and bugles"
+                            ],
+                            "correctAnswer": "Combined conchshells of the Pāṇḍavas"
+                        },
+                        {
+                            "questionNumber": 11,
+                            "questionText": "What did Arjuna request Kṛṣṇa to do with his chariot?",
+                            "options": [
+                              "Take it to the back",
+                              "Withdraw it from the battlefield",
+                              "Place it between the two armies",
+                              "His father - Dhṛtarāṣṭra"
+                            ],
+                            "correctAnswer": "Place it between the two armies"
+                        },
+                        {
+                            "questionNumber": 12,
+                            "questionText": "Who is referred to as the \"infallible one\"",
+                            "options": [
+                              "Bhīṣma",
+                              "Kṛṣṇa",
+                              "Yudhiṣṭhira",
+                              "Sañjaya"
+                            ],
+                            "correctAnswer": "Kṛṣṇa"
+                        },
+                        {
+                            "questionNumber": 13,
+                            "questionText": "What effect did the blowing of the Pāṇḍavas' conchshells have on the sons of Dhṛtarāṣṭra?",
+                            "options": [
+                              "It boosted their morale",
+                              "It shattered their hearts",
+                              "It made them retreat",
+                              "It caused confusion in their ranks"
+                            ],
+                            "correctAnswer": "It shattered their hearts"
+                        },
+                        {
+                            "questionNumber": 14,
+                            "questionText": "What was the sound made by Bhīṣma’s conchshell compared to?",
+                            "options": [
+                              "Roar of a tiger",
+                              "Thunder",
+                              "Roar of a lion",
+                              "Echoing mountains"
+                            ],
+                            "correctAnswer": "Roar of a lion"
+                        },
+                        {
+                            "questionNumber": 15,
+                            "questionText": "Why did Arjuna want to see those gathered to fight?",
+                            "options": [
+                              "To analyze their weaponry",
+                              "To see who wanted to support Dhṛtarāṣṭra’s son",
+                              "To pay respects",
+                              "To admire their bravery"
+                            ],
+                            "correctAnswer": "To see who wanted to support Dhṛtarāṣṭra’s son"
+                        }
+                    ],
+                    "count" : 15
+                }
+            ]
+        }
+    ]
+}
