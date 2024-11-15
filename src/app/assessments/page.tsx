@@ -1,8 +1,26 @@
 import React from "react";
 import Link from "next/link";
 
+interface CardType {
+	lecture: any;
+	classNumber: number;
+}
+
+interface Question {
+	questionNumber: number;
+	questionText: string;
+	options: string[];
+	correctAnswer: string;
+}
+
+interface Lesson {
+	name: string;
+	"sub-heading": string;
+	questions: Question[];
+	count: number;
+}
+
 import assesmentJson from "../../../public/questions.json";
-import { Router } from "next/router";
 
 export default function Quizzes() {
 	const classes = assesmentJson.assessments[0].classes;
@@ -11,14 +29,14 @@ export default function Quizzes() {
 		// background div
 
 		<div className=" flex flex-row flex-wrap w-[95%] bg-slate-100 mx-auto mt-[2rem] p-[2rem]">
-			{classes.map((lecture: any, i) => (
+			{classes.map((lecture: Object, i) => (
 				<Card key={i} lecture={lecture} classNumber={i} />
 			))}
 		</div>
 	);
 }
 
-const Card = (props: any) => {
+const Card = (props: CardType) => {
 	return (
 		<div className=" flex flex-col justify-between m-[1rem]  w-[15rem] h-[12rem] p-4 bg-orange-100 border-2 border-orange-300">
 			<h2 className="text-xl font-mono font-bold bg-yellow-300 w-fit px-2">
@@ -36,7 +54,7 @@ const Card = (props: any) => {
 				href={{
 					pathname: "/assessments/interface",
 					query: {
-						class: props.class,
+						lecture: props.lecture,
 					},
 				}}
 				className="w-full bg-sky-600 no-underline py-2 px-2 text-white text-lg text-center font-mono font-bold rounded-md"
