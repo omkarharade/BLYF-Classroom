@@ -17,33 +17,24 @@ export default function Interface() {
 
 const Display = (props: any) => {
 	const [qNumber, setQNumber] = useState(0);
-	const [optionJudge1, setOptionJudge1] = useState(
-		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-	);
-	const [optionJudge2, setOptionJudge2] = useState(
-		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-	);
-	const [optionJudge3, setOptionJudge3] = useState(
-		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-	);
-	const [optionJudge4, setOptionJudge4] = useState(
-		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-	);
+	const optionColorBlue =
+		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500";
+
+	const optionColorRed =
+		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-red-200 hover:bg-red-700 border-2 hover:text-white border-red-500";
+	const optionColorGreen =
+		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-green-200 hover:bg-green-700 border-2 hover:text-white border-green-500";
+
+	const [optionJudge1, setOptionJudge1] = useState(optionColorBlue);
+	const [optionJudge2, setOptionJudge2] = useState(optionColorBlue);
+	const [optionJudge3, setOptionJudge3] = useState(optionColorBlue);
+	const [optionJudge4, setOptionJudge4] = useState(optionColorBlue);
+
 	useEffect(() => {
-		//Runs on the first render
-		//And any time any dependency value changes
-		setOptionJudge1(
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		);
-		setOptionJudge2(
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		);
-		setOptionJudge3(
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		);
-		setOptionJudge4(
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		);
+		setOptionJudge1(optionColorBlue);
+		setOptionJudge2(optionColorBlue);
+		setOptionJudge3(optionColorBlue);
+		setOptionJudge4(optionColorBlue);
 	}, [qNumber]);
 
 	function prevPage() {
@@ -59,78 +50,43 @@ const Display = (props: any) => {
 	}
 
 	function optionCheck1(selectedAnswer: string, rightAnswer: string) {
-		if (
-			optionJudge1 !==
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		)
-			return;
+		if (optionJudge1 !== optionColorBlue) return;
 
 		if (selectedAnswer === rightAnswer) {
-			setOptionJudge1(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-green-200 hover:bg-green-700 border-2 hover:text-white border-green-500"
-			);
+			setOptionJudge1(optionColorGreen);
 		} else {
-			setOptionJudge1(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-red-200 hover:bg-red-700 border-2 hover:text-white border-red-500"
-			);
+			setOptionJudge1(optionColorRed);
 		}
 	}
 
 	function optionCheck2(selectedAnswer: string, rightAnswer: string) {
-		if (
-			optionJudge2 !==
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		)
-			return;
+		if (optionJudge2 !== optionColorBlue) return;
 
 		if (selectedAnswer === rightAnswer) {
-			setOptionJudge2(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-green-200 hover:bg-green-700 border-2 hover:text-white border-green-500"
-			);
+			setOptionJudge2(optionColorGreen);
 		} else {
-			setOptionJudge2(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-red-200 hover:bg-red-700 border-2 hover:text-white border-red-500"
-			);
+			setOptionJudge2(optionColorRed);
 		}
 	}
 
 	function optionCheck3(selectedAnswer: string, rightAnswer: string) {
-		console.log(selectedAnswer === rightAnswer);
-		if (
-			optionJudge3 !==
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		)
-			return;
+		if (optionJudge3 !== optionColorBlue) return;
 
 		if (selectedAnswer === rightAnswer) {
-			setOptionJudge3(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-green-200 hover:bg-green-700 border-2 hover:text-white border-green-500"
-			);
+			setOptionJudge3(optionColorGreen);
 		} else {
-			setOptionJudge3(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-red-200 hover:bg-red-700 border-2 hover:text-white border-red-500"
-			);
+			setOptionJudge3(optionColorRed);
 		}
-
-		console.log("optionJudge3", optionJudge3);
 	}
 
 	function optionCheck4(selectedAnswer: string, rightAnswer: string) {
 		console.log(selectedAnswer === rightAnswer);
-		if (
-			optionJudge4 !==
-			"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500"
-		)
-			return;
+		if (optionJudge4 !== optionColorBlue) return;
 
 		if (selectedAnswer === rightAnswer) {
-			setOptionJudge4(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-green-200 hover:bg-green-700 border-2 hover:text-white border-green-500"
-			);
+			setOptionJudge4(optionColorGreen);
 		} else {
-			setOptionJudge4(
-				"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-base font-medium  bg-red-200 hover:bg-red-700 border-2 hover:text-white border-red-500"
-			);
+			setOptionJudge4(optionColorRed);
 		}
 
 		console.log("optionJudge4", optionJudge4);
@@ -170,7 +126,7 @@ const Display = (props: any) => {
 						className={optionJudge1}
 					>
 						<p className="pe-[1rem]">{"A)"}</p>
-						<p className="font-sans text-base font-medium">
+						<p className="font-sans text-xl font-medium">
 							{props.data.questions[qNumber].options[0]}
 						</p>
 					</div>
@@ -186,7 +142,7 @@ const Display = (props: any) => {
 						className={optionJudge2}
 					>
 						<p className="pe-[1rem]">{"B)"}</p>
-						<p className="font-sans text-base font-medium">
+						<p className="font-sans text-xl font-medium">
 							{props.data.questions[qNumber].options[1]}
 						</p>
 					</div>
@@ -202,7 +158,7 @@ const Display = (props: any) => {
 						className={optionJudge3}
 					>
 						<p className="pe-[1rem]">{"C)"}</p>
-						<p className="font-sans text-base font-medium">
+						<p className="font-sans text-xl font-medium">
 							{props.data.questions[qNumber].options[2]}
 						</p>
 					</div>
@@ -218,7 +174,7 @@ const Display = (props: any) => {
 						className={optionJudge4}
 					>
 						<p className="pe-[1rem]">{"D)"}</p>
-						<p className="font-sans text-base font-medium">
+						<p className="font-sans text-xl font-medium">
 							{props.data.questions[qNumber].options[3]}
 						</p>
 					</div>
