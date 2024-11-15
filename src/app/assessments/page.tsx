@@ -34,10 +34,7 @@ const Card = (props: any) => {
 
 			<Link
 				href={{
-					pathname: "/assesbaseents/interface",
-					query: {
-						lecture: props.lecture,
-					},
+					pathname: "/assessments/interface",
 				}}
 				className="w-full bg-sky-600 no-underline py-2 px-2 text-white text-lg text-center font-mono font-bold rounded-md"
 			>
