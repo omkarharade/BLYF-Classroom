@@ -5,12 +5,12 @@ import React, { useEffect, useState } from "react";
 const InterfaceDisplay = (props: any) => {
 	const [qNumber, setQNumber] = useState(0);
 	const optionColorBlue =
-		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500";
+		"flex flex-row w-full py-[0.5rem] md:py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-sky-200 hover:bg-sky-700 border-2 hover:text-white border-sky-500";
 
 	const optionColorRed =
-		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-red-200 hover:bg-red-700 border-2 hover:text-white border-red-500";
+		"flex flex-row w-full md:py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-red-200 hover:bg-red-700 border-2 hover:text-white border-red-500";
 	const optionColorGreen =
-		"flex flex-row w-[rem] py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-green-200 hover:bg-green-700 border-2 hover:text-white border-green-500";
+		"flex flex-row w-full md:py-[1rem] px-[1rem] font-sans text-xl font-medium  bg-green-200 hover:bg-green-700 border-2 hover:text-white border-green-500";
 
 	const [optionJudge1, setOptionJudge1] = useState(optionColorBlue);
 	const [optionJudge2, setOptionJudge2] = useState(optionColorBlue);
@@ -98,7 +98,7 @@ const InterfaceDisplay = (props: any) => {
 	}
 
 	return (
-		<div className="w-full  max-w-screen-xl h-full bg-orange-100  mx-auto flex flex-col justify-between">
+		<div className="w-full  max-w-screen-xl min-h-fit h-full bg-orange-100  mx-auto flex flex-col justify-between">
 			<div>
 				{/* question sub header */}
 				<div className="w-[100%] px-[1rem] py-2 sm:flex-row  flex flex-col items-center  justify-between bg-sky-200 border-2 border-sky-500 ">
@@ -112,7 +112,7 @@ const InterfaceDisplay = (props: any) => {
 				</div>
 
 				{/* question text div */}
-				<div className="flex justify-center h-[10rem] overflow-y-scroll  min-w-[20rem] mx-auto mt-[3rem]">
+				<div className="flex justify-center min-h-[8rem] max-h-[11rem] overflow-y-scroll  min-w-[20rem] mx-auto mt-[1rem] sm:mt-[2rem] mb-[1rem] md:mt-[3rem]">
 					<div className="min-w-[20rem] w-[90%]  px-[2rem] py-[1rem] text-xl md:text-2xl">
 						{props.data.questions[qNumber].questionText}
 					</div>
@@ -120,7 +120,7 @@ const InterfaceDisplay = (props: any) => {
 			</div>
 
 			{/* options div */}
-			<div className="mx-auto w-[95%] mb-[1rem] mt-[2rem]">
+			<div className="mx-auto w-[95%] md:mb-[1rem] md:mt-[2rem]">
 				{/* option -1 */}
 				<div
 					onClick={() => {
