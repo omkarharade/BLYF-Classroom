@@ -8,7 +8,7 @@ export default function Quizzes() {
 	return (
 		// background div
 
-		<div className=" flex flex-row  flex-wrap min-w-[20rem] w-[95%] bg-slate-100 mx-auto my-[2rem] p-[2rem]">
+		<div className=" flex flex-row  flex-wrap min-w-[20rem]  w-[95%] bg-slate-100 mx-auto my-[2rem] p-[2rem]">
 			{classes.map((lecture: Object, i) => (
 				<Card key={i} lecture={lecture} classNumber={i} />
 			))}
