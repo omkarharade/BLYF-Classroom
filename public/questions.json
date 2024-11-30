@@ -312,6 +312,179 @@
 						}
 					],
 					"count": 15
+				},
+				{
+					"name": "BG : Class - 3",
+					"sub-heading": "BG 2.01 to 2.30",
+					"questions": [
+						{
+						  "questionNumber": 1,
+						  "questionText": "What metaphor did Kṛṣṇa use to explain the soul changing bodies?",
+						  "options": [
+							"River flowing into the ocean",
+							"Fire consuming wood",
+							"Wind carrying leaves",
+							"Person putting on new garments"
+						  ],
+						  "correctAnswer": "Person putting on new garments"
+						},
+						{
+						  "questionNumber": 2,
+						  "questionText": "What does Kṛṣṇa say about the nonpermanent nature of happiness and distress?",
+						  "options": [
+							"They are permanent states of being",
+							"They arise from sense perception and must be tolerated",
+							"They can be controlled by willpower",
+							"They are punishments for past actions"
+						  ],
+						  "correctAnswer": "They arise from sense perception and must be tolerated"
+						},
+						{
+						  "questionNumber": 3,
+						  "questionText": "Why did Arjuna declare himself Kṛṣṇa's disciple?",
+						  "options": [
+							"He wanted blessings for victory",
+							"He was confused about his duty",
+							"He wanted forgiveness for his sins",
+							"He sought knowledge of warfare"
+						  ],
+						  "correctAnswer": "He was confused about his duty"
+						},
+						{
+						  "questionNumber": 4,
+						  "questionText": "What is the nature of the soul, according to Kṛṣṇa?",
+						  "options": [
+							"Invisible, inconceivable, and immutable",
+							"Tangible, perceivable, and changing",
+							"Fragile, finite, and temporary",
+							"Visible, measurable, and destructible"
+						  ],
+						  "correctAnswer": "Invisible, inconceivable, and immutable"
+						},
+						{
+						  "questionNumber": 5,
+						  "questionText": "What is certain for one who is born, as stated by Kṛṣṇa?",
+						  "options": [
+							"Eternal life",
+							"Future liberation",
+							"Death",
+							"Immediate salvation"
+						  ],
+						  "correctAnswer": "Death"
+						},
+						{
+						  "questionNumber": 6,
+						  "questionText": "What analogy does Kṛṣṇa give for the temporary appearance and disappearance of happiness and distress?",
+						  "options": [
+							"Day and night",
+							"Life and death",
+							"Sunrise and sunset",
+							"Summer and winter seasons"
+						  ],
+						  "correctAnswer": "Summer and winter seasons"
+						},
+						{
+						  "questionNumber": 7,
+						  "questionText": "What quality makes one eligible for liberation, according to Kṛṣṇa?",
+						  "options": [
+							"Detachment from material pleasures",
+							"Steadiness in happiness and distress",
+							"Mastery in battle",
+							"Knowledge of scriptures"
+						  ],
+						  "correctAnswer": "Steadiness in happiness and distress"
+						},
+						{
+						  "questionNumber": 8,
+						  "questionText": "Among the body and soul, who has no endurance, and in whom is there no change, respectively? This is the conclusion of the seers of truth, derived from studying the nature of both.",
+						  "options": [
+							"Soul, Body",
+							"None of them, None of them",
+							"Body, Soul",
+							"Both of them, Both of them"
+						  ],
+						  "correctAnswer": "Body, Soul"
+						},
+						{
+						  "questionNumber": 9,
+						  "questionText": "What does Kṛṣṇa say about the soul's visibility?",
+						  "options": [
+							"It is invisible and inconceivable",
+							"It can be seen through meditation",
+							"It becomes visible after death",
+							"It is visible to sages only"
+						  ],
+						  "correctAnswer": "It is invisible and inconceivable"
+						},
+						{
+						  "questionNumber": 10,
+						  "questionText": "What happens to the created beings in their beginning, in their interim state and after annihilation respectively?",
+						  "options": [
+							"Manifest, remain unmanifest throughout",
+							"Remain Unmanifested, manifest during annihilation",
+							"Manifest, Unmanifest, Manifest",
+							"Unmanifest, Manifest, Unmanifest"
+						  ],
+						  "correctAnswer": "Unmanifest, Manifest, Unmanifest"
+						},
+						{
+						  "questionNumber": 11,
+						  "questionText": "Some look on the ________ as amazing, some describe him as amazing, and some hear of him as amazing, while others, even after hearing about him, cannot understand him at all.",
+						  "options": [
+							"Money",
+							"Food",
+							"Soul",
+							"Celebrities"
+						  ],
+						  "correctAnswer": "Soul"
+						},
+						{
+						  "questionNumber": 12,
+						  "questionText": "Who does Kṛṣṇa say does not lament for the living or the dead?",
+						  "options": [
+							"A person with strong body",
+							"The soldier",
+							"A wise person",
+							"A criminal"
+						  ],
+						  "correctAnswer": "A wise person"
+						},
+						{
+						  "questionNumber": 13,
+						  "questionText": "How does Kṛṣṇa describe the soul's qualities?",
+						  "options": [
+							"Measurable and temporary",
+							"Indestructible, eternal, and immeasurable",
+							"Limited and perishable",
+							"Finite and conditional"
+						  ],
+						  "correctAnswer": "Indestructible, eternal, and immeasurable"
+						},
+						{
+						  "questionNumber": 14,
+						  "questionText": "Who is referred to as the 'descendant of Bharata'?",
+						  "options": [
+							"Sañjaya",
+							"Kṛṣṇa",
+							"Arjun",
+							"Dhṛtarāṣṭra"
+						  ],
+						  "correctAnswer": "Dhṛtarāṣṭra"
+						},
+						{
+						  "questionNumber": 15,
+						  "questionText": "Which Sanskrit word correctly translates to 'best among men'?",
+						  "options": [
+							"Guḍākeśa",
+							"Mahā-bāho",
+							"Puruṣarṣabha",
+							"Dhira"
+						  ],
+						  "correctAnswer": "Puruṣarṣabha"
+						}
+					  ]
+					  ,
+					"count": 15
 				}
 			]
 		}
