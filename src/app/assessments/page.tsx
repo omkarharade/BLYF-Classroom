@@ -8,7 +8,7 @@ export default function Quizzes() {
 	return (
 		// background div
 
-		<div className=" flex flex-row  flex-wrap min-w-[20rem]  w-[95%] bg-slate-100 mx-auto my-[2rem] p-[2rem]">
+		<div className=" flex flex-row  flex-wrap min-w-[20rem]  w-[95%] bg-orange-100 mx-auto my-[2rem] p-[2rem]">
 			{classes.map((lecture: Object, i) => (
 				<Card key={i} lecture={lecture} classNumber={i} />
 			))}
@@ -18,7 +18,7 @@ export default function Quizzes() {
 
 const Card = (props: any) => {
 	return (
-		<div className=" flex flex-col justify-between m-[1rem]  w-[15rem] h-[12rem] p-4 bg-orange-100 border-2 border-orange-300">
+		<div className=" flex flex-col justify-between m-[1rem]  w-[15rem] h-[12rem] p-4 bg-yellow-100 border-2 border-orange-300 rounded-xl">
 			<h2 className="text-xl font-mono font-bold bg-yellow-300 w-fit px-2">
 				{props.lecture.name}
 			</h2>
