@@ -485,6 +485,178 @@
 					  ]
 					  ,
 					"count": 15
+				},
+				{
+					"name": "BG : Class - 4",
+					"sub-heading": "BG 2.31 to 2.53",
+					"questions": [
+						{
+							"questionNumber": 1,
+							"questionText": "According to the text, what is the best engagement for a kṣatriya?",
+							"options": [
+								"Meditating in the forest",
+								"Accumulating wealth",
+								"Fighting on religious principles",
+								"Performing sacrifices"
+							],
+							"correctAnswer": "Fighting on religious principles"
+						},
+						{
+							"questionNumber": 2,
+							"questionText": "What happens if a kṣatriya neglects their duty of fighting?",
+							"options": [
+								"They attain liberation",
+								"They incur sins and lose their reputation",
+								"They achieve inner peace",
+								"They are honored in heaven"
+							],
+							"correctAnswer": "They incur sins and lose their reputation"
+						},
+						{
+							"questionNumber": 3,
+							"questionText": "What is said about dishonor for a respectable person?",
+							"options": [
+								"It is unavoidable",
+								"It is worse than death",
+								"It is easily forgotten",
+								"It leads to liberation"
+							],
+							"correctAnswer": "It is worse than death"
+						},
+						{
+							"questionNumber": 4,
+							"questionText": "What will the great generals think if Arjuna leaves the battlefield?",
+							"options": [
+								"He is wise",
+								"He has renounced material life",
+								"He is insignificant and fearful",
+								"He is merciful"
+							],
+							"correctAnswer": "He is insignificant and fearful"
+						},
+						{
+							"questionNumber": 5,
+							"questionText": "Who are described as misers in the text?",
+							"options": [
+								"Those who perform duties without devotion",
+								"Those who abandon all duties",
+								"Those who seek liberation",
+								"Those who desire to enjoy the fruits of their work"
+							],
+							"correctAnswer": "Those who desire to enjoy the fruits of their work"
+						},
+						{
+							"questionNumber": 6,
+							"questionText": "What does devotional service help a person achieve?",
+							"options": [
+								"Fame and wealth",
+								"Liberation from the cycle of birth and death",
+								"Enhanced material enjoyment",
+								"Greater attachment to worldly desires"
+							],
+							"correctAnswer": "Liberation from the cycle of birth and death"
+						},
+						{
+							"questionNumber": 7,
+							"questionText": "What protects one from the most dangerous type of fear?",
+							"options": [
+								"A little advancement in the path of yoga",
+								"Complete renunciation of all duties",
+								"Accumulating material wealth",
+								"Attachment to rituals"
+							],
+							"correctAnswer": "A little advancement in the path of yoga"
+						},
+						{
+							"questionNumber": 8,
+							"questionText": "What signifies divine consciousness in the text?",
+							"options": [
+								"Attachment to wealth",
+								"Worship of multiple deities",
+								"Following flowery Vedic rituals",
+								"Fixed in trance of self-realization"
+							],
+							"correctAnswer": "Fixed in trance of self-realization"
+						},
+						{
+							"questionNumber": 9,
+							"questionText": "What does surrendering to the Lord in devotional service remove?",
+							"options": [
+								"All desires",
+								"The need for rituals",
+								"The results of good and bad reactions",
+								"One’s sense of duty"
+							],
+							"correctAnswer": "The results of good and bad reactions"
+						},
+						{
+							"questionNumber": 10,
+							"questionText": "What is described as the 'art of all work'?",
+							"options": [
+								"Wealth accumulation",
+								"Yoga",
+								"Ritual sacrifices",
+								"Knowledge of Vedic scriptures"
+							],
+							"correctAnswer": "Yoga"
+						},
+						{
+							"questionNumber": 11,
+							"questionText": "What is the effect of becoming transcendental to the three modes of material nature?",
+							"options": [
+								"One attains liberation",
+								"One becomes rich",
+								"One gains fame",
+								"One becomes free from duty"
+							],
+							"correctAnswer": "One attains liberation"
+						},
+						{
+							"questionNumber": 12,
+							"questionText": "TEXT 39: . . . . . . . . . . . O son of Pṛthā, when you act in such knowledge you can free yourself from the bondage of works. Who is referred as 'Pṛthā'?",
+							"options": [
+								"Draupadī",
+								"Subhadrā",
+								"King Pṛthu",
+								"Kunti"
+							],
+							"correctAnswer": "Kunti"
+						},
+						{
+							"questionNumber": 13,
+							"questionText": "You have a right to perform your prescribed duty, but you are not entitled to the ______ of action. Never consider yourself the cause of the ______ of your activities, and never be ______ to not doing your duty.",
+							"options": [
+								"results, fruits, attracted",
+								"fruits, results, attached",
+								"cause, results, entitled",
+								"rewards, actions, attached"
+							],
+							"correctAnswer": "fruits, results, attached"
+						},
+						{
+							"questionNumber": 14,
+							"questionText": "O Dhanañjaya, keep all ______ activities far distant by devotional service, and in that consciousness ______ unto the Lord. Those who want to enjoy the ______ of their work are misers.",
+							"options": [
+								"abominable, surrender, fruits",
+								"sinful, offer, results",
+								"abominable, offer, rewards",
+								"negative, surrender, results"
+							],
+							"correctAnswer": "abominable, surrender, fruits"
+						},
+						{
+							"questionNumber": 15,
+							"questionText": "TEXT 49: O Dhanañjaya, keep all __________ activities far distant by __________ service.",
+							"options": [
+								"abominable; devotional",
+								"virtuous; material",
+								"righteous; selfless",
+								"destructive; monetary"
+							],
+							"correctAnswer": "abominable; devotional"
+						}
+					],
+					"count": 15
 				}
 			]
 		}
