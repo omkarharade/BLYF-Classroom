@@ -16,6 +16,7 @@ const InterfaceDisplay = (props: any) => {
 	const [optionJudge2, setOptionJudge2] = useState(optionColorBlue);
 	const [optionJudge3, setOptionJudge3] = useState(optionColorBlue);
 	const [optionJudge4, setOptionJudge4] = useState(optionColorBlue);
+	const questionsCount = props.data.count; // no. of questions 
 
 	function prevPage() {
 		if (qNumber === 0) return;
@@ -25,7 +26,7 @@ const InterfaceDisplay = (props: any) => {
 	}
 
 	function nextPage() {
-		if (qNumber >= 14) return;
+		if (qNumber >= questionsCount-1) return;
 		else setQNumber((prev) => prev + 1);
 	}
 

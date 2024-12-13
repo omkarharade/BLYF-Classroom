@@ -657,6 +657,124 @@
 						}
 					],
 					"count": 15
+				},
+				{
+					"name": "BG : Class - 5",
+					"sub-heading": "BG 2.54 to 2.72",
+					"questions": [
+						{
+						  "questionNumber": 1,
+						  "questionText": "What arises from attachment, as mentioned in the texts?",
+						  "options": [
+							"Peace",
+							"Anger",
+							"Wisdom",
+							"Enlightenment"
+						  ],
+						  "correctAnswer": "Anger"
+						},
+						{
+						  "questionNumber": 2,
+						  "questionText": "Fill in the blank: From delusion arises bewilderment of ____.",
+						  "options": [
+							"Memory",
+							"Happiness",
+							"Intelligence",
+							"Peace"
+						  ],
+						  "correctAnswer": "Memory"
+						},
+						{
+						  "questionNumber": 3,
+						  "questionText": "What happens when intelligence is lost, according to the texts?",
+						  "options": [
+							"One achieves transcendence",
+							"One becomes fearless",
+							"One falls into the material pool",
+							"One finds satisfaction in the self"
+						  ],
+						  "correctAnswer": "One falls into the material pool"
+						},
+						{
+						  "questionNumber": 4,
+						  "questionText": "What is the analogy used to describe a person who achieves peace despite desires flowing in?",
+						  "options": [
+							"A calm forest",
+							"A flame that burns brightly",
+							"A bird flying freely",
+							"An ocean being filled by rivers"
+						  ],
+						  "correctAnswer": "An ocean being filled by rivers"
+						},
+						{
+						  "questionNumber": 5,
+						  "questionText": "What does a person attain who has given up all sense of proprietorship and false ego?",
+						  "options": [
+							"Perfect knowledge",
+							"Eternal fame",
+							"Real peace",
+							"Happiness through sense gratification"
+						  ],
+						  "correctAnswer": "Real peace"
+						},
+						{
+						  "questionNumber": 6,
+						  "questionText": "The senses are so strong and impetuous that they forcibly carry away the ____ of a man of discrimination.",
+						  "options": [
+							"Intelligence",
+							"Mind",
+							"Desires",
+							"Knowledge"
+						  ],
+						  "correctAnswer": "Mind"
+						},
+						{
+						  "questionNumber": 7,
+						  "questionText": "How does the tortoise exemplify perfect consciousness?",
+						  "options": [
+							"By withdrawing its senses from spiritual activities",
+							"By withdrawing its senses from sense objects",
+							"By showing fear towards threats",
+							"By showing anger towards threats"
+						  ],
+						  "correctAnswer": "By withdrawing its senses from sense objects"
+						},
+						{
+						  "questionNumber": 8,
+						  "questionText": "What happens to one who is satisfied in Kṛṣṇa consciousness?",
+						  "options": [
+							"They do not fear material losses",
+							"They develop high intellect",
+							"They become deluded by attachment",
+							"The threefold miseries no longer exist"
+							
+						  ],
+						  "correctAnswer": "The threefold miseries no longer exist"
+						},
+						{
+						  "questionNumber": 9,
+						  "questionText": "Who is awake during what is night for all beings?",
+						  "options": [
+							"The one having fear of the dark",
+							"The one having difficulty falling asleep",
+							"The self-controlled",
+							"The dreamer"
+						  ],
+						  "correctAnswer": "The self-controlled"
+						},
+						{
+						  "questionNumber": 10,
+						  "questionText": "What is the state of one situated in spiritual and godly life and not bewildered even at the hour of death?",
+						  "options": [
+							"Bewildered",
+							"Enlightened",
+							"Fallen into illusion",
+							"Entering the kingdom of God"
+						  ],
+						  "correctAnswer": "Entering the kingdom of God"
+						}
+					  ],
+					"count": 10
 				}
 			]
 		}
