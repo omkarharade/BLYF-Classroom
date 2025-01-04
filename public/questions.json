@@ -775,7 +775,125 @@
 						}
 					  ],
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 7",
+					"sub-heading": "BG 3.25 to 3.43",
+					"questions": [
+						{
+							"questionNumber": 1,
+							"questionText": "What causes the spirit soul to think itself the doer of activities?",
+							"options": [
+								"Influence of lust",
+								"Attachment towards results",
+								"Influence of false ego",
+								"Attachment to sense gratification"
+							],
+							"correctAnswer": "Influence of false ego"
+						},
+						{
+							"questionNumber": 2,
+							"questionText": "How does a person in knowledge of the Absolute Truth act?",
+							"options": [
+								"Engages in sense gratification to understand its futility",
+								"Avoids all work and duties",
+								"Seeks liberation through mental speculation",
+								"Does not engage in the senses and sense gratification"
+							],
+							"correctAnswer": "Does not engage in the senses and sense gratification"
+						},
+						{
+							"questionNumber": 3,
+							"questionText": "What governs human actions according to the teachings?",
+							"options": [
+								"Personal willpower alone",
+								"The nature acquired from the three modes",
+								"Repression of natural tendencies",
+								"Mental effort and determination"
+							],
+							"correctAnswer": "The nature acquired from the three modes"
+						},
+						{
+							"questionNumber": 4,
+							"questionText": "What are attachment and aversion described as?",
+							"options": [
+								"Principles for achieving sense gratification",
+								"Regulations for improving material success",
+								"Stumbling blocks on the path of self-realization",
+								"Natural qualities of a spiritual person"
+							],
+							"correctAnswer": "Stumbling blocks on the path of self-realization"
+						},
+						{
+							"questionNumber": 5,
+							"questionText": "What is advised about performing one’s own duties?",
+							"options": [
+								"One should seek perfection in another’s duties",
+								"Performing one’s own duties, even faultily, is better than another’s duties",
+								"One should abandon all duties for personal freedom",
+								"It is better to follow another’s path to avoid destruction"
+							],
+							"correctAnswer": "Performing one’s own duties, even faultily, is better than another’s duties"
+						},
+						{
+							"questionNumber": 6,
+							"questionText": "What does Kṛṣṇa identify as the cause of sinful acts?",
+							"options": [
+								"Anger born of ignorance",
+								"Attachment to material possessions",
+								"False ego derived from the mind",
+								"Lust born of the material mode of passion"
+							],
+							"correctAnswer": "Lust born of the material mode of passion"
+						},
+						{
+							"questionNumber": 7,
+							"questionText": "What analogy is used to describe how lust covers the living entity?",
+							"options": [
+								"Fire covered by smoke",
+								"A stone submerged in water",
+								"Light obscured by a curtain",
+								"A flower hidden by leaves"
+							],
+							"correctAnswer": "Fire covered by smoke"
+						},
+						{
+							"questionNumber": 8,
+							"questionText": "According to Kṛṣṇa, where is lust said to reside?",
+							"options": [
+								"In the soul itself",
+								"In material objects",
+								"In the senses, mind, and intelligence",
+								"In the external environment"
+							],
+							"correctAnswer": "In the senses, mind, and intelligence"
+						},
+						{
+							"questionNumber": 9,
+							"questionText": "The working _______ are superior to dull matter; ______ is higher than the senses; _______ is still higher than the mind; and he [the soul] is even higher than the intelligence. Fill in the blanks with the correct order according to the verse.",
+							"options": [
+								"intelligence, soul, senses",
+								"intelligence, mind, senses",
+								"senses, mind, intelligence",
+								"mind, intelligence, senses"
+							],
+							"correctAnswer": "senses, mind, intelligence"
+						},
+						{
+							"questionNumber": 10,
+							"questionText": "How should one conquer lust?",
+							"options": [
+								"By renouncing all material possessions",
+								"By steadying the mind with deliberate spiritual intelligence",
+								"By suppressing desires forcefully",
+								"By avoiding interactions with others"
+							],
+							"correctAnswer": "By steadying the mind with deliberate spiritual intelligence"
+						}
+					],
+					"count": 10
 				}
+				
 			]
 		}
 	]
