@@ -318,172 +318,156 @@
 					"sub-heading": "BG 2.01 to 2.30",
 					"questions": [
 						{
-						  "questionNumber": 1,
-						  "questionText": "What metaphor did Kṛṣṇa use to explain the soul changing bodies?",
-						  "options": [
-							"River flowing into the ocean",
-							"Fire consuming wood",
-							"Wind carrying leaves",
-							"Person putting on new garments"
-						  ],
-						  "correctAnswer": "Person putting on new garments"
+							"questionNumber": 1,
+							"questionText": "What metaphor did Kṛṣṇa use to explain the soul changing bodies?",
+							"options": [
+								"River flowing into the ocean",
+								"Fire consuming wood",
+								"Wind carrying leaves",
+								"Person putting on new garments"
+							],
+							"correctAnswer": "Person putting on new garments"
 						},
 						{
-						  "questionNumber": 2,
-						  "questionText": "What does Kṛṣṇa say about the nonpermanent nature of happiness and distress?",
-						  "options": [
-							"They are permanent states of being",
-							"They arise from sense perception and must be tolerated",
-							"They can be controlled by willpower",
-							"They are punishments for past actions"
-						  ],
-						  "correctAnswer": "They arise from sense perception and must be tolerated"
+							"questionNumber": 2,
+							"questionText": "What does Kṛṣṇa say about the nonpermanent nature of happiness and distress?",
+							"options": [
+								"They are permanent states of being",
+								"They arise from sense perception and must be tolerated",
+								"They can be controlled by willpower",
+								"They are punishments for past actions"
+							],
+							"correctAnswer": "They arise from sense perception and must be tolerated"
 						},
 						{
-						  "questionNumber": 3,
-						  "questionText": "Why did Arjuna declare himself Kṛṣṇa's disciple?",
-						  "options": [
-							"He wanted blessings for victory",
-							"He was confused about his duty",
-							"He wanted forgiveness for his sins",
-							"He sought knowledge of warfare"
-						  ],
-						  "correctAnswer": "He was confused about his duty"
+							"questionNumber": 3,
+							"questionText": "Why did Arjuna declare himself Kṛṣṇa's disciple?",
+							"options": [
+								"He wanted blessings for victory",
+								"He was confused about his duty",
+								"He wanted forgiveness for his sins",
+								"He sought knowledge of warfare"
+							],
+							"correctAnswer": "He was confused about his duty"
 						},
 						{
-						  "questionNumber": 4,
-						  "questionText": "What is the nature of the soul, according to Kṛṣṇa?",
-						  "options": [
-							"Invisible, inconceivable, and immutable",
-							"Tangible, perceivable, and changing",
-							"Fragile, finite, and temporary",
-							"Visible, measurable, and destructible"
-						  ],
-						  "correctAnswer": "Invisible, inconceivable, and immutable"
+							"questionNumber": 4,
+							"questionText": "What is the nature of the soul, according to Kṛṣṇa?",
+							"options": [
+								"Invisible, inconceivable, and immutable",
+								"Tangible, perceivable, and changing",
+								"Fragile, finite, and temporary",
+								"Visible, measurable, and destructible"
+							],
+							"correctAnswer": "Invisible, inconceivable, and immutable"
 						},
 						{
-						  "questionNumber": 5,
-						  "questionText": "What is certain for one who is born, as stated by Kṛṣṇa?",
-						  "options": [
-							"Eternal life",
-							"Future liberation",
-							"Death",
-							"Immediate salvation"
-						  ],
-						  "correctAnswer": "Death"
+							"questionNumber": 5,
+							"questionText": "What is certain for one who is born, as stated by Kṛṣṇa?",
+							"options": [
+								"Eternal life",
+								"Future liberation",
+								"Death",
+								"Immediate salvation"
+							],
+							"correctAnswer": "Death"
 						},
 						{
-						  "questionNumber": 6,
-						  "questionText": "What analogy does Kṛṣṇa give for the temporary appearance and disappearance of happiness and distress?",
-						  "options": [
-							"Day and night",
-							"Life and death",
-							"Sunrise and sunset",
-							"Summer and winter seasons"
-						  ],
-						  "correctAnswer": "Summer and winter seasons"
+							"questionNumber": 6,
+							"questionText": "What analogy does Kṛṣṇa give for the temporary appearance and disappearance of happiness and distress?",
+							"options": [
+								"Day and night",
+								"Life and death",
+								"Sunrise and sunset",
+								"Summer and winter seasons"
+							],
+							"correctAnswer": "Summer and winter seasons"
 						},
 						{
-						  "questionNumber": 7,
-						  "questionText": "What quality makes one eligible for liberation, according to Kṛṣṇa?",
-						  "options": [
-							"Detachment from material pleasures",
-							"Steadiness in happiness and distress",
-							"Mastery in battle",
-							"Knowledge of scriptures"
-						  ],
-						  "correctAnswer": "Steadiness in happiness and distress"
+							"questionNumber": 7,
+							"questionText": "What quality makes one eligible for liberation, according to Kṛṣṇa?",
+							"options": [
+								"Detachment from material pleasures",
+								"Steadiness in happiness and distress",
+								"Mastery in battle",
+								"Knowledge of scriptures"
+							],
+							"correctAnswer": "Steadiness in happiness and distress"
 						},
 						{
-						  "questionNumber": 8,
-						  "questionText": "Among the body and soul, who has no endurance, and in whom is there no change, respectively? This is the conclusion of the seers of truth, derived from studying the nature of both.",
-						  "options": [
-							"Soul, Body",
-							"None of them, None of them",
-							"Body, Soul",
-							"Both of them, Both of them"
-						  ],
-						  "correctAnswer": "Body, Soul"
+							"questionNumber": 8,
+							"questionText": "Among the body and soul, who has no endurance, and in whom is there no change, respectively? This is the conclusion of the seers of truth, derived from studying the nature of both.",
+							"options": [
+								"Soul, Body",
+								"None of them, None of them",
+								"Body, Soul",
+								"Both of them, Both of them"
+							],
+							"correctAnswer": "Body, Soul"
 						},
 						{
-						  "questionNumber": 9,
-						  "questionText": "What does Kṛṣṇa say about the soul's visibility?",
-						  "options": [
-							"It is invisible and inconceivable",
-							"It can be seen through meditation",
-							"It becomes visible after death",
-							"It is visible to sages only"
-						  ],
-						  "correctAnswer": "It is invisible and inconceivable"
+							"questionNumber": 9,
+							"questionText": "What does Kṛṣṇa say about the soul's visibility?",
+							"options": [
+								"It is invisible and inconceivable",
+								"It can be seen through meditation",
+								"It becomes visible after death",
+								"It is visible to sages only"
+							],
+							"correctAnswer": "It is invisible and inconceivable"
 						},
 						{
-						  "questionNumber": 10,
-						  "questionText": "What happens to the created beings in their beginning, in their interim state and after annihilation respectively?",
-						  "options": [
-							"Manifest, remain unmanifest throughout",
-							"Remain Unmanifested, manifest during annihilation",
-							"Manifest, Unmanifest, Manifest",
-							"Unmanifest, Manifest, Unmanifest"
-						  ],
-						  "correctAnswer": "Unmanifest, Manifest, Unmanifest"
+							"questionNumber": 10,
+							"questionText": "What happens to the created beings in their beginning, in their interim state and after annihilation respectively?",
+							"options": [
+								"Manifest, remain unmanifest throughout",
+								"Remain Unmanifested, manifest during annihilation",
+								"Manifest, Unmanifest, Manifest",
+								"Unmanifest, Manifest, Unmanifest"
+							],
+							"correctAnswer": "Unmanifest, Manifest, Unmanifest"
 						},
 						{
-						  "questionNumber": 11,
-						  "questionText": "Some look on the ________ as amazing, some describe him as amazing, and some hear of him as amazing, while others, even after hearing about him, cannot understand him at all.",
-						  "options": [
-							"Money",
-							"Food",
-							"Soul",
-							"Celebrities"
-						  ],
-						  "correctAnswer": "Soul"
+							"questionNumber": 11,
+							"questionText": "Some look on the ________ as amazing, some describe him as amazing, and some hear of him as amazing, while others, even after hearing about him, cannot understand him at all.",
+							"options": ["Money", "Food", "Soul", "Celebrities"],
+							"correctAnswer": "Soul"
 						},
 						{
-						  "questionNumber": 12,
-						  "questionText": "Who does Kṛṣṇa say does not lament for the living or the dead?",
-						  "options": [
-							"A person with strong body",
-							"The soldier",
-							"A wise person",
-							"A criminal"
-						  ],
-						  "correctAnswer": "A wise person"
+							"questionNumber": 12,
+							"questionText": "Who does Kṛṣṇa say does not lament for the living or the dead?",
+							"options": [
+								"A person with strong body",
+								"The soldier",
+								"A wise person",
+								"A criminal"
+							],
+							"correctAnswer": "A wise person"
 						},
 						{
-						  "questionNumber": 13,
-						  "questionText": "How does Kṛṣṇa describe the soul's qualities?",
-						  "options": [
-							"Measurable and temporary",
-							"Indestructible, eternal, and immeasurable",
-							"Limited and perishable",
-							"Finite and conditional"
-						  ],
-						  "correctAnswer": "Indestructible, eternal, and immeasurable"
+							"questionNumber": 13,
+							"questionText": "How does Kṛṣṇa describe the soul's qualities?",
+							"options": [
+								"Measurable and temporary",
+								"Indestructible, eternal, and immeasurable",
+								"Limited and perishable",
+								"Finite and conditional"
+							],
+							"correctAnswer": "Indestructible, eternal, and immeasurable"
 						},
 						{
-						  "questionNumber": 14,
-						  "questionText": "TEXT 10: \"O descendant of Bharata, at that time Kṛṣṇa, smiling, in the midst of both the armies, spoke the following words to the grief-stricken Arjuna\". Who is referred to as the 'descendant of Bharata'?",
-						  "options": [
-							"Sañjaya",
-							"Kṛṣṇa",
-							"Arjun",
-							"Dhṛtarāṣṭra"
-						  ],
-						  "correctAnswer": "Dhṛtarāṣṭra"
+							"questionNumber": 14,
+							"questionText": "TEXT 10: \"O descendant of Bharata, at that time Kṛṣṇa, smiling, in the midst of both the armies, spoke the following words to the grief-stricken Arjuna\". Who is referred to as the 'descendant of Bharata'?",
+							"options": ["Sañjaya", "Kṛṣṇa", "Arjun", "Dhṛtarāṣṭra"],
+							"correctAnswer": "Dhṛtarāṣṭra"
 						},
 						{
-						  "questionNumber": 15,
-						  "questionText": "Which Sanskrit word correctly translates to 'best among men'?",
-						  "options": [
-							"Guḍākeśa",
-							"Mahā-bāho",
-							"Puruṣarṣabha",
-							"Dhira"
-						  ],
-						  "correctAnswer": "Puruṣarṣabha"
+							"questionNumber": 15,
+							"questionText": "Which Sanskrit word correctly translates to 'best among men'?",
+							"options": ["Guḍākeśa", "Mahā-bāho", "Puruṣarṣabha", "Dhira"],
+							"correctAnswer": "Puruṣarṣabha"
 						}
-					  ]
-					  ,
+					],
 					"count": 15
 				},
 				{
@@ -614,12 +598,7 @@
 						{
 							"questionNumber": 12,
 							"questionText": "TEXT 39: . . . . . . . . . . . O son of Pṛthā, when you act in such knowledge you can free yourself from the bondage of works. Who is referred as 'Pṛthā'?",
-							"options": [
-								"Draupadī",
-								"Subhadrā",
-								"King Pṛthu",
-								"Kunti"
-							],
+							"options": ["Draupadī", "Subhadrā", "King Pṛthu", "Kunti"],
 							"correctAnswer": "Kunti"
 						},
 						{
@@ -663,117 +642,101 @@
 					"sub-heading": "BG 2.54 to 2.72",
 					"questions": [
 						{
-						  "questionNumber": 1,
-						  "questionText": "What arises from attachment, as mentioned in the texts?",
-						  "options": [
-							"Peace",
-							"Anger",
-							"Wisdom",
-							"Enlightenment"
-						  ],
-						  "correctAnswer": "Anger"
+							"questionNumber": 1,
+							"questionText": "What arises from attachment, as mentioned in the texts?",
+							"options": ["Peace", "Anger", "Wisdom", "Enlightenment"],
+							"correctAnswer": "Anger"
 						},
 						{
-						  "questionNumber": 2,
-						  "questionText": "Fill in the blank: From delusion arises bewilderment of ____.",
-						  "options": [
-							"Memory",
-							"Happiness",
-							"Intelligence",
-							"Peace"
-						  ],
-						  "correctAnswer": "Memory"
+							"questionNumber": 2,
+							"questionText": "Fill in the blank: From delusion arises bewilderment of ____.",
+							"options": ["Memory", "Happiness", "Intelligence", "Peace"],
+							"correctAnswer": "Memory"
 						},
 						{
-						  "questionNumber": 3,
-						  "questionText": "What happens when intelligence is lost, according to the texts?",
-						  "options": [
-							"One achieves transcendence",
-							"One becomes fearless",
-							"One falls into the material pool",
-							"One finds satisfaction in the self"
-						  ],
-						  "correctAnswer": "One falls into the material pool"
+							"questionNumber": 3,
+							"questionText": "What happens when intelligence is lost, according to the texts?",
+							"options": [
+								"One achieves transcendence",
+								"One becomes fearless",
+								"One falls into the material pool",
+								"One finds satisfaction in the self"
+							],
+							"correctAnswer": "One falls into the material pool"
 						},
 						{
-						  "questionNumber": 4,
-						  "questionText": "What is the analogy used to describe a person who achieves peace despite desires flowing in?",
-						  "options": [
-							"A calm forest",
-							"A flame that burns brightly",
-							"A bird flying freely",
-							"An ocean being filled by rivers"
-						  ],
-						  "correctAnswer": "An ocean being filled by rivers"
+							"questionNumber": 4,
+							"questionText": "What is the analogy used to describe a person who achieves peace despite desires flowing in?",
+							"options": [
+								"A calm forest",
+								"A flame that burns brightly",
+								"A bird flying freely",
+								"An ocean being filled by rivers"
+							],
+							"correctAnswer": "An ocean being filled by rivers"
 						},
 						{
-						  "questionNumber": 5,
-						  "questionText": "What does a person attain who has given up all sense of proprietorship and false ego?",
-						  "options": [
-							"Perfect knowledge",
-							"Eternal fame",
-							"Real peace",
-							"Happiness through sense gratification"
-						  ],
-						  "correctAnswer": "Real peace"
+							"questionNumber": 5,
+							"questionText": "What does a person attain who has given up all sense of proprietorship and false ego?",
+							"options": [
+								"Perfect knowledge",
+								"Eternal fame",
+								"Real peace",
+								"Happiness through sense gratification"
+							],
+							"correctAnswer": "Real peace"
 						},
 						{
-						  "questionNumber": 6,
-						  "questionText": "The senses are so strong and impetuous that they forcibly carry away the ____ of a man of discrimination.",
-						  "options": [
-							"Intelligence",
-							"Mind",
-							"Desires",
-							"Knowledge"
-						  ],
-						  "correctAnswer": "Mind"
+							"questionNumber": 6,
+							"questionText": "The senses are so strong and impetuous that they forcibly carry away the ____ of a man of discrimination.",
+							"options": ["Intelligence", "Mind", "Desires", "Knowledge"],
+							"correctAnswer": "Mind"
 						},
 						{
-						  "questionNumber": 7,
-						  "questionText": "How does the tortoise exemplify perfect consciousness?",
-						  "options": [
-							"By withdrawing its senses from spiritual activities",
-							"By withdrawing its senses from sense objects",
-							"By showing fear towards threats",
-							"By showing anger towards threats"
-						  ],
-						  "correctAnswer": "By withdrawing its senses from sense objects"
+							"questionNumber": 7,
+							"questionText": "How does the tortoise exemplify perfect consciousness?",
+							"options": [
+								"By withdrawing its senses from spiritual activities",
+								"By withdrawing its senses from sense objects",
+								"By showing fear towards threats",
+								"By showing anger towards threats"
+							],
+							"correctAnswer": "By withdrawing its senses from sense objects"
 						},
 						{
-						  "questionNumber": 8,
-						  "questionText": "What happens to one who is satisfied in Kṛṣṇa consciousness?",
-						  "options": [
-							"They do not fear material losses",
-							"They develop high intellect",
-							"They become deluded by attachment",
-							"The threefold miseries no longer exist"
-							
-						  ],
-						  "correctAnswer": "The threefold miseries no longer exist"
+							"questionNumber": 8,
+							"questionText": "What happens to one who is satisfied in Kṛṣṇa consciousness?",
+							"options": [
+								"They do not fear material losses",
+								"They develop high intellect",
+								"They become deluded by attachment",
+								"The threefold miseries no longer exist"
+							],
+							"correctAnswer": "The threefold miseries no longer exist"
 						},
 						{
-						  "questionNumber": 9,
-						  "questionText": "Who is awake during what is night for all beings?",
-						  "options": [
-							"The one having fear of the dark",
-							"The one having difficulty falling asleep",
-							"The self-controlled",
-							"The dreamer"
-						  ],
-						  "correctAnswer": "The self-controlled"
+							"questionNumber": 9,
+							"questionText": "Who is awake during what is night for all beings?",
+							"options": [
+								"The one having fear of the dark",
+								"The one having difficulty falling asleep",
+								"The self-controlled",
+								"The dreamer"
+							],
+							"correctAnswer": "The self-controlled"
 						},
 						{
-						  "questionNumber": 10,
-						  "questionText": "What is the state of one situated in spiritual and godly life and not bewildered even at the hour of death?",
-						  "options": [
-							"Bewildered",
-							"Enlightened",
-							"Fallen into illusion",
-							"Entering the kingdom of God"
-						  ],
-						  "correctAnswer": "Entering the kingdom of God"
+							"questionNumber": 10,
+							"questionText": "What is the state of one situated in spiritual and godly life and not bewildered even at the hour of death?",
+							"options": [
+								"Bewildered",
+								"Enlightened",
+								"Fallen into illusion",
+								"Entering the kingdom of God"
+							],
+							"correctAnswer": "Entering the kingdom of God"
 						}
-					  ],
+					],
 					"count": 10
 				},
 				{
@@ -892,8 +855,98 @@
 						}
 					],
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 8",
+					"sub-heading": "BG 4.01 to 4.25",
+					"questions": [
+						{
+							"questionNumber": 1,
+							"questionText": "Before instructing the knowledge of Bhagavad Gita to Arjuna, Lord Krishna had instructed this knowledge to?",
+							"options": ["Manu", "Vivasvan", "Brahma"],
+							"correctAnswer": "Vivasvan"
+						},
+						{
+							"questionNumber": 2,
+							"questionText": "In which way was the supreme science of the Bhagavad Gita passed on after Lord Krishna instructed it to Vivasvan?",
+							"options": ["Through word of mouth", "Was passed from generation to generation", "Through chain of disciplic succession"],
+							"correctAnswer": "Through chain of disciplic succession"
+						},
+						{
+							"questionNumber": 3,
+							"questionText": "Through verse 4.2 of Bhagavad Gita it is clear that the science of Bhagavad Gita is meant for?",
+							"options": ["Saintly kings", "Anyone", "Demigods"],
+							"correctAnswer": "Saintly kings"
+						},
+						{
+							"questionNumber": 4,
+							"questionText": "Why was the ancient science of the relationship with the Supreme told by the Supreme Personality of Godhead to Arjuna?",
+							"options": [
+								"Arjuna was in great confusion, however was intelligent to understand the transcendental mystery of this science",
+								"Arjuna was a saintly person and could understand the transcendental mystery of this science",
+								"Arjuna was a friend of Lord Krishna and could understand the transcendental mystery of this science"
+							],
+							"correctAnswer": "Arjuna was a friend of Lord Krishna and could understand the transcendental mystery of this science"
+						},
+						{
+							"questionNumber": 5,
+							"questionText": "Both we and Lord Krishna have passed many births. Who can remember all the births?",
+							"options": [
+								"Arjuna can remember his births",
+								"Lord Krishna can remember his own births",
+								"Lord Krishna can remember all the births of both, but we cannot"
+							],
+							"correctAnswer": "Lord Krishna can remember all the births of both, but we cannot"
+						},
+						{
+							"questionNumber": 6,
+							"questionText": "Although I am the Lord of all living entities, I still appear in every ___ in My original ___ form.",
+							"options": [
+								"Transcendental, millennium",
+								"Yuga, Transcendental",
+								"Millennium, transcendental"
+							],
+							"correctAnswer": "Millennium, transcendental"
+						},
+						{
+							"questionNumber": 7,
+							"questionText": "Who doesn’t take birth again?",
+							"options": [
+								"One who knows transcendental nature of Lord's appearance and activities",
+								"One who interprets transcendental nature of Lord's appearance and activities",
+								"One who practices ritualistic activities each day as sadhana"
+							],
+							"correctAnswer": "One who knows transcendental nature of Lord's appearance and activities"
+						},
+						{
+							"questionNumber": 8,
+							"questionText": "How many divisions of human society are created by Lord Krishna himself as per the modes of material nature?",
+							"options": ["5", "4", "3"],
+							"correctAnswer": "4"
+						},
+						{
+							"questionNumber": 9,
+							"questionText": "One whose every endeavor is devoid of desire for sense gratification is said by sages to be a worker for whom the reactions of work have been?",
+							"options": [
+								"Destroyed by the blessings of the devotees",
+								"Burned up by the fire of perfect knowledge",
+								"Demolished by intense devotional service"
+							],
+							"correctAnswer": "Burned up by the fire of perfect knowledge"
+						},
+						{
+							"questionNumber": 10,
+							"questionText": "Who is never entangled in actions, although performing them?",
+							"options": [
+								"Who is unaffected by fruitive results",
+								"Who is always in transcendence",
+								"Who is steady in both success and failure"
+							],
+							"correctAnswer": "Who is steady in both success and failure"
+						}
+					],
+					"count": 10
 				}
-				
 			]
 		}
 	]

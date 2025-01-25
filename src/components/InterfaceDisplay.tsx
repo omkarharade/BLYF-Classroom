@@ -123,55 +123,90 @@ const InterfaceDisplay = (props: any) => {
 			{/* options div */}
 			<div className="mx-auto w-[95%] md:mb-[1rem] md:mt-[2rem]">
 				{/* option -1 */}
-				<div
-					onClick={() => {
-						optionCheck1(
-							props.data.questions[qNumber].options[0],
-							props.data.questions[qNumber].correctAnswer
-						);
-					}}
-					className={optionJudge1}
-				>
-					<p className="pe-[1rem]">{"A)"}</p>
-					<p className="font-sans text-lg  md:text-xl font-medium">
-						{props.data.questions[qNumber].options[0]}
-					</p>
-				</div>
+				
+				{props.data.questions[qNumber].options[0] ? (
+					<div
+						onClick={() => {
+							optionCheck1(
+								props.data.questions[qNumber].options[0],
+								props.data.questions[qNumber].correctAnswer
+							);
+						}}
+						className={optionJudge1}
+					>
+						<p className="pe-[1rem]">{"A)"}</p>
+						<p className="font-sans text-lg  md:text-xl font-medium">
+							{props.data.questions[qNumber].options[0]}
+						</p>
+					</div>
+				) : (
+					<></>
+				)}
 
 				{/* option -2 */}
-				<div
-					onClick={() => {
-						optionCheck2(
-							props.data.questions[qNumber].options[1],
-							props.data.questions[qNumber].correctAnswer
-						);
-					}}
-					className={optionJudge2}
-				>
-					<p className="pe-[1rem]">{"B)"}</p>
-					<p className="font-sans text-lg  md:text-xl font-medium">
-						{props.data.questions[qNumber].options[1]}
-					</p>
-				</div>
+
+				{props.data.questions[qNumber].options[1] ? (
+					<div
+						onClick={() => {
+							optionCheck2(
+								props.data.questions[qNumber].options[1],
+								props.data.questions[qNumber].correctAnswer
+							);
+						}}
+						className={optionJudge2}
+					>
+						<p className="pe-[1rem]">{"B)"}</p>
+						<p className="font-sans text-lg  md:text-xl font-medium">
+							{props.data.questions[qNumber].options[1]}
+						</p>
+					</div>
+				) : (
+					<></>
+				)}
 
 				{/* option -3 */}
-				<div
-					onClick={() => {
-						optionCheck3(
-							props.data.questions[qNumber].options[2],
-							props.data.questions[qNumber].correctAnswer
-						);
-					}}
-					className={optionJudge3}
-				>
-					<p className="pe-[1rem]">{"C)"}</p>
-					<p className="font-sans text-lg  md:text-xl font-medium">
-						{props.data.questions[qNumber].options[2]}
-					</p>
-				</div>
+
+				{props.data.questions[qNumber].options[2] ? (
+					<div
+						onClick={() => {
+							optionCheck3(
+								props.data.questions[qNumber].options[2],
+								props.data.questions[qNumber].correctAnswer
+							);
+						}}
+						className={optionJudge3}
+					>
+						<p className="pe-[1rem]">{"C)"}</p>
+						<p className="font-sans text-lg  md:text-xl font-medium">
+							{props.data.questions[qNumber].options[2]}
+						</p>
+					</div>
+				) : (
+					<></>
+				)}
 
 				{/* option-4 */}
-				<div
+
+				{props.data.questions[qNumber].options[3] ? (
+					<div
+						onClick={() => {
+							optionCheck4(
+								props.data.questions[qNumber].options[3],
+								props.data.questions[qNumber].correctAnswer
+							);
+						}}
+						className={optionJudge4}
+					>
+						<p className="pe-[1rem]">{"D)"}</p>
+						<p className="font-sans text-lg  md:text-xl font-medium">
+							{props.data.questions[qNumber].options[3]}
+						</p>
+					</div>
+				) : (
+					<></>
+				)}
+
+				{/* <div
 					onClick={() => {
 						optionCheck4(
 							props.data.questions[qNumber].options[3],
@@ -184,7 +219,7 @@ const InterfaceDisplay = (props: any) => {
 					<p className="font-sans text-lg  md:text-xl font-medium">
 						{props.data.questions[qNumber].options[3]}
 					</p>
-				</div>
+				</div> */}
 			</div>
 
 			<div className="flex flex-row justify-between h-[2rem] mx-[1rem] md:mx-[2.5rem] my-[2rem]">
