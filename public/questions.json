@@ -946,6 +946,115 @@
 						}
 					],
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 9",
+					"sub-heading": "BG 4.26 to 4.42",
+					"questions": [
+						{
+						  "questionNumber": 1,
+						  "questionText": "Who are the performers who know the meaning of sacrifice and become cleansed?",
+						  "options": [
+							"One who performs devotional service",
+							"One who performs eightfold of yoga",
+							"One who sacrifices possessions",
+							"All"
+						  ],
+						  "correctAnswer": "All"
+						},
+						{
+						  "questionNumber": 2,
+						  "questionText": "One cannot be happy without:",
+						  "options": [
+							"Performing austerities",
+							"Performing sacrifices",
+							"Performing Bhakti"
+						  ],
+						  "correctAnswer": "Performing sacrifices"
+						},
+						{
+						  "questionNumber": 3,
+						  "questionText": "Which kind of sacrifice does the Veda approve?",
+						  "options": [
+							"Eightfold of yoga",
+							"Sacrifices of possessions",
+							"Performing Bhakti",
+							"All"
+						  ],
+						  "correctAnswer": "All"
+						},
+						{
+						  "questionNumber": 4,
+						  "questionText": "Which of the two sacrifices is considered better?",
+						  "options": [
+							"Sacrifice of possession",
+							"Sacrifice of knowledge"
+						  ],
+						  "correctAnswer": "Sacrifice of knowledge"
+						},
+						{
+						  "questionNumber": 5,
+						  "questionText": "Who can impart knowledge to a person interested in self-realization?",
+						  "options": [
+							"Supreme Personality of Godhead",
+							"A person already on the path of self-realization",
+							"A self-realized person"
+						  ],
+						  "correctAnswer": "A self-realized person"
+						},
+						{
+						  "questionNumber": 6,
+						  "questionText": "If you are the most sinful, how can you still cross this ocean of miseries?",
+						  "options": [
+							"When you are situated in the boat the same as the self-realized person",
+							"When you are situated in the boat of transcendental knowledge",
+							"When you are situated in the boat of knowledge for liberation"
+						  ],
+						  "correctAnswer": "When you are situated in the boat of transcendental knowledge"
+						},
+						{
+						  "questionNumber": 7,
+						  "questionText": "Who enjoys the transcendental knowledge within himself in due course of time?",
+						  "options": [
+							"One who is performing devotional service",
+							"One who is accomplished in the practice of devotional service",
+							"One who is acquiring knowledge from a self-realized soul"
+						  ],
+						  "correctAnswer": "One who is accomplished in the practice of devotional service"
+						},
+						{
+						  "questionNumber": 8,
+						  "questionText": "Who is eligible to achieve transcendental knowledge of devotional service?",
+						  "options": [
+							"Anyone",
+							"If one is interested in the same",
+							"If one is dedicated and has subdued his senses"
+						  ],
+						  "correctAnswer": "If one is dedicated and has subdued his senses"
+						},
+						{
+						  "questionNumber": 9,
+						  "questionText": "If we never want to fall into illusion, what does Lord Krishna instruct us to do?",
+						  "options": [
+							"Perform devotional service under the guidance of the Lord Himself",
+							"Obtain knowledge from a self-realized soul",
+							"Obtain knowledge from the Vedas"
+						  ],
+						  "correctAnswer": "Obtain knowledge from a self-realized soul"
+						},
+						{
+						  "questionNumber": 10,
+						  "questionText": "Sacrificing possessions by opening various kinds of charitable institutions is which kind of yajña/sacrifice?",
+						  "options": [
+							"Tapomaya-yajña",
+							"Yoga-yajña",
+							"Dravyamaya-yajña"
+						  ],
+						  "correctAnswer": "Dravyamaya-yajña"
+						}
+					  ]
+					  ,
+					"count": 10
 				}
 			]
 		}
