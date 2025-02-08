@@ -741,7 +741,7 @@
 				},
 				{
 					"name": "BG : Class - 7",
-					"sub-heading": "BG 3.25 to 3.43",
+					"sub-heading": "BG 3.01 to 3.43",
 					"questions": [
 						{
 							"questionNumber": 1,
@@ -1055,7 +1055,127 @@
 					  ]
 					  ,
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 10",
+					"sub-heading": "BG 5.01 to 5.29",
+					"questions": [
+						{
+						  "questionNumber": 1,
+						  "questionText": "What does Arjuna ask Krishna at the beginning of their conversation?",
+						  "options": [
+							"Whether renunciation or work in devotion is better",
+							"How to attain wealth and prosperity",
+							"Why people suffer in the material world",
+							"How to defeat his enemies in battle"
+						  ],
+						  "correctAnswer": "Whether renunciation or work in devotion is better"
+						},
+						{
+						  "questionNumber": 2,
+						  "questionText": "According to Krishna, which path is superior for liberation?",
+						  "options": [
+							"Renunciation of work",
+							"Work in devotional service",
+							"Following strict penance",
+							"Performing sacrifices to demigods"
+						  ],
+						  "correctAnswer": "Work in devotional service"
+						},
+						{
+						  "questionNumber": 3,
+						  "questionText": "How do the learned view devotional service and analytical study?",
+						  "options": [
+							"As separate and opposing paths",
+							"As unnecessary for liberation",
+							"As equally beneficial",
+							"As only meant for the Brahmanas"
+						  ],
+						  "correctAnswer": "As equally beneficial"
+						},
+						{
+						  "questionNumber": 4,
+						  "questionText": "What is the comparison used for a person who performs duty without attachment?",
+						  "options": [
+							"Like a bird flying freely",
+							"Like a roaring lion",
+							"Like an ocean that never overflows",
+							"Like the lotus leaf untouched by water"
+						  ],
+						  "correctAnswer": "Like the lotus leaf untouched by water"
+						},
+						{
+						  "questionNumber": 5,
+						  "questionText": "How is true knowledge described in relation to darkness?",
+						  "options": [
+							"Like the rising moon in the night sky",
+							"Like the sun illuminating everything in daytime",
+							"Like a lamp in a dark cave",
+							"Like fire burning away ignorance"
+						  ],
+						  "correctAnswer": "Like the sun illuminating everything in daytime"
+						},
+						{
+						  "questionNumber": 6,
+						  "questionText": "What is the vision of a truly knowledgeable sage?",
+						  "options": [
+							"Seeing all beings with equal vision",
+							"Distinguishing between good and bad people",
+							"Recognizing social status and wealth",
+							"Judging others based on their religious practices"
+						  ],
+						  "correctAnswer": "Seeing all beings with equal vision"
+						},
+						{
+						  "questionNumber": 7,
+						  "questionText": "What characteristic defines those who have conquered birth and death?",
+						  "options": [
+							  "Performing sacrifices regularly",
+							  "Engaging in deep meditation",
+							  "Studying the Vedas thoroughly",
+							  "Having equanimity and sameness"
+						  ],
+						  "correctAnswer": "Having equanimity and sameness"
+						},
+						{
+						  "questionNumber": 8,
+						  "questionText": "What does a self-intelligent person avoid?",
+						  "options": [
+							"Rejoicing in gains and lamenting losses",
+							"Interacting with others",
+							"Seeking knowledge from the scriptures",
+							"Performing any actions"
+						  ],
+						  "correctAnswer": "Rejoicing in gains and lamenting losses"
+						},
+						{
+						  "questionNumber": 9,
+						  "questionText": "What must one tolerate before giving up the body?",
+						  "options": [
+							  "The pain of fasting",
+							  "The distractions of family life",
+							  "The urges of material senses",
+							  "The temptations of wealth"
+						  ],
+						  "correctAnswer": "The urges of material senses"
+						},
+						{
+						  "questionNumber": 10,
+						  "questionText": "Who attains peace from material miseries?",
+						  "options": [
+							  "One who performs rituals regularly for Krishna",
+							  "One who knows Krishna as the ultimate beneficiary and well-wisher",
+							  "One who fasts and meditates daily for Krishna",
+							  "One who renounces all possessions for Krishna"
+						  ],
+						  "correctAnswer": "One who knows Krishna as the ultimate beneficiary and well-wisher"
+						}
+					  ]
+					  
+					  ,
+					"count": 10
 				}
+				
 			]
 		}
 	]
