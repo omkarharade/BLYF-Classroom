@@ -1174,6 +1174,123 @@
 					  
 					  ,
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 11",
+					"sub-heading": "BG 6.01 to 6.32",
+					"questions": [
+						{
+						  "questionNumber": 1,
+						  "questionText": "According to the Supreme Personality of Godhead, who is considered a true mystic?",
+						  "options": [
+							"One who performs no duty and lights no fire",
+							"One who is unattached to the fruits of his work and performs his obligations",
+							"One who engages in material pleasures",
+							"One who renounces all actions, including duties"
+						  ],
+						  "correctAnswer": "One who is unattached to the fruits of his work and performs his obligations"
+						},
+						{
+						  "questionNumber": 2,
+						  "questionText": "For a beginner in the eightfold yoga system, what is said to be the means?",
+						  "options": [
+							"Meditation",
+							"Work",
+							"Fasting",
+							"Silence"
+						  ],
+						  "correctAnswer": "Work"
+						},
+						{
+						  "questionNumber": 3,
+						  "questionText": "A person is said to be elevated in yoga when he:",
+						  "options": [
+							"Renounces all material desires",
+							"Accumulates wealth through spiritual means",
+							"Performs grand sacrifices",
+							"Follows elaborate rituals"
+						  ],
+						  "correctAnswer": "Renounces all material desires"
+						},
+						{
+						  "questionNumber": 4,
+						  "questionText": "What should one use to deliver oneself?",
+						  "options": [
+							"Ego",
+							"Wealth",
+							"Physical strength",
+							"Mind"
+						  ],
+						  "correctAnswer": "Mind"
+						},
+						{
+						  "questionNumber": 5,
+						  "questionText": "What should the yogī use as a seat while practicing yoga?",
+						  "options": [
+							"Soft silk cushions",
+							"A golden throne",
+							"Kuśa grass covered with a deerskin and a soft cloth",
+							"A bed with a mattress"
+						  ],
+						  "correctAnswer": "Kuśa grass covered with a deerskin and a soft cloth"
+						},
+						{
+						  "questionNumber": 6,
+						  "questionText": "Who cannot become a yogī?",
+						  "options": [
+							"One who sleeps too much or too little",
+							"One who does not follow a undisciplined life",
+							"One who does not let the senses go uncontrolled",
+							"One who meditates regularly"
+						  ],
+						  "correctAnswer": "One who sleeps too much or too little"
+						},
+						{
+						  "questionNumber": 7,
+						  "questionText": "What is the example given for a steady mind in meditation?",
+						  "options": [
+							"A flowing river",
+							"A lamp in a windless place",
+							"A roaring ocean",
+							"A stormy sky"
+						  ],
+						  "correctAnswer": "A lamp in a windless place"
+						},
+						{
+						  "questionNumber": 8,
+						  "questionText": "How can one mitigate all material pains?",
+						  "options": [
+							"By eating excessively",
+							"By regulating habits of eating, sleeping, recreation, and work",
+							"By avoiding spiritual practices",
+							"By ignoring yoga"
+						  ],
+						  "correctAnswer": "By regulating habits of eating, sleeping, recreation, and work"
+						},
+						{
+						  "questionNumber": 9,
+						  "questionText": "What should a yogī do when his mind wanders?",
+						  "options": [
+							"Let it flow freely",
+							"Follow it and enjoy material desires",
+							"Ignore meditation",
+							"Withdraw it and bring it back under control"
+						  ],
+						  "correctAnswer": "Withdraw it and bring it back under control"
+						},
+						{
+						  "questionNumber": 10,
+						  "questionText": "A person is said to be established in self-realization and called a yogī when he is fully satisfied by virtue of acquired _______ and _______. Such a person is _______ and sees everything – whether pebbles, stones, or gold – as  _______.",
+						  "options": [
+							"wealth, power, superior, most valuable",
+							"knowledge, realization, self-controlled, the same",
+							"fame, success, materialistic, different",
+							"desires, emotions, restless, insignificant"
+						  ],
+						  "correctAnswer": "knowledge, realization, self-controlled, the same"
+						}
+					  ],
+					"count": 10
 				}
 				
 			]
