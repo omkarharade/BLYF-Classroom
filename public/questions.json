@@ -1291,8 +1291,125 @@
 						}
 					  ],
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 12",
+					"sub-heading": "BG 6.33 to 6.47",
+					"questions": [
+						{
+						  "questionNumber": 1,
+						  "questionText": "What does Arjuna say about the system of yoga summarized by Krishna?",
+						  "options": [
+							"It is the easiest path to liberation",
+							"It is impractical and unendurable",
+							"It is practical and endurable",
+							"It is practical and unendurable"
+						  ],
+						  "correctAnswer": "It is impractical and unendurable"
+						},
+						{
+						  "questionNumber": 2,
+						  "questionText": "According to Arjuna, controlling the mind is more difficult than controlling what?",
+						  "options": [
+							"Fire",
+							"Water",
+							"The wind",
+							"The earth"
+						  ],
+						  "correctAnswer": "The wind"
+						},
+						{
+						  "questionNumber": 3,
+						  "questionText": "What qualities does Arjuna attribute to the mind in his conversation with Krishna?",
+						  "options": [
+							  "Steady and peaceful",
+							  "Gentle and calm",
+							  "Easily controllable",
+							  "Restless, turbulent, obstinate, and very strong"
+						  ],
+						  "correctAnswer": "Restless, turbulent, obstinate, and very strong"
+						},
+						{
+						  "questionNumber": 4,
+						  "questionText": "What does Krishna say is required to curb the restless mind?",
+						  "options": [
+							"Isolation and renunciation",
+							"Practice and detachment",
+							"Knowledge and detachment",
+							"Rituals and prayers"
+						  ],
+						  "correctAnswer": "Practice and detachment"
+						},
+						{
+						  "questionNumber": 5,
+						  "questionText": "Where is an unsuccessful yogī reborn after many years of enjoyment?",
+						  "options": [
+							"In a family of scholars",
+							"In a family of ascetics in the mountains",
+							"In a family of temple priests",
+							"In a family of righteous people or rich aristocracy"
+						  ],
+						  "correctAnswer": "In a family of righteous people or rich aristocracy"
+						},
+						{
+						  "questionNumber": 6,
+						  "questionText": "What kind of birth is considered rare according to Krishna?",
+						  "options": [
+							"Birth in a family of warriors",
+							"Birth in a family of transcendentalists",
+							"Birth in a family of Thieves",
+							"Birth in a family of merchants"
+						  ],
+						  "correctAnswer": "Birth in a family of transcendentalists"
+						},
+						{
+						  "questionNumber": 7,
+						  "questionText": "What does a transcendentalist regain upon taking a new birth?",
+						  "options": [
+							"Wealth and status",
+							"The ability to perform rituals perfectly",
+							"Divine consciousness from their previous life",
+							"Perfect knowledge of scriptures"
+						  ],
+						  "correctAnswer": "Divine consciousness from their previous life"
+						},
+						{
+						  "questionNumber": 8,
+						  "questionText": "What happens when a yogī continues their practice with sincere effort?",
+						  "options": [
+							"They eventually attain the supreme goal",
+							"They lose interest in spiritual life",
+							"They are reborn as kings",
+							"They become famous among people"
+						  ],
+						  "correctAnswer": "They eventually attain the supreme goal"
+						},
+						{
+						  "questionNumber": 9,
+						  "questionText": "What does Krishna advise Arjuna to become in all circumstances?",
+						  "options": [
+							"A warrior",
+							"A yogī",
+							"A renunciate",
+							"A ruler"
+						  ],
+						  "correctAnswer": "A yogī"
+						},
+						{
+						  "questionNumber": 10,
+						  "questionText": "A yogī is not greater than which of the following personalities according to 6.46?",
+						  "options": [
+							"Ascetic",
+							"Fruitive worker",
+							"Krishna",
+							"Empiricist"
+						  ],
+						  "correctAnswer": "Krishna"
+						}
+					  ],
+					  
+					"count": 10
 				}
-				
 			]
 		}
 	]
