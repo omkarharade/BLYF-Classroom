@@ -1409,6 +1409,124 @@
 					  ],
 					  
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 13",
+					"sub-heading": "BG 11.01 to 11.55",
+					"questions": [
+						{
+						  "questionNumber": 1,
+						  "questionText": "Why does Krishna grant Arjuna divine eyes?",
+						  "options": [
+							"So Arjuna can become immortal",
+							"So Arjuna can understand the Vedas",
+							"So Arjuna can perceive Krishna’s universal form",
+							"So Arjuna can see through illusions"
+						  ],
+						  "correctAnswer": "So Arjuna can perceive Krishna’s universal form"
+						},
+						{
+						  "questionNumber": 2,
+						  "questionText": "What request does Arjuna make to Krishna in the beginning of Chapter 11?",
+						  "options": [
+							"To teach him how to meditate",
+							"To describe the science of yoga",
+							"To show His universal form",
+							"To help him defeat Karna"
+						  ],
+						  "correctAnswer": "To show His universal form"
+						},
+						{
+						  "questionNumber": 3,
+						  "questionText": "What does Arjuna see within Krishna's universal form?",
+						  "options": [
+							"Only the battlefield of Kurukshetra",
+							"The future avatars of Krishna",
+							"The seven oceans",
+							"The entire universe, both moving and nonmoving"
+						  ],
+						  "correctAnswer": "The entire universe, both moving and nonmoving"
+						},
+						{
+						  "questionNumber": 4,
+						  "questionText": "Which celestial comparison is made to describe the radiance of the universal form?",
+						  "options": [
+							"The moonlight on a full moon",
+							"A thousand suns rising simultaneously",
+							"The glow of fireflies",
+							"The northern lights"
+						  ],
+						  "correctAnswer": "A thousand suns rising simultaneously"
+						},
+						{
+						  "questionNumber": 5,
+						  "questionText": "What emotion does Arjuna predominantly feel upon seeing the terrifying form of Krishna?",
+						  "options": [
+							"Bewildered and astonished",
+							"Jealousy",
+							"Joy and pride",
+							"Laughter"
+						  ],
+						  "correctAnswer": "Bewildered and astonished"
+						},
+						{
+						  "questionNumber": 6,
+						  "questionText": "What simile does Arjuna use to describe how warriors are entering Krishna’s mouths?",
+						  "options": [
+							"Like clouds into a storm",
+							"Like rivers flowing to the sea",
+							"Like moths rushing into fire",
+							"Like birds flying into the sky"
+						  ],
+						  "correctAnswer": "Like moths rushing into fire"
+						},
+						{
+						  "questionNumber": 7,
+						  "questionText": "Which form does Arjuna request Krishna to return to, after seeing the universal form?",
+						  "options": [
+							"The two-armed form",
+							"The four-armed Viṣṇu form",
+							"The cosmic serpent form",
+							"The baby form of Gopāla"
+						  ],
+						  "correctAnswer": "The four-armed Viṣṇu form"
+						},
+						{
+						  "questionNumber": 8,
+						  "questionText": "According to Krishna, how can one truly see and understand Him?",
+						  "options": [
+							"Through penance and fasting",
+							"By memorizing all the Vedas",
+							"By mastering all yoga postures",
+							"Only by undivided devotional service"
+						  ],
+						  "correctAnswer": "Only by undivided devotional service"
+						},
+						{
+						  "questionNumber": 9,
+						  "questionText": "What does Krishna ask Arjuna to do, even though the enemies are already doomed?",
+						  "options": [
+							"Preach renunciation",
+							"Surrender and leave the war",
+							"Be an instrument and fight",
+							"Take shelter in a forest"
+						  ],
+						  "correctAnswer": "Be an instrument and fight"
+						},
+						{
+						  "questionNumber": 10,
+						  "questionText": "Who does Krishna say is qualified to enter into the mysteries of His understanding?",
+						  "options": [
+							"One who renders pure devotional service",
+							"One who meditates in the Himalayas",
+							"One who reads all scriptures",
+							"One who defeats enemies in battle"
+						  ],
+						  "correctAnswer": "One who renders pure devotional service"
+						}
+					  ],
+
+					"count": 10
 				}
 			]
 		}
