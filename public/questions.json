@@ -869,13 +869,21 @@
 						{
 							"questionNumber": 2,
 							"questionText": "In which way was the supreme science of the Bhagavad Gita passed on after Lord Krishna instructed it to Vivasvan?",
-							"options": ["Through word of mouth", "Was passed from generation to generation", "Through chain of disciplic succession"],
+							"options": [
+								"Through word of mouth",
+								"Was passed from generation to generation",
+								"Through chain of disciplic succession"
+							],
 							"correctAnswer": "Through chain of disciplic succession"
 						},
 						{
 							"questionNumber": 3,
 							"questionText": "Why do men in this world worship Demi-Gods ?",
-							"options": ["with an aim to ultimately find out the supreme truth", "with an aim to follow the ancestors", "with an aim to get the desired fruitive results"],
+							"options": [
+								"with an aim to ultimately find out the supreme truth",
+								"with an aim to follow the ancestors",
+								"with an aim to get the desired fruitive results"
+							],
 							"correctAnswer": "with an aim to get the desired fruitive results"
 						},
 						{
@@ -952,108 +960,100 @@
 					"sub-heading": "BG 4.26 to 4.42",
 					"questions": [
 						{
-						  "questionNumber": 1,
-						  "questionText": "Who are the performers who know the meaning of sacrifice and become cleansed?",
-						  "options": [
-							"One who performs devotional service",
-							"One who performs eightfold of yoga",
-							"One who sacrifices possessions",
-							"All"
-						  ],
-						  "correctAnswer": "All"
+							"questionNumber": 1,
+							"questionText": "Who are the performers who know the meaning of sacrifice and become cleansed?",
+							"options": [
+								"One who performs devotional service",
+								"One who performs eightfold of yoga",
+								"One who sacrifices possessions",
+								"All"
+							],
+							"correctAnswer": "All"
 						},
 						{
-						  "questionNumber": 2,
-						  "questionText": "One cannot be happy without:",
-						  "options": [
-							"Performing austerities",
-							"Performing sacrifices",
-							"Performing Bhakti"
-						  ],
-						  "correctAnswer": "Performing sacrifices"
+							"questionNumber": 2,
+							"questionText": "One cannot be happy without:",
+							"options": [
+								"Performing austerities",
+								"Performing sacrifices",
+								"Performing Bhakti"
+							],
+							"correctAnswer": "Performing sacrifices"
 						},
 						{
-						  "questionNumber": 3,
-						  "questionText": "Which kind of sacrifice does the Veda approve?",
-						  "options": [
-							"Eightfold of yoga",
-							"Sacrifices of possessions",
-							"Performing Bhakti",
-							"All"
-						  ],
-						  "correctAnswer": "All"
+							"questionNumber": 3,
+							"questionText": "Which kind of sacrifice does the Veda approve?",
+							"options": [
+								"Eightfold of yoga",
+								"Sacrifices of possessions",
+								"Performing Bhakti",
+								"All"
+							],
+							"correctAnswer": "All"
 						},
 						{
-						  "questionNumber": 4,
-						  "questionText": "Which of the two sacrifices is considered better?",
-						  "options": [
-							"Sacrifice of possession",
-							"Sacrifice of knowledge"
-						  ],
-						  "correctAnswer": "Sacrifice of knowledge"
+							"questionNumber": 4,
+							"questionText": "Which of the two sacrifices is considered better?",
+							"options": ["Sacrifice of possession", "Sacrifice of knowledge"],
+							"correctAnswer": "Sacrifice of knowledge"
 						},
 						{
-						  "questionNumber": 5,
-						  "questionText": "Who can impart knowledge to a person interested in self-realization?",
-						  "options": [
-							"Supreme Personality of Godhead",
-							"A person already on the path of self-realization",
-							"A self-realized person"
-						  ],
-						  "correctAnswer": "A self-realized person"
+							"questionNumber": 5,
+							"questionText": "Who can impart knowledge to a person interested in self-realization?",
+							"options": [
+								"Supreme Personality of Godhead",
+								"A person already on the path of self-realization",
+								"A self-realized person"
+							],
+							"correctAnswer": "A self-realized person"
 						},
 						{
-						  "questionNumber": 6,
-						  "questionText": "If you are the most sinful, how can you still cross this ocean of miseries?",
-						  "options": [
-							"When you are situated in the boat the same as the self-realized person",
-							"When you are situated in the boat of transcendental knowledge",
-							"When you are situated in the boat of knowledge for liberation"
-						  ],
-						  "correctAnswer": "When you are situated in the boat of transcendental knowledge"
+							"questionNumber": 6,
+							"questionText": "If you are the most sinful, how can you still cross this ocean of miseries?",
+							"options": [
+								"When you are situated in the boat the same as the self-realized person",
+								"When you are situated in the boat of transcendental knowledge",
+								"When you are situated in the boat of knowledge for liberation"
+							],
+							"correctAnswer": "When you are situated in the boat of transcendental knowledge"
 						},
 						{
-						  "questionNumber": 7,
-						  "questionText": "Who enjoys the transcendental knowledge within himself in due course of time?",
-						  "options": [
-							"One who is performing devotional service",
-							"One who is accomplished in the practice of devotional service",
-							"One who is acquiring knowledge from a self-realized soul"
-						  ],
-						  "correctAnswer": "One who is accomplished in the practice of devotional service"
+							"questionNumber": 7,
+							"questionText": "Who enjoys the transcendental knowledge within himself in due course of time?",
+							"options": [
+								"One who is performing devotional service",
+								"One who is accomplished in the practice of devotional service",
+								"One who is acquiring knowledge from a self-realized soul"
+							],
+							"correctAnswer": "One who is accomplished in the practice of devotional service"
 						},
 						{
-						  "questionNumber": 8,
-						  "questionText": "Who is eligible to achieve transcendental knowledge of devotional service?",
-						  "options": [
-							"Anyone",
-							"If one is interested in the same",
-							"If one is dedicated and has subdued his senses"
-						  ],
-						  "correctAnswer": "If one is dedicated and has subdued his senses"
+							"questionNumber": 8,
+							"questionText": "Who is eligible to achieve transcendental knowledge of devotional service?",
+							"options": [
+								"Anyone",
+								"If one is interested in the same",
+								"If one is dedicated and has subdued his senses"
+							],
+							"correctAnswer": "If one is dedicated and has subdued his senses"
 						},
 						{
-						  "questionNumber": 9,
-						  "questionText": "If we never want to fall into illusion, what does Lord Krishna instruct us to do?",
-						  "options": [
-							"Perform devotional service under the guidance of the Lord Himself",
-							"Obtain knowledge from a self-realized soul",
-							"Obtain knowledge from the Vedas"
-						  ],
-						  "correctAnswer": "Obtain knowledge from a self-realized soul"
+							"questionNumber": 9,
+							"questionText": "If we never want to fall into illusion, what does Lord Krishna instruct us to do?",
+							"options": [
+								"Perform devotional service under the guidance of the Lord Himself",
+								"Obtain knowledge from a self-realized soul",
+								"Obtain knowledge from the Vedas"
+							],
+							"correctAnswer": "Obtain knowledge from a self-realized soul"
 						},
 						{
-						  "questionNumber": 10,
-						  "questionText": "Sacrificing possessions by opening various kinds of charitable institutions is which kind of yajña/sacrifice?",
-						  "options": [
-							"Tapomaya-yajña",
-							"Yoga-yajña",
-							"Dravyamaya-yajña"
-						  ],
-						  "correctAnswer": "Dravyamaya-yajña"
+							"questionNumber": 10,
+							"questionText": "Sacrificing possessions by opening various kinds of charitable institutions is which kind of yajña/sacrifice?",
+							"options": ["Tapomaya-yajña", "Yoga-yajña", "Dravyamaya-yajña"],
+							"correctAnswer": "Dravyamaya-yajña"
 						}
-					  ]
-					  ,
+					],
 					"count": 10
 				},
 				{
@@ -1061,118 +1061,117 @@
 					"sub-heading": "BG 5.01 to 5.29",
 					"questions": [
 						{
-						  "questionNumber": 1,
-						  "questionText": "What does Arjuna ask Krishna at the beginning of their conversation?",
-						  "options": [
-							"Whether renunciation or work in devotion is better",
-							"How to attain wealth and prosperity",
-							"Why people suffer in the material world",
-							"How to defeat his enemies in battle"
-						  ],
-						  "correctAnswer": "Whether renunciation or work in devotion is better"
+							"questionNumber": 1,
+							"questionText": "What does Arjuna ask Krishna at the beginning of their conversation?",
+							"options": [
+								"Whether renunciation or work in devotion is better",
+								"How to attain wealth and prosperity",
+								"Why people suffer in the material world",
+								"How to defeat his enemies in battle"
+							],
+							"correctAnswer": "Whether renunciation or work in devotion is better"
 						},
 						{
-						  "questionNumber": 2,
-						  "questionText": "According to Krishna, which path is superior for liberation?",
-						  "options": [
-							"Renunciation of work",
-							"Work in devotional service",
-							"Following strict penance",
-							"Performing sacrifices to demigods"
-						  ],
-						  "correctAnswer": "Work in devotional service"
+							"questionNumber": 2,
+							"questionText": "According to Krishna, which path is superior for liberation?",
+							"options": [
+								"Renunciation of work",
+								"Work in devotional service",
+								"Following strict penance",
+								"Performing sacrifices to demigods"
+							],
+							"correctAnswer": "Work in devotional service"
 						},
 						{
-						  "questionNumber": 3,
-						  "questionText": "How do the learned view devotional service and analytical study?",
-						  "options": [
-							"As separate and opposing paths",
-							"As unnecessary for liberation",
-							"As equally beneficial",
-							"As only meant for the Brahmanas"
-						  ],
-						  "correctAnswer": "As equally beneficial"
+							"questionNumber": 3,
+							"questionText": "How do the learned view devotional service and analytical study?",
+							"options": [
+								"As separate and opposing paths",
+								"As unnecessary for liberation",
+								"As equally beneficial",
+								"As only meant for the Brahmanas"
+							],
+							"correctAnswer": "As equally beneficial"
 						},
 						{
-						  "questionNumber": 4,
-						  "questionText": "What is the comparison used for a person who performs duty without attachment?",
-						  "options": [
-							"Like a bird flying freely",
-							"Like a roaring lion",
-							"Like an ocean that never overflows",
-							"Like the lotus leaf untouched by water"
-						  ],
-						  "correctAnswer": "Like the lotus leaf untouched by water"
+							"questionNumber": 4,
+							"questionText": "What is the comparison used for a person who performs duty without attachment?",
+							"options": [
+								"Like a bird flying freely",
+								"Like a roaring lion",
+								"Like an ocean that never overflows",
+								"Like the lotus leaf untouched by water"
+							],
+							"correctAnswer": "Like the lotus leaf untouched by water"
 						},
 						{
-						  "questionNumber": 5,
-						  "questionText": "How is true knowledge described in relation to darkness?",
-						  "options": [
-							"Like the rising moon in the night sky",
-							"Like the sun illuminating everything in daytime",
-							"Like a lamp in a dark cave",
-							"Like fire burning away ignorance"
-						  ],
-						  "correctAnswer": "Like the sun illuminating everything in daytime"
+							"questionNumber": 5,
+							"questionText": "How is true knowledge described in relation to darkness?",
+							"options": [
+								"Like the rising moon in the night sky",
+								"Like the sun illuminating everything in daytime",
+								"Like a lamp in a dark cave",
+								"Like fire burning away ignorance"
+							],
+							"correctAnswer": "Like the sun illuminating everything in daytime"
 						},
 						{
-						  "questionNumber": 6,
-						  "questionText": "What is the vision of a truly knowledgeable sage?",
-						  "options": [
-							"Seeing all beings with equal vision",
-							"Distinguishing between good and bad people",
-							"Recognizing social status and wealth",
-							"Judging others based on their religious practices"
-						  ],
-						  "correctAnswer": "Seeing all beings with equal vision"
+							"questionNumber": 6,
+							"questionText": "What is the vision of a truly knowledgeable sage?",
+							"options": [
+								"Seeing all beings with equal vision",
+								"Distinguishing between good and bad people",
+								"Recognizing social status and wealth",
+								"Judging others based on their religious practices"
+							],
+							"correctAnswer": "Seeing all beings with equal vision"
 						},
 						{
-						  "questionNumber": 7,
-						  "questionText": "What characteristic defines those who have conquered birth and death?",
-						  "options": [
-							  "Performing sacrifices regularly",
-							  "Engaging in deep meditation",
-							  "Studying the Vedas thoroughly",
-							  "Having equanimity and sameness"
-						  ],
-						  "correctAnswer": "Having equanimity and sameness"
+							"questionNumber": 7,
+							"questionText": "What characteristic defines those who have conquered birth and death?",
+							"options": [
+								"Performing sacrifices regularly",
+								"Engaging in deep meditation",
+								"Studying the Vedas thoroughly",
+								"Having equanimity and sameness"
+							],
+							"correctAnswer": "Having equanimity and sameness"
 						},
 						{
-						  "questionNumber": 8,
-						  "questionText": "What does a self-intelligent person avoid?",
-						  "options": [
-							"Rejoicing in gains and lamenting losses",
-							"Interacting with others",
-							"Seeking knowledge from the scriptures",
-							"Performing any actions"
-						  ],
-						  "correctAnswer": "Rejoicing in gains and lamenting losses"
+							"questionNumber": 8,
+							"questionText": "What does a self-intelligent person avoid?",
+							"options": [
+								"Rejoicing in gains and lamenting losses",
+								"Interacting with others",
+								"Seeking knowledge from the scriptures",
+								"Performing any actions"
+							],
+							"correctAnswer": "Rejoicing in gains and lamenting losses"
 						},
 						{
-						  "questionNumber": 9,
-						  "questionText": "What must one tolerate before giving up the body?",
-						  "options": [
-							  "The pain of fasting",
-							  "The distractions of family life",
-							  "The urges of material senses",
-							  "The temptations of wealth"
-						  ],
-						  "correctAnswer": "The urges of material senses"
+							"questionNumber": 9,
+							"questionText": "What must one tolerate before giving up the body?",
+							"options": [
+								"The pain of fasting",
+								"The distractions of family life",
+								"The urges of material senses",
+								"The temptations of wealth"
+							],
+							"correctAnswer": "The urges of material senses"
 						},
 						{
-						  "questionNumber": 10,
-						  "questionText": "Who attains peace from material miseries?",
-						  "options": [
-							  "One who performs rituals regularly for Krishna",
-							  "One who knows Krishna as the ultimate beneficiary and well-wisher",
-							  "One who fasts and meditates daily for Krishna",
-							  "One who renounces all possessions for Krishna"
-						  ],
-						  "correctAnswer": "One who knows Krishna as the ultimate beneficiary and well-wisher"
+							"questionNumber": 10,
+							"questionText": "Who attains peace from material miseries?",
+							"options": [
+								"One who performs rituals regularly for Krishna",
+								"One who knows Krishna as the ultimate beneficiary and well-wisher",
+								"One who fasts and meditates daily for Krishna",
+								"One who renounces all possessions for Krishna"
+							],
+							"correctAnswer": "One who knows Krishna as the ultimate beneficiary and well-wisher"
 						}
-					  ]
-					  
-					  ,
+					],
+
 					"count": 10
 				},
 				{
@@ -1180,116 +1179,106 @@
 					"sub-heading": "BG 6.01 to 6.32",
 					"questions": [
 						{
-						  "questionNumber": 1,
-						  "questionText": "According to the Supreme Personality of Godhead, who is considered a true mystic?",
-						  "options": [
-							"One who performs no duty and lights no fire",
-							"One who is unattached to the fruits of his work and performs his obligations",
-							"One who engages in material pleasures",
-							"One who renounces all actions, including duties"
-						  ],
-						  "correctAnswer": "One who is unattached to the fruits of his work and performs his obligations"
+							"questionNumber": 1,
+							"questionText": "According to the Supreme Personality of Godhead, who is considered a true mystic?",
+							"options": [
+								"One who performs no duty and lights no fire",
+								"One who is unattached to the fruits of his work and performs his obligations",
+								"One who engages in material pleasures",
+								"One who renounces all actions, including duties"
+							],
+							"correctAnswer": "One who is unattached to the fruits of his work and performs his obligations"
 						},
 						{
-						  "questionNumber": 2,
-						  "questionText": "For a beginner in the eightfold yoga system, what is said to be the means?",
-						  "options": [
-							"Meditation",
-							"Work",
-							"Fasting",
-							"Silence"
-						  ],
-						  "correctAnswer": "Work"
+							"questionNumber": 2,
+							"questionText": "For a beginner in the eightfold yoga system, what is said to be the means?",
+							"options": ["Meditation", "Work", "Fasting", "Silence"],
+							"correctAnswer": "Work"
 						},
 						{
-						  "questionNumber": 3,
-						  "questionText": "A person is said to be elevated in yoga when he:",
-						  "options": [
-							"Renounces all material desires",
-							"Accumulates wealth through spiritual means",
-							"Performs grand sacrifices",
-							"Follows elaborate rituals"
-						  ],
-						  "correctAnswer": "Renounces all material desires"
+							"questionNumber": 3,
+							"questionText": "A person is said to be elevated in yoga when he:",
+							"options": [
+								"Renounces all material desires",
+								"Accumulates wealth through spiritual means",
+								"Performs grand sacrifices",
+								"Follows elaborate rituals"
+							],
+							"correctAnswer": "Renounces all material desires"
 						},
 						{
-						  "questionNumber": 4,
-						  "questionText": "What should one use to deliver oneself?",
-						  "options": [
-							"Ego",
-							"Wealth",
-							"Physical strength",
-							"Mind"
-						  ],
-						  "correctAnswer": "Mind"
+							"questionNumber": 4,
+							"questionText": "What should one use to deliver oneself?",
+							"options": ["Ego", "Wealth", "Physical strength", "Mind"],
+							"correctAnswer": "Mind"
 						},
 						{
-						  "questionNumber": 5,
-						  "questionText": "What should the yogī use as a seat while practicing yoga?",
-						  "options": [
-							"Soft silk cushions",
-							"A golden throne",
-							"Kuśa grass covered with a deerskin and a soft cloth",
-							"A bed with a mattress"
-						  ],
-						  "correctAnswer": "Kuśa grass covered with a deerskin and a soft cloth"
+							"questionNumber": 5,
+							"questionText": "What should the yogī use as a seat while practicing yoga?",
+							"options": [
+								"Soft silk cushions",
+								"A golden throne",
+								"Kuśa grass covered with a deerskin and a soft cloth",
+								"A bed with a mattress"
+							],
+							"correctAnswer": "Kuśa grass covered with a deerskin and a soft cloth"
 						},
 						{
-						  "questionNumber": 6,
-						  "questionText": "Who cannot become a yogī?",
-						  "options": [
-							"One who sleeps too much or too little",
-							"One who does not follow a undisciplined life",
-							"One who does not let the senses go uncontrolled",
-							"One who meditates regularly"
-						  ],
-						  "correctAnswer": "One who sleeps too much or too little"
+							"questionNumber": 6,
+							"questionText": "Who cannot become a yogī?",
+							"options": [
+								"One who sleeps too much or too little",
+								"One who does not follow a undisciplined life",
+								"One who does not let the senses go uncontrolled",
+								"One who meditates regularly"
+							],
+							"correctAnswer": "One who sleeps too much or too little"
 						},
 						{
-						  "questionNumber": 7,
-						  "questionText": "What is the example given for a steady mind in meditation?",
-						  "options": [
-							"A flowing river",
-							"A lamp in a windless place",
-							"A roaring ocean",
-							"A stormy sky"
-						  ],
-						  "correctAnswer": "A lamp in a windless place"
+							"questionNumber": 7,
+							"questionText": "What is the example given for a steady mind in meditation?",
+							"options": [
+								"A flowing river",
+								"A lamp in a windless place",
+								"A roaring ocean",
+								"A stormy sky"
+							],
+							"correctAnswer": "A lamp in a windless place"
 						},
 						{
-						  "questionNumber": 8,
-						  "questionText": "How can one mitigate all material pains?",
-						  "options": [
-							"By eating excessively",
-							"By regulating habits of eating, sleeping, recreation, and work",
-							"By avoiding spiritual practices",
-							"By ignoring yoga"
-						  ],
-						  "correctAnswer": "By regulating habits of eating, sleeping, recreation, and work"
+							"questionNumber": 8,
+							"questionText": "How can one mitigate all material pains?",
+							"options": [
+								"By eating excessively",
+								"By regulating habits of eating, sleeping, recreation, and work",
+								"By avoiding spiritual practices",
+								"By ignoring yoga"
+							],
+							"correctAnswer": "By regulating habits of eating, sleeping, recreation, and work"
 						},
 						{
-						  "questionNumber": 9,
-						  "questionText": "What should a yogī do when his mind wanders?",
-						  "options": [
-							"Let it flow freely",
-							"Follow it and enjoy material desires",
-							"Ignore meditation",
-							"Withdraw it and bring it back under control"
-						  ],
-						  "correctAnswer": "Withdraw it and bring it back under control"
+							"questionNumber": 9,
+							"questionText": "What should a yogī do when his mind wanders?",
+							"options": [
+								"Let it flow freely",
+								"Follow it and enjoy material desires",
+								"Ignore meditation",
+								"Withdraw it and bring it back under control"
+							],
+							"correctAnswer": "Withdraw it and bring it back under control"
 						},
 						{
-						  "questionNumber": 10,
-						  "questionText": "A person is said to be established in self-realization and called a yogī when he is fully satisfied by virtue of acquired _______ and _______. Such a person is _______ and sees everything – whether pebbles, stones, or gold – as  _______.",
-						  "options": [
-							"wealth, power, superior, most valuable",
-							"knowledge, realization, self-controlled, the same",
-							"fame, success, materialistic, different",
-							"desires, emotions, restless, insignificant"
-						  ],
-						  "correctAnswer": "knowledge, realization, self-controlled, the same"
+							"questionNumber": 10,
+							"questionText": "A person is said to be established in self-realization and called a yogī when he is fully satisfied by virtue of acquired _______ and _______. Such a person is _______ and sees everything – whether pebbles, stones, or gold – as  _______.",
+							"options": [
+								"wealth, power, superior, most valuable",
+								"knowledge, realization, self-controlled, the same",
+								"fame, success, materialistic, different",
+								"desires, emotions, restless, insignificant"
+							],
+							"correctAnswer": "knowledge, realization, self-controlled, the same"
 						}
-					  ],
+					],
 					"count": 10
 				},
 				{
@@ -1297,117 +1286,107 @@
 					"sub-heading": "BG 6.33 to 6.47",
 					"questions": [
 						{
-						  "questionNumber": 1,
-						  "questionText": "What does Arjuna say about the system of yoga summarized by Krishna?",
-						  "options": [
-							"It is the easiest path to liberation",
-							"It is impractical and unendurable",
-							"It is practical and endurable",
-							"It is practical and unendurable"
-						  ],
-						  "correctAnswer": "It is impractical and unendurable"
+							"questionNumber": 1,
+							"questionText": "What does Arjuna say about the system of yoga summarized by Krishna?",
+							"options": [
+								"It is the easiest path to liberation",
+								"It is impractical and unendurable",
+								"It is practical and endurable",
+								"It is practical and unendurable"
+							],
+							"correctAnswer": "It is impractical and unendurable"
 						},
 						{
-						  "questionNumber": 2,
-						  "questionText": "According to Arjuna, controlling the mind is more difficult than controlling what?",
-						  "options": [
-							"Fire",
-							"Water",
-							"The wind",
-							"The earth"
-						  ],
-						  "correctAnswer": "The wind"
+							"questionNumber": 2,
+							"questionText": "According to Arjuna, controlling the mind is more difficult than controlling what?",
+							"options": ["Fire", "Water", "The wind", "The earth"],
+							"correctAnswer": "The wind"
 						},
 						{
-						  "questionNumber": 3,
-						  "questionText": "What qualities does Arjuna attribute to the mind in his conversation with Krishna?",
-						  "options": [
-							  "Steady and peaceful",
-							  "Gentle and calm",
-							  "Easily controllable",
-							  "Restless, turbulent, obstinate, and very strong"
-						  ],
-						  "correctAnswer": "Restless, turbulent, obstinate, and very strong"
+							"questionNumber": 3,
+							"questionText": "What qualities does Arjuna attribute to the mind in his conversation with Krishna?",
+							"options": [
+								"Steady and peaceful",
+								"Gentle and calm",
+								"Easily controllable",
+								"Restless, turbulent, obstinate, and very strong"
+							],
+							"correctAnswer": "Restless, turbulent, obstinate, and very strong"
 						},
 						{
-						  "questionNumber": 4,
-						  "questionText": "What does Krishna say is required to curb the restless mind?",
-						  "options": [
-							"Isolation and renunciation",
-							"Practice and detachment",
-							"Knowledge and detachment",
-							"Rituals and prayers"
-						  ],
-						  "correctAnswer": "Practice and detachment"
+							"questionNumber": 4,
+							"questionText": "What does Krishna say is required to curb the restless mind?",
+							"options": [
+								"Isolation and renunciation",
+								"Practice and detachment",
+								"Knowledge and detachment",
+								"Rituals and prayers"
+							],
+							"correctAnswer": "Practice and detachment"
 						},
 						{
-						  "questionNumber": 5,
-						  "questionText": "Where is an unsuccessful yogī reborn after many years of enjoyment?",
-						  "options": [
-							"In a family of scholars",
-							"In a family of ascetics in the mountains",
-							"In a family of temple priests",
-							"In a family of righteous people or rich aristocracy"
-						  ],
-						  "correctAnswer": "In a family of righteous people or rich aristocracy"
+							"questionNumber": 5,
+							"questionText": "Where is an unsuccessful yogī reborn after many years of enjoyment?",
+							"options": [
+								"In a family of scholars",
+								"In a family of ascetics in the mountains",
+								"In a family of temple priests",
+								"In a family of righteous people or rich aristocracy"
+							],
+							"correctAnswer": "In a family of righteous people or rich aristocracy"
 						},
 						{
-						  "questionNumber": 6,
-						  "questionText": "What kind of birth is considered rare according to Krishna?",
-						  "options": [
-							"Birth in a family of warriors",
-							"Birth in a family of transcendentalists",
-							"Birth in a family of Thieves",
-							"Birth in a family of merchants"
-						  ],
-						  "correctAnswer": "Birth in a family of transcendentalists"
+							"questionNumber": 6,
+							"questionText": "What kind of birth is considered rare according to Krishna?",
+							"options": [
+								"Birth in a family of warriors",
+								"Birth in a family of transcendentalists",
+								"Birth in a family of Thieves",
+								"Birth in a family of merchants"
+							],
+							"correctAnswer": "Birth in a family of transcendentalists"
 						},
 						{
-						  "questionNumber": 7,
-						  "questionText": "What does a transcendentalist regain upon taking a new birth?",
-						  "options": [
-							"Wealth and status",
-							"The ability to perform rituals perfectly",
-							"Divine consciousness from their previous life",
-							"Perfect knowledge of scriptures"
-						  ],
-						  "correctAnswer": "Divine consciousness from their previous life"
+							"questionNumber": 7,
+							"questionText": "What does a transcendentalist regain upon taking a new birth?",
+							"options": [
+								"Wealth and status",
+								"The ability to perform rituals perfectly",
+								"Divine consciousness from their previous life",
+								"Perfect knowledge of scriptures"
+							],
+							"correctAnswer": "Divine consciousness from their previous life"
 						},
 						{
-						  "questionNumber": 8,
-						  "questionText": "What happens when a yogī continues their practice with sincere effort?",
-						  "options": [
-							"They eventually attain the supreme goal",
-							"They lose interest in spiritual life",
-							"They are reborn as kings",
-							"They become famous among people"
-						  ],
-						  "correctAnswer": "They eventually attain the supreme goal"
+							"questionNumber": 8,
+							"questionText": "What happens when a yogī continues their practice with sincere effort?",
+							"options": [
+								"They eventually attain the supreme goal",
+								"They lose interest in spiritual life",
+								"They are reborn as kings",
+								"They become famous among people"
+							],
+							"correctAnswer": "They eventually attain the supreme goal"
 						},
 						{
-						  "questionNumber": 9,
-						  "questionText": "What does Krishna advise Arjuna to become in all circumstances?",
-						  "options": [
-							"A warrior",
-							"A yogī",
-							"A renunciate",
-							"A ruler"
-						  ],
-						  "correctAnswer": "A yogī"
+							"questionNumber": 9,
+							"questionText": "What does Krishna advise Arjuna to become in all circumstances?",
+							"options": ["A warrior", "A yogī", "A renunciate", "A ruler"],
+							"correctAnswer": "A yogī"
 						},
 						{
-						  "questionNumber": 10,
-						  "questionText": "A yogī is not greater than which of the following personalities according to 6.46?",
-						  "options": [
-							"Ascetic",
-							"Fruitive worker",
-							"Krishna",
-							"Empiricist"
-						  ],
-						  "correctAnswer": "Krishna"
+							"questionNumber": 10,
+							"questionText": "A yogī is not greater than which of the following personalities according to 6.46?",
+							"options": [
+								"Ascetic",
+								"Fruitive worker",
+								"Krishna",
+								"Empiricist"
+							],
+							"correctAnswer": "Krishna"
 						}
-					  ],
-					  
+					],
+
 					"count": 10
 				},
 				{
@@ -1415,117 +1394,224 @@
 					"sub-heading": "BG 11.01 to 11.55",
 					"questions": [
 						{
-						  "questionNumber": 1,
-						  "questionText": "Why does Krishna grant Arjuna divine eyes?",
-						  "options": [
-							"So Arjuna can become immortal",
-							"So Arjuna can understand the Vedas",
-							"So Arjuna can perceive Krishna’s universal form",
-							"So Arjuna can see through illusions"
-						  ],
-						  "correctAnswer": "So Arjuna can perceive Krishna’s universal form"
+							"questionNumber": 1,
+							"questionText": "Why does Krishna grant Arjuna divine eyes?",
+							"options": [
+								"So Arjuna can become immortal",
+								"So Arjuna can understand the Vedas",
+								"So Arjuna can perceive Krishna’s universal form",
+								"So Arjuna can see through illusions"
+							],
+							"correctAnswer": "So Arjuna can perceive Krishna’s universal form"
 						},
 						{
-						  "questionNumber": 2,
-						  "questionText": "What request does Arjuna make to Krishna in the beginning of Chapter 11?",
-						  "options": [
-							"To teach him how to meditate",
-							"To describe the science of yoga",
-							"To show His universal form",
-							"To help him defeat Karna"
-						  ],
-						  "correctAnswer": "To show His universal form"
+							"questionNumber": 2,
+							"questionText": "What request does Arjuna make to Krishna in the beginning of Chapter 11?",
+							"options": [
+								"To teach him how to meditate",
+								"To describe the science of yoga",
+								"To show His universal form",
+								"To help him defeat Karna"
+							],
+							"correctAnswer": "To show His universal form"
 						},
 						{
-						  "questionNumber": 3,
-						  "questionText": "What does Arjuna see within Krishna's universal form?",
-						  "options": [
-							"Only the battlefield of Kurukshetra",
-							"The future avatars of Krishna",
-							"The seven oceans",
-							"The entire universe, both moving and nonmoving"
-						  ],
-						  "correctAnswer": "The entire universe, both moving and nonmoving"
+							"questionNumber": 3,
+							"questionText": "What does Arjuna see within Krishna's universal form?",
+							"options": [
+								"Only the battlefield of Kurukshetra",
+								"The future avatars of Krishna",
+								"The seven oceans",
+								"The entire universe, both moving and nonmoving"
+							],
+							"correctAnswer": "The entire universe, both moving and nonmoving"
 						},
 						{
-						  "questionNumber": 4,
-						  "questionText": "Which celestial comparison is made to describe the radiance of the universal form?",
-						  "options": [
-							"The moonlight on a full moon",
-							"A thousand suns rising simultaneously",
-							"The glow of fireflies",
-							"The northern lights"
-						  ],
-						  "correctAnswer": "A thousand suns rising simultaneously"
+							"questionNumber": 4,
+							"questionText": "Which celestial comparison is made to describe the radiance of the universal form?",
+							"options": [
+								"The moonlight on a full moon",
+								"A thousand suns rising simultaneously",
+								"The glow of fireflies",
+								"The northern lights"
+							],
+							"correctAnswer": "A thousand suns rising simultaneously"
 						},
 						{
-						  "questionNumber": 5,
-						  "questionText": "What emotion does Arjuna predominantly feel upon seeing the terrifying form of Krishna?",
-						  "options": [
-							"Bewildered and astonished",
-							"Jealousy",
-							"Joy and pride",
-							"Laughter"
-						  ],
-						  "correctAnswer": "Bewildered and astonished"
+							"questionNumber": 5,
+							"questionText": "What emotion does Arjuna predominantly feel upon seeing the terrifying form of Krishna?",
+							"options": [
+								"Bewildered and astonished",
+								"Jealousy",
+								"Joy and pride",
+								"Laughter"
+							],
+							"correctAnswer": "Bewildered and astonished"
 						},
 						{
-						  "questionNumber": 6,
-						  "questionText": "What simile does Arjuna use to describe how warriors are entering Krishna’s mouths?",
-						  "options": [
-							"Like clouds into a storm",
-							"Like rivers flowing to the sea",
-							"Like moths rushing into fire",
-							"Like birds flying into the sky"
-						  ],
-						  "correctAnswer": "Like moths rushing into fire"
+							"questionNumber": 6,
+							"questionText": "What simile does Arjuna use to describe how warriors are entering Krishna’s mouths?",
+							"options": [
+								"Like clouds into a storm",
+								"Like rivers flowing to the sea",
+								"Like moths rushing into fire",
+								"Like birds flying into the sky"
+							],
+							"correctAnswer": "Like moths rushing into fire"
 						},
 						{
-						  "questionNumber": 7,
-						  "questionText": "Which form does Arjuna request Krishna to return to, after seeing the universal form?",
-						  "options": [
-							"The two-armed form",
-							"The four-armed Viṣṇu form",
-							"The cosmic serpent form",
-							"The baby form of Gopāla"
-						  ],
-						  "correctAnswer": "The four-armed Viṣṇu form"
+							"questionNumber": 7,
+							"questionText": "Which form does Arjuna request Krishna to return to, after seeing the universal form?",
+							"options": [
+								"The two-armed form",
+								"The four-armed Viṣṇu form",
+								"The cosmic serpent form",
+								"The baby form of Gopāla"
+							],
+							"correctAnswer": "The four-armed Viṣṇu form"
 						},
 						{
-						  "questionNumber": 8,
-						  "questionText": "According to Krishna, how can one truly see and understand Him?",
-						  "options": [
-							"Through penance and fasting",
-							"By memorizing all the Vedas",
-							"By mastering all yoga postures",
-							"Only by undivided devotional service"
-						  ],
-						  "correctAnswer": "Only by undivided devotional service"
+							"questionNumber": 8,
+							"questionText": "According to Krishna, how can one truly see and understand Him?",
+							"options": [
+								"Through penance and fasting",
+								"By memorizing all the Vedas",
+								"By mastering all yoga postures",
+								"Only by undivided devotional service"
+							],
+							"correctAnswer": "Only by undivided devotional service"
 						},
 						{
-						  "questionNumber": 9,
-						  "questionText": "What does Krishna ask Arjuna to do, even though the enemies are already doomed?",
-						  "options": [
-							"Preach renunciation",
-							"Surrender and leave the war",
-							"Be an instrument and fight",
-							"Take shelter in a forest"
-						  ],
-						  "correctAnswer": "Be an instrument and fight"
+							"questionNumber": 9,
+							"questionText": "What does Krishna ask Arjuna to do, even though the enemies are already doomed?",
+							"options": [
+								"Preach renunciation",
+								"Surrender and leave the war",
+								"Be an instrument and fight",
+								"Take shelter in a forest"
+							],
+							"correctAnswer": "Be an instrument and fight"
 						},
 						{
-						  "questionNumber": 10,
-						  "questionText": "Who does Krishna say is qualified to enter into the mysteries of His understanding?",
-						  "options": [
-							"One who renders pure devotional service",
-							"One who meditates in the Himalayas",
-							"One who reads all scriptures",
-							"One who defeats enemies in battle"
-						  ],
-						  "correctAnswer": "One who renders pure devotional service"
+							"questionNumber": 10,
+							"questionText": "Who does Krishna say is qualified to enter into the mysteries of His understanding?",
+							"options": [
+								"One who renders pure devotional service",
+								"One who meditates in the Himalayas",
+								"One who reads all scriptures",
+								"One who defeats enemies in battle"
+							],
+							"correctAnswer": "One who renders pure devotional service"
 						}
-					  ],
+					],
 
+					"count": 10
+				},
+				{
+					"name": "BG : Class - 15",
+					"sub-heading": "BG 13.01 to 11.35",
+					"questions": [
+						{
+							"questionNumber": 1,
+							"questionText": "What is referred to as the 'field' in the Bhagavad Gita?",
+							"options": [
+								"The battlefield of Kurukshetra",
+								"The Soul",
+								"The body",
+								"The Supersoul"
+							],
+							"correctAnswer": "The body"
+						},
+						{
+							"questionNumber": 2,
+							"questionText": "Who does Krishna say is the knower in all bodies?",
+							"options": [
+								"Nature",
+								"Krishna Himself",
+								"The Soul",
+								"The material elements"
+							],
+							"correctAnswer": "Krishna Himself"
+						},
+						{
+							"questionNumber": 3,
+							"questionText": "According to Krishna, what is true knowledge?",
+							"options": [
+								"Remembering one's past lives",
+								"Being able to recite the Vedas",
+								"Knowing all scientific processes",
+								"Understanding the field and the knower of the field"
+							],
+							"correctAnswer": "Understanding the field and the knower of the field"
+						},
+						{
+							"questionNumber": 4,
+							"questionText": "How many elements does the field of activity consist of?",
+							"options": ["23", "24", "25", "26"],
+							"correctAnswer": "24"
+						},
+						{
+							"questionNumber": 5,
+							"questionText": "How is the Supersoul described in relation to the senses?",
+							"options": [
+								"He is the origin of the senses yet without senses Himself",
+								"He creates the senses but uses them all the time",
+								"He controls the senses using karma",
+								"He has no connection to the senses"
+							],
+							"correctAnswer": "He is the origin of the senses yet without senses Himself"
+						},
+						{
+							"questionNumber": 6,
+							"questionText": "How can the Supersoul be both near and far at the same time?",
+							"options": [
+								"He travels at the speed of light",
+								"He is imagined by the mind",
+								"He is subtle and all-pervading",
+								"He appears only in dreams"
+							],
+							"correctAnswer": "He is subtle and all-pervading"
+						},
+						{
+							"questionNumber": 7,
+							"questionText": "According to Krishna, what causes suffering and enjoyment in this world?",
+							"options": [
+								"Supersoul’s will",
+								"Material nature alone",
+								"Karma of present life",
+								"The living entity’s association with material nature"
+							],
+							"correctAnswer": "The living entity’s association with material nature"
+						},
+						{
+							"questionNumber": 8,
+							"questionText": "Who is the 'transcendental enjoyer' in the body according to Krishna?",
+							"options": [
+								"The Soul",
+								"The Senses",
+								"The Supersoul",
+								"The Mind"
+							],
+							"correctAnswer": "The Supersoul"
+						},
+						{
+							"questionNumber": 9,
+							"questionText": "In Bhagavad-Gita Krishna declares how many elements of Knowledge?",
+							"options": ["20", "19", "18", "21"],
+							"correctAnswer": "20"
+						},
+						{
+							"questionNumber": 10,
+							"questionText": "How does Krishna compare the soul situated in Brahman vision with the body?",
+							"options": [
+								"Like oil and water mixing",
+								"Like sky not mixing though all-pervading",
+								"Like fire consuming fuel",
+								"Like salt dissolving in water"
+							],
+							"correctAnswer": "Like sky not mixing though all-pervading"
+						}
+					],
 					"count": 10
 				}
 			]
