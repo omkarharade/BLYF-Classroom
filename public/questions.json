@@ -1613,6 +1613,118 @@
 						}
 					],
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 16",
+					"sub-heading": "BG 14.01 to 14.13",
+					"questions": [
+						{
+							"questionNumber": 1,
+							"questionText": "What is the result of being fixed in the supreme knowledge Krishna speaks of?",
+							"options": [
+								"One becomes an expert in rituals",
+								"One achieves material prosperity",
+								"One attains transcendental nature like Krishna’s",
+								"One merges into the void"
+							],
+							"correctAnswer": "One attains transcendental nature like Krishna’s"
+						},
+						{
+							"questionNumber": 2,
+							"questionText": "What role does Krishna say He plays in creation?",
+							"options": [
+								"The punisher of the wicked",
+								"The seed-giving father",
+								"The destroyer of ignorance",
+								"The teacher of yoga"
+							],
+							"correctAnswer": "The seed-giving father"
+						},
+						{
+							"questionNumber": 3,
+							"questionText": "What are the three modes of material nature?",
+							"options": [
+								"Desire, karma, and dharma",
+								"Purity, discipline, and knowledge",
+								"Enlightenment, action, and illusion",
+								"Goodness, passion, and ignorance"
+							],
+							"correctAnswer": "Goodness, passion, and ignorance"
+						},
+						{
+							"questionNumber": 4,
+							"questionText": "What happens when the eternal living entity contacts material nature?",
+							"options": [
+								"He attains liberation",
+								"He becomes all-knowing",
+								"He becomes conditioned by the modes",
+								"He merges with Brahman"
+							],
+							"correctAnswer": "He becomes conditioned by the modes"
+						},
+						{
+							"questionNumber": 5,
+							"questionText": "What quality is associated with the mode of goodness?",
+							"options": [
+								"Aggression and dominance",
+								"Happiness and knowledge",
+								"Intoxication and forgetfulness",
+								"Creativity and rebellion"
+							],
+							"correctAnswer": "Happiness and knowledge"
+						},
+						{
+							"questionNumber": 6,
+							"questionText": "How does the mode of passion affect the living being?",
+							"options": [
+								"It binds him to fruitive actions",
+								"It leads to peace and introspection",
+								"It destroys his desires",
+								"It makes him indifferent to the world"
+							],
+							"correctAnswer": "It binds him to fruitive actions"
+						},
+						{
+							"questionNumber": 7,
+							"questionText": "What is born of ignorance, according to Krishna?",
+							"options": [
+								"Enlightenment and renunciation",
+								"Desires and action",
+								"Happiness and peace",
+								"Madness, indolence, and sleep"
+							],
+							"correctAnswer": "Madness, indolence, and sleep"
+						},
+						{
+							"questionNumber": 8,
+							"questionText": "Which mode is described as purer and illuminating?",
+							"options": ["Ignorance", "Goodness", "Passion", "Ego"],
+							"correctAnswer": "Goodness"
+						},
+						{
+							"questionNumber": 9,
+							"questionText": "What does the mode of passion arise from?",
+							"options": [
+								"Unlimited desires and longings",
+								"Anger and fear",
+								"External rituals and duties",
+								"Devotion and detachment"
+							],
+							"correctAnswer": "Unlimited desires and longings"
+						},
+						{
+							"questionNumber": 10,
+							"questionText": "According to Krishna, what is always happening between the three modes?",
+							"options": [
+								"They unite to liberate the soul",
+								"They are controlled by karma",
+								"They are harmonized by devotion",
+								"They are always in conflict for supremacy"
+							],
+							"correctAnswer": "They are always in conflict for supremacy"
+						}
+					],
+					"count": 10
 				}
 			]
 		}
