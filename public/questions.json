@@ -1725,6 +1725,108 @@
 						}
 					],
 					"count": 10
+				},
+				{
+					"name": "BG : Class - 17",
+					"sub-heading": "BG 14.14 to 14.27",
+					"questions": [
+						{
+							"questionNumber": 1,
+							"questionText": "What happens when one dies in the mode of goodness?",
+							"options": [
+								"He is reborn as a yogi",
+								"He merges into the void",
+								"He attains the higher planets of the great sages",
+								"He takes birth as a demigod"
+							],
+							"correctAnswer": "He attains the higher planets of the great sages"
+						},
+						{
+							"questionNumber": 2,
+							"questionText": "According to Krishna, those who die in the mode of passion are reborn among:",
+							"options": [
+								"Enlightened sages",
+								"Those engaged in fruitive activities",
+								"Yogis and ascetics",
+								"The divine beings"
+							],
+							"correctAnswer": "Those engaged in fruitive activities"
+						},
+						{
+							"questionNumber": 3,
+							"questionText": "What is the destination of one who dies in the mode of ignorance?",
+							"options": [
+								"The heavenly planets",
+								"The land of the ancestors",
+								"The realm of dreams",
+								"The animal kingdom"
+							],
+							"correctAnswer": "The animal kingdom"
+						},
+						{
+							"questionNumber": 4,
+							"questionText": "What does action in the mode of passion result in?",
+							"options": ["Bliss", "Liberation", "Misery", "Detachment"],
+							"correctAnswer": "Misery"
+						},
+						{
+							"questionNumber": 5,
+							"questionText": "What is the outcome of actions in the mode of ignorance?",
+							"options": ["Fame", "Foolishness", "Wealth", "Enlightenment"],
+							"correctAnswer": "Foolishness"
+						},
+						{
+							"questionNumber": 6,
+							"questionText": "Greed arises from which mode of material nature?",
+							"options": ["Passion", "Ignorance", "Goodness", "Detachment"],
+							"correctAnswer": "Passion"
+						},
+						{
+							"questionNumber": 7,
+							"questionText": "What is the destination of those in the mode of ignorance?",
+							"options": [
+								"The land of ancestors",
+								"The celestial worlds",
+								"The hellish worlds",
+								"The eternal kingdom"
+							],
+							"correctAnswer": "The hellish worlds"
+						},
+						{
+							"questionNumber": 8,
+							"questionText": "What happens when one transcends the three modes?",
+							"options": [
+								"He attains the heavenly planets",
+								"He merges into void",
+								"He is reborn as the Supreme Personality of Godhead",
+								"He becomes free from birth, death, old age, and distress"
+							],
+							"correctAnswer": "He becomes free from birth, death, old age, and distress"
+						},
+						{
+							"questionNumber": 9,
+							"questionText": "Which behavior signifies transcendence over the modes?",
+							"options": [
+								"Remaining neutral to illumination, attachment, and illusion",
+								"Remaining neutral to illumination, detachment, and delusion",
+								"Remaining neutral to illumination, attachment, and delusion",
+								"Remaining neutral to illumination, detachment, and illusion"
+							],
+							"correctAnswer": "Remaining neutral to illumination, attachment, and delusion"
+						},
+						{
+							"questionNumber": 10,
+							"questionText": "How does one certainly transcend the modes of nature?",
+							"options": [
+								"By practicing detachment alone",
+								"Through full and unfailing devotional service",
+								"By studying the Upanishads",
+								"By meditating on impersonal Brahman"
+							],
+							"correctAnswer": "Through full and unfailing devotional service"
+						}
+					],
+					"count": 10
 				}
 			]
 		}
