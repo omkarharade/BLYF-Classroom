@@ -9,7 +9,7 @@ import { BsBook, BsCalendarDay, BsFillQuestionCircleFill } from "react-icons/bs"
 export default function Home() {
 
 	return (
-		<div className="flex flex-col w-[100%] bg-orange-100 justify-center items-center bg-gray-700">
+		<div className="flex flex-col w-[100%] bg-orange-100 justify-center items-center ">
 
 			{/* navbar  */}
 
