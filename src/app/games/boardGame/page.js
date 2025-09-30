@@ -77,7 +77,7 @@ export default function BoardGamePage() {
     20: { color: "blue", type: "move", value: 4 },
     21: { color: "red", type: "move", value: -4 },
     36: { color: "blue", type: "flipQuestion" },
-    42: { color: "red", type: "doubleQuestion" },
+    42: { color: "red", type: "skipTurn" },
     55: { color: "blue", type: "extraTurn" },
     67: { color: "red", type: "skipTurn" },
     68: { color: "blue", type: "move", value: 3 },

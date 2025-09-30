@@ -2,11 +2,12 @@
 
 import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
-import { Play, Square, RotateCcw } from "lucide-react"; // Added icons
+import { Play, Square, RotateCcw, X } from "lucide-react"; // Added icons
 
 export default function DiceBoard({ questions, playerScores, specialBlocks }) {
   const [positions, setPositions] = useState({ p1: 1, p2: 1 });
   const [currentPlayer, setCurrentPlayer] = useState("p1");
+  const [answeringPlayer, setAnsweringPlayer] = useState("p1"); // ✅ new
   const [diceValue, setDiceValue] = useState(null);
   const [showQuestion, setShowQuestion] = useState(false);
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -14,6 +15,9 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
   const [skipTurn, setSkipTurn] = useState({ p1: false, p2: false });
   const [pendingMove, setPendingMove] = useState(null);
   const [rolling, setRolling] = useState(false);
+
+  // ✅ Popup State
+  const [popup, setPopup] = useState({ visible: false, title: "", description: "" });
 
   /** ----------------
    * ⏱ TIMER STATES
@@ -34,15 +38,11 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
     return () => clearInterval(timerRef.current);
   }, [isTimerRunning, timer]);
 
-  const startTimer = () => {
-    setIsTimerRunning(true);
-  };
-
+  const startTimer = () => setIsTimerRunning(true);
   const stopTimer = () => {
     clearInterval(timerRef.current);
     setIsTimerRunning(false);
   };
-
   const resetTimer = () => {
     clearInterval(timerRef.current);
     setTimer(30);
@@ -67,9 +67,15 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
         if (newPos > 100) newPos = 100;
         setPendingMove(newPos);
 
-        setTimeout(() => {
-          setRolling(false);
-        }, 300);
+        setTimeout(() => setRolling(false), 300);
+
+        // ✅ set answering player here (skip logic)
+        let ansPlayer = currentPlayer;
+        if (skipTurn[currentPlayer]) {
+          ansPlayer = currentPlayer === "p1" ? "p2" : "p1";
+          setSkipTurn((prev) => ({ ...prev, [currentPlayer]: false })); // consume skip
+        }
+        setAnsweringPlayer(ansPlayer);
 
         // open question modal
         setTimeout(() => {
@@ -82,18 +88,24 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 
   /** ✅ Answer Handling */
   const handleAnswer = (isCorrect) => {
+    let extraTurnTriggered = false;
+
     if (isCorrect && pendingMove !== null) {
-      setPositions((prev) => ({ ...prev, [currentPlayer]: pendingMove }));
-      handleSpecialBlock(pendingMove, currentPlayer);
+      setPositions((prev) => ({ ...prev, [answeringPlayer]: pendingMove }));
+
+      const result = handleSpecialBlock(pendingMove, answeringPlayer);
+      if (result?.extraTurn) extraTurnTriggered = true;
 
       setScores((prev) => ({
         ...prev,
-        [currentPlayer]: prev[currentPlayer] + 1,
+        [answeringPlayer]: prev[answeringPlayer] + 1,
       }));
     }
 
     closeQuestionModal();
-    if (diceValue === 6) return; // extra turn
+
+    // 🎯 Correct flow
+    if (diceValue === 6 || extraTurnTriggered) return; // same player rolls again
     switchTurn();
   };
 
@@ -112,37 +124,84 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
     stopTimer();
   };
 
-  /** 🔹 Special Block Routing */
+  /** 🔹 Handle Special Blocks */
   const handleSpecialBlock = (pos, player) => {
     const special = specialBlocks[pos];
-    if (!special) return;
+    if (!special) return {};
+
+    const showPopup = (title, description) => {
+      setPopup({ visible: true, title, description });
+    };
 
     switch (special.type) {
       case "move":
-        setPositions((prev) => ({
-          ...prev,
-          [player]: Math.max(1, pos + special.value),
-        }));
+        handleMoveBlock(pos, player, special.value, showPopup);
         break;
       case "extraTurn":
-        break;
+        handleExtraTurn(player, showPopup);
+        return { extraTurn: true };
       case "skipTurn":
-        setSkipTurn((prev) => ({ ...prev, [player]: true }));
+        handleSkipTurn(player, showPopup);
+        return { skipTurn: true };
+      case "flipQuestion":
+        handleFlipQuestion(showPopup);
+        break;
+      case "oppositeAnswers":
+        handleOppositeAnswers(showPopup);
         break;
       default:
+        handleDefaultCase(showPopup);
         break;
     }
+
+    return {};
+  };
+
+  /** 🔸 Move Block */
+  const handleMoveBlock = (pos, player, value, showPopup) => {
+    const newPos = Math.max(1, pos + value);
+    setPositions((prev) => ({ ...prev, [player]: newPos }));
+
+    showPopup(
+      "Move Block 🎲",
+      `You landed on a Move Block! Move ${value > 0 ? `forward ${value}` : `backward ${Math.abs(value)}`} steps.`
+    );
+  };
+
+  /** 🔸 Extra Turn */
+  const handleExtraTurn = (player, showPopup) => {
+    showPopup("Extra Turn 🔁", "You got an Extra Turn! Roll again.");
+  };
+
+  /** 🔸 Skip Turn */
+  const handleSkipTurn = (player, showPopup) => {
+    setSkipTurn((prev) => ({ ...prev, [player]: true }));
+    showPopup("Skip Turn ⏭️", "Oh no! Your next turn will be skipped.");
+  };
+
+  /** 🔸 Flip Question */
+  const handleFlipQuestion = (showPopup) => {
+    setCurrentQuestionIndex(-1);
+    showPopup("Flip Question 🔀", "Your question has been flipped to a reserved one!");
+  };
+
+  /** 🔸 Opposite Answers */
+  const handleOppositeAnswers = (showPopup) => {
+    showPopup(
+      "Opposite Answers 🔄",
+      "This question will be answered by the opposite team, but the game flow remains normal."
+    );
+  };
+
+  /** 🔸 Default / Placeholder */
+  const handleDefaultCase = (showPopup) => {
+    showPopup("Special Block ✨", "This special block will be implemented later.");
   };
 
   /** 🔄 Switch Player Turn */
   const switchTurn = () => {
     const nextPlayer = currentPlayer === "p1" ? "p2" : "p1";
-    if (skipTurn[nextPlayer]) {
-      setSkipTurn((prev) => ({ ...prev, [nextPlayer]: false }));
-      setCurrentPlayer(currentPlayer);
-    } else {
-      setCurrentPlayer(nextPlayer);
-    }
+    setCurrentPlayer(nextPlayer);
   };
 
   /** 🎨 Render Each Cell */
@@ -203,7 +262,7 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
               currentPlayer === "p1" ? "text-lime-400" : "text-purple-400"
             }`}
           >
-            {currentPlayer === "p1" ? "Player 1" : "Player 2"}
+            {currentPlayer === "p1" ? "Team Prithu" : "Team Brahma"}
           </p>
         </div>
 
@@ -248,16 +307,15 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
       {/* Question Modal */}
       {showQuestion && (
         <div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-xl shadow-2xl max-w-7xl w-full text-black">
-            <h2 className="font-bold text-2xl mb-4">🧠 Question</h2>
+          <div className="bg-white p-6 rounded-xl shadow-2xl w-full text-black mx-[2em]">
+            <h2 className="font-bold text-2xl mb-4">
+              Question ({answeringPlayer === "p1" ? "Team Prithu" : "Team Brahma"})
+            </h2>
 
             {/* Timer */}
             <div className="mb-4 flex items-center justify-between">
-              <span className="text-xl font-bold text-red-600">
-                ⏱ {timer}s
-              </span>
+              <span className="text-xl font-bold text-red-600">⏱ {timer}s</span>
               <div className="flex gap-3">
-                {/* Start */}
                 <button
                   onClick={startTimer}
                   className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600"
@@ -265,8 +323,6 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
                 >
                   <Play size={20} />
                 </button>
-
-                {/* Stop */}
                 <button
                   onClick={stopTimer}
                   className="p-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600"
@@ -274,8 +330,6 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
                 >
                   <Square size={20} />
                 </button>
-
-                {/* Reset */}
                 <button
                   onClick={resetTimer}
                   className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
@@ -288,32 +342,43 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 
             {/* Question Text */}
             <div className="mb-4">
-              <p className="text-2xl  text-black">
-                {questions[currentQuestionIndex]?.q}
-              </p>
-              <p className="text-2xl text-black mt-1">
-                {questions[currentQuestionIndex]?.qHindi}
-              </p>
+              {currentQuestionIndex === -1 ? (
+                <>
+                  <p className="text-2xl text-black">
+                    In text 39, who is the supreme teacher?
+                  </p>
+                  <p className="text-2xl text-black mt-1">Ans: Lord Brahma.</p>
+                </>
+              ) : (
+                <>
+                  <p className="text-2xl text-black">
+                    {questions[currentQuestionIndex]?.q}
+                  </p>
+                  <p className="text-2xl text-black mt-1">
+                    {questions[currentQuestionIndex]?.qHindi}
+                  </p>
+                </>
+              )}
             </div>
 
             {/* Answer Section */}
-            <div className="mb-4">
-              <details className="bg-yellow-100 rounded p-3">
-                <summary className="cursor-pointer font-semibold text-yellow-800 text-lg">
-                  Reveal Answer
-                </summary>
-                <div className="mt-4 max-h-40 overflow-y-auto text-black">
-                  <p className="text-lg">
-                    <span className="font-semibold">English: </span>
-                    {questions[currentQuestionIndex]?.ans || "No answer provided."}
-                  </p>
-                  <p className="text-lg mt-2">
-                    <span className="font-semibold">हिंदी: </span>
-                    {questions[currentQuestionIndex]?.ansHindi || "उत्तर उपलब्ध नहीं।"}
-                  </p>
-                </div>
-              </details>
-            </div>
+            {currentQuestionIndex !== -1 && (
+              <div className="mb-4">
+                <details className="bg-yellow-100 rounded p-3">
+                  <summary className="cursor-pointer font-semibold text-yellow-800 text-lg">
+                    Reveal Answer
+                  </summary>
+                  <div className="mt-4 max-h-40 overflow-y-auto text-black">
+                    <p className="text-xl">
+                      {questions[currentQuestionIndex]?.ans || "No answer provided."}
+                    </p>
+                    <p className="text-xl mt-2">
+                      {questions[currentQuestionIndex]?.ansHindi || "उत्तर उपलब्ध नहीं।"}
+                    </p>
+                  </div>
+                </details>
+              </div>
+            )}
 
             {/* Action Buttons */}
             <div className="flex justify-start gap-4">
@@ -336,6 +401,21 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
                 Timeout
               </button>
             </div>
+          </div>
+        </div>
+      )}
+
+      {/* Popup Bar */}
+      {popup.visible && (
+        <div className="fixed bottom-6 right-6 bg-gray-900 text-white px-6 py-4 rounded-lg shadow-lg border border-cyan-500 w-80 z-50">
+          <div className="flex justify-between items-start">
+            <div>
+              <h3 className="font-bold text-lg">{popup.title}</h3>
+              <p className="text-sm mt-1">{popup.description}</p>
+            </div>
+            <button onClick={() => setPopup({ ...popup, visible: false })}>
+              <X size={20} className="text-gray-400 hover:text-white" />
+            </button>
           </div>
         </div>
       )}
