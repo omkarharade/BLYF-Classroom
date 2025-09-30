@@ -1,7 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
+import { Play, Square, RotateCcw } from "lucide-react"; // Added icons
 
 export default function DiceBoard({ questions, playerScores, specialBlocks }) {
   const [positions, setPositions] = useState({ p1: 1, p2: 1 });
@@ -13,6 +14,40 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
   const [skipTurn, setSkipTurn] = useState({ p1: false, p2: false });
   const [pendingMove, setPendingMove] = useState(null);
   const [rolling, setRolling] = useState(false);
+
+  /** ----------------
+   * ⏱ TIMER STATES
+   ---------------- */
+  const [timer, setTimer] = useState(30); // initial time 30 sec
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+  const timerRef = useRef(null);
+
+  /** TIMER LOGIC */
+  useEffect(() => {
+    if (isTimerRunning && timer > 0) {
+      timerRef.current = setInterval(() => {
+        setTimer((prev) => prev - 1);
+      }, 1000);
+    } else if (timer === 0) {
+      clearInterval(timerRef.current);
+    }
+    return () => clearInterval(timerRef.current);
+  }, [isTimerRunning, timer]);
+
+  const startTimer = () => {
+    setIsTimerRunning(true);
+  };
+
+  const stopTimer = () => {
+    clearInterval(timerRef.current);
+    setIsTimerRunning(false);
+  };
+
+  const resetTimer = () => {
+    clearInterval(timerRef.current);
+    setTimer(30);
+    setIsTimerRunning(false);
+  };
 
   /** 🎲 Roll Dice */
   const rollDice = () => {
@@ -36,8 +71,10 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
           setRolling(false);
         }, 300);
 
+        // open question modal
         setTimeout(() => {
           setShowQuestion(true);
+          resetTimer(); // reset timer when modal opens
         }, 2000);
       }
     }, 100);
@@ -55,15 +92,24 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
       }));
     }
 
+    closeQuestionModal();
+    if (diceValue === 6) return; // extra turn
+    switchTurn();
+  };
+
+  /** ⏳ Timeout Handling */
+  const handleTimeout = () => {
+    closeQuestionModal();
+    if (diceValue === 6) return; // still no extra turn
+    switchTurn();
+  };
+
+  /** Close modal & stop timer */
+  const closeQuestionModal = () => {
     setShowQuestion(false);
     setCurrentQuestionIndex((prev) => prev + 1);
     setPendingMove(null);
-
-    if (diceValue === 6) {
-      return; // extra turn
-    }
-
-    switchTurn();
+    stopTimer();
   };
 
   /** 🔹 Special Block Routing */
@@ -79,21 +125,9 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
         }));
         break;
       case "extraTurn":
-        break; // automatically handled
+        break;
       case "skipTurn":
         setSkipTurn((prev) => ({ ...prev, [player]: true }));
-        break;
-      case "flipQuestion":
-        alert("🔄 Flip Question! Replace with special logic.");
-        break;
-      case "doubleQuestion":
-        alert("❓ Answer 2 Questions!");
-        break;
-      case "otherTeamAnswers":
-        alert(`🎯 Other team will answer instead of ${player}`);
-        break;
-      case "oppositeAnswers":
-        alert(`🤝 Opposite team answers for ${player}`);
         break;
       default:
         break;
@@ -217,33 +251,71 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
           <div className="bg-white p-6 rounded-xl shadow-2xl max-w-7xl w-full text-black">
             <h2 className="font-bold text-2xl mb-4">🧠 Question</h2>
 
-            <div className="my-10">
-              {/* English Question */}
-              <p className="text-2xl font-medium text-black">
+            {/* Timer */}
+            <div className="mb-4 flex items-center justify-between">
+              <span className="text-xl font-bold text-red-600">
+                ⏱ {timer}s
+              </span>
+              <div className="flex gap-3">
+                {/* Start */}
+                <button
+                  onClick={startTimer}
+                  className="p-2 bg-green-500 text-white rounded-full hover:bg-green-600"
+                  title="Start Timer"
+                >
+                  <Play size={20} />
+                </button>
+
+                {/* Stop */}
+                <button
+                  onClick={stopTimer}
+                  className="p-2 bg-yellow-500 text-white rounded-full hover:bg-yellow-600"
+                  title="Stop Timer"
+                >
+                  <Square size={20} />
+                </button>
+
+                {/* Reset */}
+                <button
+                  onClick={resetTimer}
+                  className="p-2 bg-blue-500 text-white rounded-full hover:bg-blue-600"
+                  title="Reset Timer"
+                >
+                  <RotateCcw size={20} />
+                </button>
+              </div>
+            </div>
+
+            {/* Question Text */}
+            <div className="mb-4">
+              <p className="text-2xl  text-black">
                 {questions[currentQuestionIndex]?.q}
               </p>
-              {/* Hindi Question */}
-              <p className="text-2xl font-medium text-black mt-5">
+              <p className="text-2xl text-black mt-1">
                 {questions[currentQuestionIndex]?.qHindi}
               </p>
             </div>
 
+            {/* Answer Section */}
             <div className="mb-4">
               <details className="bg-yellow-100 rounded p-3">
                 <summary className="cursor-pointer font-semibold text-yellow-800 text-lg">
                   Reveal Answer
                 </summary>
                 <div className="mt-4 max-h-40 overflow-y-auto text-black">
-                  <p className="text-2xl">
+                  <p className="text-lg">
+                    <span className="font-semibold">English: </span>
                     {questions[currentQuestionIndex]?.ans || "No answer provided."}
                   </p>
-                  <p className="text-2xl mt-2">
+                  <p className="text-lg mt-2">
+                    <span className="font-semibold">हिंदी: </span>
                     {questions[currentQuestionIndex]?.ansHindi || "उत्तर उपलब्ध नहीं।"}
                   </p>
                 </div>
               </details>
             </div>
 
+            {/* Action Buttons */}
             <div className="flex justify-start gap-4">
               <button
                 onClick={() => handleAnswer(true)}
@@ -256,6 +328,12 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
                 className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
               >
                 Incorrect
+              </button>
+              <button
+                onClick={handleTimeout}
+                className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
+              >
+                Timeout
               </button>
             </div>
           </div>
