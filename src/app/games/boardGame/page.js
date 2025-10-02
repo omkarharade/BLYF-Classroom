@@ -81,7 +81,7 @@ export default function BoardGamePage() {
     55: { color: "blue", type: "extraTurn" },
     67: { color: "red", type: "skipTurn" },
     68: { color: "blue", type: "move", value: 3 },
-    80: { color: "red", type: "otherTeamAnswers" },
+    80: { color: "red", type: "answerOppositeTeamQuestion" },
     83: { color: "blue", type: "oppositeAnswers" },
     99: { color: "red", type: "skipTurn" },
   };
