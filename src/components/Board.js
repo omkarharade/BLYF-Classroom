@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Play, Square, RotateCcw, X, Shuffle } from "lucide-react"; // Added icons
 
 export default function DiceBoard({ questions, playerScores, specialBlocks }) {
-	const [positions, setPositions] = useState({ p1: 79, p2: 79 });
+	const [positions, setPositions] = useState({ p1: 1, p2: 1 });
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [answeringPlayer, setAnsweringPlayer] = useState("p1"); // ✅ new
 	const [diceValue, setDiceValue] = useState(null);
