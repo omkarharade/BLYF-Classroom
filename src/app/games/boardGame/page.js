@@ -72,18 +72,81 @@ export default function BoardGamePage() {
   ];
 
   const specialBlocks = {
-    4: { color: "red", type: "move", value: -3 },
-    9: { color: "blue", type: "extraTurn" },
-    20: { color: "blue", type: "move", value: 4 },
-    21: { color: "red", type: "move", value: -4 },
-    36: { color: "blue", type: "flipQuestion" },
-    42: { color: "red", type: "skipTurn" },
-    55: { color: "blue", type: "extraTurn" },
-    67: { color: "red", type: "skipTurn" },
-    68: { color: "blue", type: "move", value: 3 },
-    80: { color: "red", type: "answerOppositeTeamQuestion" },
-    83: { color: "blue", type: "oppositeAnswers" },
-    99: { color: "red", type: "skipTurn" },
+    4: { 
+      color: "red", 
+      type: "move", 
+      value: -3,
+      message: "Late for seva, go back to start" 
+    },
+    9: { 
+      color: "blue", 
+      type: "extraTurn",
+      message: "Good chanting. Extra turn",
+      requiresAnswer: true
+    },
+    20: { 
+      color: "blue", 
+      type: "move", 
+      value: 4,
+      message: "Good reading. Move 4 places",
+      requiresAnswer: true
+    },
+    21: { 
+      color: "red", 
+      type: "move", 
+      value: -4,
+      message: "Chanting incomplete. Go back 4 places"
+    },
+    36: { 
+      color: "blue", 
+      type: "flipQuestion",
+      message: "Mandir darshan. You can flip the question",
+      requiresAnswer: true,
+      flipQuestion: {
+        q: "In text 39, who is the supreme teacher?",
+        ans: "Lord Brahma"
+      }
+    },
+    42: { 
+      color: "red", 
+      type: "skipTurn",
+      message: "Missed mangala. Miss a turn"
+    },
+    55: { 
+      color: "blue", 
+      type: "extraTurn",
+      message: "In Vrindavan. Extra turn",
+      requiresAnswer: true
+    },
+    67: { 
+      color: "red", 
+      type: "skipTurn",
+      message: "Ekadashi, extra chanting. Miss a turn"
+    },
+    68: { 
+      color: "blue", 
+      type: "move", 
+      value: 3,
+      message: "Regular seva. Move 3 places",
+      requiresAnswer: true
+    },
+    80: { 
+      color: "red", 
+      type: "skipTurn",
+      message: "Mode of ignorance. Miss a turn"
+    },
+    83: { 
+      color: "blue", 
+      type: "move", 
+      value: 0,
+      message: "Mode of goodness",
+      requiresAnswer: true
+    },
+    99: { 
+      color: "red", 
+      type: "skipTurn",
+      message: "Class cancelled. Miss a turn"
+    }
   };
 
   return (
