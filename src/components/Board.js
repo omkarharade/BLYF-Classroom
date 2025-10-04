@@ -130,17 +130,25 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 		);
 	};
 
+	/** 🔸 Move Block */
+	const handleMoveBlock = (pos, player, value) => {
+		const newPos = Math.max(1, Math.min(100, pos + value)); // Ensure position stays between 1-100
+		setPositions((prev) => ({ ...prev, [player]: newPos }));
+		showPopup(
+			"Move Block 🎲",
+			`${value > 0 ? 'Move forward' : 'Go back'} ${Math.abs(value)} spaces`
+		);
+	};
+
 	/** ✅ Handle Answer */
 	const handleAnswer = (isCorrect) => {
 		let extraTurnTriggered = false;
 
 		if (pendingMove !== null && isCorrect) {
-			// Move player only on correct answer
 			setPositions((prev) => ({ ...prev, [currentPlayer]: pendingMove }));
 
 			const special = specialBlocks[pendingMove];
-
-			// Handle special block effects after correct answer
+			
 			if (special) {
 				if (special.type === "move" && special.color === "blue") {
 					handleMoveBlock(pendingMove, currentPlayer, special.value);
@@ -149,7 +157,6 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 				if (result?.extraTurn) extraTurnTriggered = true;
 			}
 
-			// Increment score on correct answer
 			setScores((prev) => ({
 				...prev,
 				[currentPlayer]: prev[currentPlayer] + 1,
