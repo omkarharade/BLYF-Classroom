@@ -121,7 +121,7 @@ export default function BoardGamePage() {
     67: { 
       color: "red", 
       type: "skipTurn",
-      message: "Ekadashi, extra chanting. Miss a turn"
+      message: "Ekadashi, didn't chant. Miss a turn"
     },
     68: { 
       color: "blue", 
@@ -132,14 +132,13 @@ export default function BoardGamePage() {
     },
     80: { 
       color: "red", 
-      type: "skipTurn",
-      message: "Mode of ignorance. Miss a turn"
+      type: "answerOppositeTeamQuestion",
+      message: "Mode of ignorance. You have to answer the other team's next question"
     },
     83: { 
       color: "blue", 
-      type: "move", 
-      value: 0,
-      message: "Mode of goodness",
+      type: "oppositeAnswers",
+      message: "Mode of goodness. The opposite team shall answer for you",
       requiresAnswer: true
     },
     99: { 

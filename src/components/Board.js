@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Play, Square, RotateCcw, X, Shuffle } from "lucide-react";
 
 export default function DiceBoard({ questions, playerScores, specialBlocks }) {
-	const [positions, setPositions] = useState({ p1: 34, p2: 35 });
+	const [positions, setPositions] = useState({ p1: 1, p2: 1 });
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [answeringPlayer, setAnsweringPlayer] = useState("p1");
 	const [diceValue, setDiceValue] = useState(null);
@@ -76,27 +76,44 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 					const special = specialBlocks[newPos];
 					setAnsweringPlayer(currentPlayer);
 
-					// Handle flip question specially
+					// Show popup for answerOppositeTeamQuestion and oppositeAnswers
+					if (special?.type === "answerOppositeTeamQuestion" || 
+							special?.type === "oppositeAnswers") {
+						showPopup(
+							special.type === "answerOppositeTeamQuestion" ? 
+								"Mode of Ignorance" : "Mode of Goodness",
+							special.message
+						);
+					}
+
 					if (special?.type === "flipQuestion") {
 						handleFlipQuestion();
 						setTimeout(() => {
 							setShowQuestion(true);
 							resetTimer();
-						}, 2000);
+						}, 3000);
 						return;
 					}
 
-					// Handle other cases
 					if (special?.color === "red") {
-						setPositions((prev) => ({ ...prev, [currentPlayer]: newPos }));
-						handleSpecialBlock(newPos, currentPlayer);
-						setPendingMove(null);
-						switchTurn();
+						// First show the popup
+						showPopup(
+							special.type.charAt(0).toUpperCase() + special.type.slice(1),
+							special.message
+						);
+						
+						// Add 3 second delay before applying effect
+						setTimeout(() => {
+							setPositions((prev) => ({ ...prev, [currentPlayer]: newPos }));
+							handleSpecialBlock(newPos, currentPlayer);
+							setPendingMove(null);
+							switchTurn();
+						}, 3000);
 					} else {
 						setTimeout(() => {
 							setShowQuestion(true);
 							resetTimer();
-						}, 2000);
+						}, 3000);
 					}
 				}, 1000);
 			}
@@ -168,10 +185,14 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 		const special = specialBlocks[pos];
 		if (!special) return;
 
-		showPopup(
-			special.type.charAt(0).toUpperCase() + special.type.slice(1),
-			special.message
-		);
+		// Skip popup for these types as we already showed it
+		if (special.type !== "answerOppositeTeamQuestion" && 
+				special.type !== "oppositeAnswers") {
+			showPopup(
+				special.type.charAt(0).toUpperCase() + special.type.slice(1),
+				special.message
+			);
+		}
 
 		switch (special.type) {
 			case "skipTurn":
