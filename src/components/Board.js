@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Play, Square, RotateCcw, X, Shuffle } from "lucide-react";
 
 export default function DiceBoard({ questions, playerScores, specialBlocks }) {
-  const [positions, setPositions] = useState({ p1: 18, p2: 19 });
+  const [positions, setPositions] = useState({ p1: 40, p2: 41 });
   const [currentPlayer, setCurrentPlayer] = useState("p1");
   const [answeringPlayer, setAnsweringPlayer] = useState("p1");
   const [diceValue, setDiceValue] = useState(null);
@@ -17,6 +17,7 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
   const [rolling, setRolling] = useState(false);
   const [flippedQuestionActive, setFlippedQuestionActive] = useState(false);
   const [showFlipped, setShowFlipped] = useState(false);
+  const [extraChance, setExtraChance] = useState({ p1: 0, p2: 0 });
 
   // ✅ Popup
   const [popup, setPopup] = useState({
@@ -25,14 +26,11 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
     description: "",
   });
 
-  /** ----------------
-   * ⏱ TIMER STATES
-   ---------------- */
+  /** ---------------- TIMER STATES ---------------- */
   const [timer, setTimer] = useState(30);
   const [isTimerRunning, setIsTimerRunning] = useState(false);
   const timerRef = useRef(null);
 
-  /** TIMER LOGIC */
   useEffect(() => {
     if (isTimerRunning && timer > 0) {
       timerRef.current = setInterval(() => {
@@ -59,13 +57,16 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
   const rollDice = () => {
     if (rolling) return;
 
-    // ✅ If player’s turn is marked as skipped → auto-pass
-    if (skipTurn[currentPlayer]) {
-      setSkipTurn((prev) => ({ ...prev, [currentPlayer]: false })); // consume skip
-      const nextPlayer = currentPlayer === "p1" ? "p2" : "p1";
-      setCurrentPlayer(nextPlayer); // opponent plays immediately
-      return;
-    }
+    // // ✅ Handle skip turn at start
+    // if (skipTurn[currentPlayer]) {
+    //   setSkipTurn((prev) => ({ ...prev, [currentPlayer]: false }));
+    //   showPopup(
+    //     "Turn Skipped ⏭️",
+    //     `${currentPlayer === "p1" ? "Team Prithu" : "Team Brahma"}'s turn is skipped!`
+    //   );
+    //   switchTurn();
+    //   return;
+    // }
 
     setRolling(true);
 
@@ -87,16 +88,16 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
         // set answering player
         setAnsweringPlayer(currentPlayer);
 
-        // ✅ Check if landing on red block → move directly, apply effect, skip modal
+        // ✅ Check if landing on red block → move & skip modal
         const special = specialBlocks[newPos];
         if (special?.color === "red") {
           setPositions((prev) => ({ ...prev, [currentPlayer]: newPos }));
           handleSpecialBlock(newPos, currentPlayer);
           setPendingMove(null);
-          return; // 🚨 don’t show question modal
+          return; // don’t show question
         }
 
-        // ✅ normal blue/empty → allow modal
+        // ✅ Handle other blocks normally
         handleSpecialBlock(newPos, currentPlayer, false);
 
         setTimeout(() => {
@@ -107,7 +108,7 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
     }, 100);
   };
 
-  /** ✅ Answer Handling */
+  /** ✅ Handle Answer */
   const handleAnswer = (isCorrect) => {
     let extraTurnTriggered = false;
 
@@ -116,7 +117,7 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 
       const special = specialBlocks[pendingMove];
 
-      // Move blocks should apply only on correct answer for blue
+      // Move blocks apply only on correct answer for blue
       if (special?.type === "move" && special.color === "blue") {
         handleMoveBlock(pendingMove, answeringPlayer, special.value, (title, desc) =>
           setPopup({ visible: true, title, description: desc })
@@ -166,18 +167,17 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 
     switch (special.type) {
       case "move":
-        // ✅ Only auto-move immediately if RED block
-        if (special.color === "red") {
-          handleMoveBlock(pos, player, special.value, showPopup);
-        }
+        if (special.color === "red") handleMoveBlock(pos, player, special.value, showPopup);
         break;
       case "extraTurn":
-        handleExtraTurn(player, showPopup);
+        setExtraChance((prev) => ({ ...prev, [player]: prev[player] + 1 }));
+        showPopup("Extra Turn 🔁", "You got an extra turn!");
         return { extraTurn: true };
       case "skipTurn":
-        setSkipTurn((prev) => ({ ...prev, [player]: true }));
+        setExtraChance((prev) => ({ ...prev, [player === 'p1' ? 'p2' : 'p1']: prev[player === 'p1' ? 'p2' : 'p1'] + 1 })); // reset extra chances
         showPopup("Skip Turn ⏭️", "Your next turn is skipped.");
-        return { skipTurn: true };
+        switchTurn();
+        return { extraTurn: true };
       case "flipQuestion":
         handleFlipQuestion(showPopup);
         break;
@@ -197,7 +197,6 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
         handleDefaultCase(showPopup);
         break;
     }
-
     return {};
   };
 
@@ -205,18 +204,12 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
   const handleMoveBlock = (pos, player, value, showPopup) => {
     const newPos = Math.max(1, pos + value);
     setPositions((prev) => ({ ...prev, [player]: newPos }));
-
     showPopup(
       "Move Block 🎲",
       `You landed on a Move Block! Move ${
         value > 0 ? `forward ${value}` : `backward ${Math.abs(value)}`
       } steps.`
     );
-  };
-
-  /** 🔸 Extra Turn */
-  const handleExtraTurn = (player, showPopup) => {
-    showPopup("Extra Turn 🔁", "You got an Extra Turn! Roll again.");
   };
 
   /** 🔸 Flip Question */
@@ -231,9 +224,15 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
     showPopup("Special Block", "This special block will be implemented later.");
   };
 
-  /** 🔄 Switch Player Turn */
+  /** 🔄 Switch Player Turn with Extra Chance Consumption */
   const switchTurn = () => {
     let nextPlayer = currentPlayer === "p1" ? "p2" : "p1";
+
+    // ✅ Consume extraChance first
+    if (extraChance[currentPlayer] > 0) {
+      setExtraChance((prev) => ({ ...prev, [currentPlayer]: prev[currentPlayer] - 1 }));
+      return; // same player rolls again
+    }
 
     // ✅ Auto-skip if nextPlayer has skipTurn active
     if (skipTurn[nextPlayer]) {
@@ -256,8 +255,7 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
         className={`w-[3.5rem] h-[3.5rem] border relative flex items-center justify-center text-lg 
           ${special?.color === "red" ? "bg-red-500" : ""}
           ${special?.color === "blue" ? "bg-blue-400" : ""}
-          ${!special && "bg-white text-black"}
-        `}
+          ${!special && "bg-white text-black"}`}
       >
         <span className="text-sm font-semibold text-gray-700">{num}</span>
         {isP1 && (
@@ -284,6 +282,11 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
         )}
       </div>
     );
+  };
+
+  /** ✅ Show Popup Helper */
+  const showPopup = (title, description) => {
+    setPopup({ visible: true, title, description });
   };
 
   return (

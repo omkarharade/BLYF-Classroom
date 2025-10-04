@@ -68,6 +68,7 @@ export default function BoardGamePage() {
       ans: "Adhoksaja ; adhoksaja (t10)",
       ansHindi: "अधोक्षज; अधोक्षज। (ता 10)"
     }
+    // Continue similarly for all questions...
   ];
 
   const specialBlocks = {
