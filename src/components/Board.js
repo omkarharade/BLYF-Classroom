@@ -142,32 +142,36 @@ export default function DiceBoard({ questions, playerScores, specialBlocks }) {
 
 	/** ✅ Handle Answer */
 	const handleAnswer = (isCorrect) => {
-		let extraTurnTriggered = false;
-
 		if (pendingMove !== null && isCorrect) {
-			setPositions((prev) => ({ ...prev, [currentPlayer]: pendingMove }));
-
+			setPositions(prev => ({ ...prev, [currentPlayer]: pendingMove }));
+			
 			const special = specialBlocks[pendingMove];
 			
 			if (special) {
 				if (special.type === "move" && special.color === "blue") {
 					handleMoveBlock(pendingMove, currentPlayer, special.value);
 				}
-				const result = handleSpecialBlock(pendingMove, currentPlayer, isCorrect);
-				if (result?.extraTurn) extraTurnTriggered = true;
+				handleSpecialBlock(pendingMove, currentPlayer, isCorrect);
 			}
 
-			setScores((prev) => ({
+			setScores(prev => ({
 				...prev,
-				[currentPlayer]: prev[currentPlayer] + 1,
+				[currentPlayer]: prev[currentPlayer] + 1
 			}));
 		}
 
 		closeQuestionModal();
 
-		// Switch turns unless it's a 6 or extra turn was triggered
-		if (diceValue === 6 || extraTurnTriggered) return;
-		switchTurn();
+		// First check if it's a 6
+		if (diceValue === 6) {
+			showPopup("Extra Turn! 🎲", "You rolled a 6! Roll again!");
+			return; // Keep turn with current player
+		}
+
+		// Then check other conditions for switching turns
+		if (!isCorrect || !specialBlocks[pendingMove]?.type?.includes("extraTurn")) {
+			switchTurn();
+		}
 	};
 
 	/** ⏳ Timeout Handling */
