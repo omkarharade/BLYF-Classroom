@@ -10,7 +10,7 @@ export default function DiceBoard({
 	specialBlocks = {},
 }) {
 	// basic game state
-	const [positions, setPositions] = useState({ p1: 1, p2: 1 });
+	const [positions, setPositions] = useState({ p1: 24, p2: 25 });
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [diceValue, setDiceValue] = useState(null);
 	const [rolling, setRolling] = useState(false);
@@ -60,12 +60,14 @@ export default function DiceBoard({
 	const [extraChance, setExtraChance] = useState({ p1: 0, p2: 0 });
 	const [skipTurn, setSkipTurn] = useState({ p1: false, p2: false });
 	const [multiQuestionReq, setMultiQuestionReq] = useState({ p1: 0, p2: 0 });
-	const [pendingMultiMove, setPendingMultiMove] = useState({ p1: 0, p2: 0 });
+	const [extraMoveCount, setExtraMoveCount] = useState({ p1: 0, p2: 0 });
 	const [oppositeAnswerPending, setOppositeAnswerPending] = useState(null); // { pos, player, opponent, value }
 	const [flippedQuestionActive, setFlippedQuestionActive] = useState(false);
 	const [flippedQuestionData, setFlippedQuestionData] = useState(null);
 	const [flippedShowing, setFlippedShowing] = useState(false);
   const rollbackStepsRef = useRef({ p1: 0, p2: 0 });
+  const extraTurnCountRef = useRef({ p1: 0, p2: 0 });
+  const isQuestionModalDisabledRef = useRef(false);
   const diceValueRef = useRef(null);
 
 	/** ------------------ Special handlers (modular) ------------------ */
@@ -91,7 +93,38 @@ export default function DiceBoard({
 
 	};
 
-	const handleSkipTurn = (pos, player) => {};
+	const handleSkipTurn = (newPos, player, stepCount, skipCount) => {
+
+
+    /**
+     * player move by 1 step only 
+     */
+
+    const specialAppliedPos = Math.min(100, newPos + stepCount);
+
+    /**
+     * update position state with special applied position
+     */
+
+    setTimeout(() => {
+
+      setPositions((prev) => ({ ...prev, [player]: specialAppliedPos }));
+
+    }, 4000)
+
+
+    /**
+     * the player misses next turn, effectively giving opponent an extra turn
+     */
+
+    const opponent = player === "p1" ? "p2" : "p1";
+
+    /**
+     * adding extra turn count to opponent
+     */
+    extraTurnCountRef.current[opponent] = skipCount;
+
+  };
 
 	const handleAnswerToMove = (pos, player, value) => {};
 
@@ -136,7 +169,8 @@ export default function DiceBoard({
 				/**
 				 * handle the skip turn special effect
 				 */
-				handleSkipTurn(pos, player);
+				handleSkipTurn(newPos, player, special?.stepCount || 0, special?.skipCount || 1);
+        
 				break;
 
 			case "answerToMove":
@@ -314,7 +348,13 @@ export default function DiceBoard({
 				clearInterval(rollInterval);
 				const finalRoll = Math.floor(Math.random() * 6) + 1;
 				setDiceValue(finalRoll);
-        diceValueRef.current = finalRoll;
+				diceValueRef.current = finalRoll;
+
+        setRolling(false);
+
+        /**
+         * calculate new position for the current player
+         */
 
 				let newPos = positions[currentPlayer] + finalRoll;
 				if (newPos > 100) newPos = 100;
@@ -323,15 +363,27 @@ export default function DiceBoard({
 				 * move the current player on UI by setting the positions useState
 				 */
 
-				
-        setTimeout(() => {
+				setTimeout(() => {
+					/**
+					 * keeping a delay to allow for dice animation to complete
+					 * and show the movement of the player piece on the board
+					 */
+					setPositions((prev) => ({ ...prev, [currentPlayer]: newPos }));
+				}, 4000);
 
-          /**
-           * keeping a delay to allow for dice animation to complete
-           * and show the movement of the player piece on the board
-           */
-          setPositions((prev) => ({ ...prev, [currentPlayer]: newPos }));
-        }, 4000);
+
+
+
+				/**
+				 * check if the current player have extra turn pending
+				 * if yes, decrement the extra turn count and keep the same player's turn
+				 */
+
+				if ((extraTurnCountRef.current[currentPlayer] || 0) > 0) {
+					extraTurnCountRef.current[currentPlayer] = extraTurnCountRef.current[currentPlayer] - 1;
+
+          return;
+				}
 
 				/**
 				 * If it's a 6 -> move instantly, no question,
@@ -352,7 +404,6 @@ export default function DiceBoard({
 					 */
 
 					setTimeout(() => {
-						setRolling(false);
 						showPopup("Rolled a 6", "You moved and get another turn!");
 					}, 800);
 
@@ -361,10 +412,6 @@ export default function DiceBoard({
 
 				// Non-6 -> prepare pending move and show question modal after animation
 				setTimeout(() => {
-					/**
-					 * set rolling to false after dice animation
-					 */
-					setRolling(false);
 
 					/**
 					 * check if the current player landed on a special block
@@ -387,27 +434,28 @@ export default function DiceBoard({
 	const switchTurn = () => {
 		const nextPlayer = currentPlayer === "p1" ? "p2" : "p1";
 
-		// if opponent must be skipped, keep current player (clear skip flag)
-		if (skipTurn[nextPlayer]) {
-			setSkipTurn((prev) => ({ ...prev, [nextPlayer]: false }));
-			showPopup("Skip Applied", `${nextPlayer} missed their turn`);
-			// keep currentPlayer same
-			setDiceValue(null);
-			resetTimer();
-			return;
-		}
+		// // if opponent must be skipped, keep current player (clear skip flag)
+		// if (skipTurn[nextPlayer]) {
+		// 	setSkipTurn((prev) => ({ ...prev, [nextPlayer]: false }));
+		// 	showPopup("Skip Applied", `${nextPlayer} missed their turn`);
+		// 	// keep currentPlayer same
+		// 	setDiceValue(null);
+		// 	resetTimer();
+		// 	return;
+		// }
 
-		// If current player has an extra chance, consume and keep turn
-		if ((extraChance[currentPlayer] || 0) > 0) {
-			setExtraChance((prev) => ({
-				...prev,
-				[currentPlayer]: prev[currentPlayer] - 1,
-			}));
-			showPopup("Extra Turn", "Using your extra turn!");
-			setDiceValue(null);
-			resetTimer();
-			return;
-		}
+		// // If current player has an extra chance, consume and keep turn
+		// if ((extraChance[currentPlayer] || 0) > 0) {
+		// 	setExtraChance((prev) => ({
+		// 		...prev,
+		// 		[currentPlayer]: prev[currentPlayer] - 1,
+		// 	}));
+		// 	showPopup("Extra Turn", "Using your extra turn!");
+		// 	setDiceValue(null);
+		// 	resetTimer();
+		// 	return;
+		// }
+
 
 		// Normal switch
 		setCurrentPlayer(nextPlayer);
