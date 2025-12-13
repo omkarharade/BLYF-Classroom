@@ -14,7 +14,6 @@ export default function DiceBoard({
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [diceValue, setDiceValue] = useState(null);
 	const [rolling, setRolling] = useState(false);
-	const [pendingMove, setPendingMove] = useState(null);
 
 	// question modal state
 	const [showQuestion, setShowQuestion] = useState(false);
@@ -66,6 +65,8 @@ export default function DiceBoard({
 	const [flippedQuestionActive, setFlippedQuestionActive] = useState(false);
 	const [flippedQuestionData, setFlippedQuestionData] = useState(null);
 	const [flippedShowing, setFlippedShowing] = useState(false);
+  const rollbackStepsRef = useRef({ p1: 0, p2: 0 });
+  const diceValueRef = useRef(null);
 
 	/** ------------------ Special handlers (modular) ------------------ */
 
@@ -85,7 +86,6 @@ export default function DiceBoard({
     setTimeout(() => {
 
       setPositions((prev) => ({ ...prev, [player]: specialAppliedPos }));
-
 
     }, 4000)
 
@@ -124,6 +124,7 @@ export default function DiceBoard({
 				 * handle the move special effect
 				 */
 				handleMove(newPos, player, special?.stepCount || 0);
+
 				break;
 
 			case "skipTurn":
@@ -232,8 +233,69 @@ export default function DiceBoard({
 		 * if yes, process the special effect
 		 */
 
+
+    const special = specialBlocks?.[newPos];
+
+    if(special){
+
+      if(special?.color === "red"){
+
+        /**
+         * if the special block is red
+         */
+
+        if(special?.stepCount && special.stepCount > 0){
+          rollbackStepsRef.current[player] = special.stepCount;
+        }
+        else {
+          rollbackStepsRef.current[player] = 0;
+        }
+
+      }
+      else {
+
+        /**
+         * if the special block is blue
+         */
+
+        if(special?.stepCount){
+
+          rollbackStepsRef.current[player] = special.stepCount;
+
+        }
+        else {
+          rollbackStepsRef.current[player] = diceValue;
+        }
+      }
+    }
+    else{
+
+      /**
+       * if there is no special block, the rollback steps will be equal to the dice value
+       */
+
+      console.log("No special block landed, setting rollback steps to dice value: ", diceValueRef.current);
+      rollbackStepsRef.current[player] = diceValueRef.current;
+
+      console.log("rollbackStepsRef current value: ", rollbackStepsRef.current);
+    }
+
 		processSpecialEffect(newPos, player);
 	};
+
+  const showQuestionModal = () => {
+
+    /**
+     * show question modal after a short delay to allow for dice animation to complete
+     * and player movement to be visually perceived
+     * 
+     * then question modal appears
+     */
+    setTimeout(() => {
+      setShowQuestion(true);
+    }, 7000);
+
+  }
 
 	// Roll Dice: 6 moves instantly and grants another roll; non-6 opens question modal
 	const rollDice = () => {
@@ -252,6 +314,7 @@ export default function DiceBoard({
 				clearInterval(rollInterval);
 				const finalRoll = Math.floor(Math.random() * 6) + 1;
 				setDiceValue(finalRoll);
+        diceValueRef.current = finalRoll;
 
 				let newPos = positions[currentPlayer] + finalRoll;
 				if (newPos > 100) newPos = 100;
@@ -260,8 +323,15 @@ export default function DiceBoard({
 				 * move the current player on UI by setting the positions useState
 				 */
 
-				setPositions((prev) => ({ ...prev, [currentPlayer]: newPos }));
-				setPendingMove(null);
+				
+        setTimeout(() => {
+
+          /**
+           * keeping a delay to allow for dice animation to complete
+           * and show the movement of the player piece on the board
+           */
+          setPositions((prev) => ({ ...prev, [currentPlayer]: newPos }));
+        }, 4000);
 
 				/**
 				 * If it's a 6 -> move instantly, no question,
@@ -290,7 +360,6 @@ export default function DiceBoard({
 				}
 
 				// Non-6 -> prepare pending move and show question modal after animation
-				setPendingMove(newPos);
 				setTimeout(() => {
 					/**
 					 * set rolling to false after dice animation
@@ -308,7 +377,7 @@ export default function DiceBoard({
 					 * after processing special effect, show question modal
 					 */
 
-					// showQuestionModal();
+					showQuestionModal();
 				}, 100);
 			}
 		}, 300);
@@ -324,7 +393,6 @@ export default function DiceBoard({
 			showPopup("Skip Applied", `${nextPlayer} missed their turn`);
 			// keep currentPlayer same
 			setDiceValue(null);
-			setPendingMove(null);
 			resetTimer();
 			return;
 		}
@@ -337,7 +405,6 @@ export default function DiceBoard({
 			}));
 			showPopup("Extra Turn", "Using your extra turn!");
 			setDiceValue(null);
-			setPendingMove(null);
 			resetTimer();
 			return;
 		}
@@ -345,7 +412,6 @@ export default function DiceBoard({
 		// Normal switch
 		setCurrentPlayer(nextPlayer);
 		setDiceValue(null);
-		setPendingMove(null);
 		resetTimer();
 	};
 
@@ -353,79 +419,62 @@ export default function DiceBoard({
 	 *  Supports: deferred special processing, multiQuestion requirements, opposite team answering, flip question display.
 	 */
 	const handleAnswer = (isCorrect) => {
-		// Determine which player the effect should apply to:
-		// If oppositeAnswerPending exists and targets current player, the opponent answers for current player.
-		// The effect (move) should apply to oppositeAnswerPending.player (the original landing player).
-		let effectPlayer = currentPlayer;
-		if (
-			oppositeAnswerPending &&
-			oppositeAnswerPending.player === currentPlayer
-		) {
-			effectPlayer = oppositeAnswerPending.player; // original player gets effect
-		}
+		
 
-		// If current player currently has multi-question requirement, this answer counts toward it
-		if ((multiQuestionReq[currentPlayer] || 0) > 0) {
-			// decrement requirement if answered correctly
-			if (isCorrect) {
-				setMultiQuestionReq((prev) => {
-					const remaining = Math.max(0, (prev[currentPlayer] || 0) - 1);
-					const updated = { ...prev, [currentPlayer]: remaining };
-					// if completed, apply the pending multi move
-					if (remaining === 0) {
-						const mv = pendingMultiMove[currentPlayer] || 0;
-						if (mv !== 0) {
-							handleMoveRelative(null, currentPlayer, mv);
-							setPendingMultiMove((pm) => ({ ...pm, [currentPlayer]: 0 }));
-						}
-					}
-					return updated;
-				});
-			}
+    /**
+     * set the current question index to next question 
+     */
+    setCurrentQuestionIndex((prev) => Math.min(prev + 1, questions.length));
 
-			// if requirement still > 0, close modal and keep same player's turn? We'll switch turn after counting as per original design
-			closeQuestionModal();
-			// After these sub-questions, switch turn (consistent with existing flow)
-			switchTurn();
-			return;
-		}
+    /**
+     * reset the timer 
+     */
+    setTimer(30);
+    setIsTimerRunning(false);
 
-		// Normal non-multi-question flow:
-		if (pendingMove !== null && isCorrect) {
-			// apply movement to the effectPlayer (usually currentPlayer unless oppositeAnswer)
-			setPositions((prev) => ({ ...prev, [effectPlayer]: pendingMove }));
-			setScores((prev) => ({
-				...prev,
-				[effectPlayer]: (prev[effectPlayer] || 0) + 1,
-			}));
 
-			// process special at landing (non-6 source)
-			processSpecialEffect(pendingMove, effectPlayer, false);
-		}
+    /**
+     * if correct, close question modal and switch turn
+     */
+    if(isCorrect){
+      setShowQuestion(false);
+      switchTurn();
+    }
+    else {
 
-		// If there was a deferred special from previous 6-land for this player, apply it now
-		if (deferredSpecial && deferredSpecial.player === currentPlayer) {
-			processSpecialEffect(deferredSpecial.pos, deferredSpecial.player, false);
-			setDeferredSpecial(null);
-		}
+      /**
+       * if incorrect, there is some steps rollback to be done
+       */
 
-		// If oppositeAnswerPending existed and was applied, clear it
-		if (
-			oppositeAnswerPending &&
-			oppositeAnswerPending.player === currentPlayer
-		) {
-			setOppositeAnswerPending(null);
-		}
+      const stepsToRollback = rollbackStepsRef.current[currentPlayer] || 0;
 
-		// If flip-question data was active for this landing, clear it after answering
-		setFlippedQuestionActive(false);
-		setFlippedQuestionData(null);
-		setFlippedShowing(false);
+      setTimeout(() => {
 
-		closeQuestionModal();
+        console.log("Rolling back ", stepsToRollback, " steps for ", currentPlayer);
 
-		// After answering a non-6 move, switch turn to opponent (unless consumed by extraChance when switching)
-		switchTurn();
+
+        setPositions((prev) => {
+        const currentPos = prev[currentPlayer];
+        const newPos = Math.max(1, currentPos - stepsToRollback);
+
+        console.log("New position after rollback: ", newPos);
+        console.log("positions object before rollback ==> ",prev);
+        console.log("positions object after rollback ==> ", { ...prev, [currentPlayer]: newPos });
+        return { ...prev, [currentPlayer]: newPos };
+      });
+
+      }, 4000);
+
+
+      /**
+       * close question modal and switch turn
+       */
+
+      setShowQuestion(false);
+      switchTurn();
+    }
+
+    diceValueRef.current = 0;
 	};
 
 	/** ⏳ Timeout Handling - treat as incorrect and switch turn */
@@ -467,7 +516,6 @@ export default function DiceBoard({
 	const closeQuestionModal = () => {
 		setShowQuestion(false);
 		setCurrentQuestionIndex((prev) => Math.min(prev + 1, questions.length - 1));
-		setPendingMove(null);
 		stopTimer();
 	};
 
