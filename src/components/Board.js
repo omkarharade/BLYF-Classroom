@@ -10,7 +10,7 @@ export default function DiceBoard({
 	specialBlocks = {},
 }) {
 	// basic game state
-	const [positions, setPositions] = useState({ p1: 22, p2: 25 });
+	const [positions, setPositions] = useState({ p1: 33, p2: 34 });
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [diceValue, setDiceValue] = useState(null);
 	const [rolling, setRolling] = useState(false);
@@ -184,15 +184,19 @@ export default function DiceBoard({
 
   };
 
-	const handleAnswerForOppositeTeam = (pos, player) => {};
+	const handleAnswerForOppositeTeam = (newPos, player) => {};
 
-	const handleAnswerTwoAndMove = (pos, player) => {};
+	const handleAnswerTwoAndMove = (newPos, player) => {};
 
-	const handleFlipTheQuestion = (pos, player, questionsRequired, value) => {};
+	const handleFlipTheQuestion = (newPos, player, questionsRequired, value) => {};
 
-	const handleExtraTurn = (pos, player, value) => {};
+	const handleExtraTurn = (newPos, player) => {
 
-	const handleOtherTeamAnswers = (pos, player, value) => {};
+    isQuestionModalDisabledRef.current = true;
+
+  };
+
+	const handleOtherTeamAnswers = (newPos, player, value) => {};
 
 	/**
 	 * Centralized processor for special effects.
@@ -253,7 +257,7 @@ export default function DiceBoard({
 				/**
 				 * handle the answer for opposite team special effect
 				 */
-				handleAnswerForOppositeTeam(pos, player);
+				handleAnswerForOppositeTeam(newPos, player);
 				break;
 
 			case "answerTwoAndMove":
@@ -268,7 +272,7 @@ export default function DiceBoard({
 				/**
 				 * handle the answer two and move special effect
 				 */
-				handleAnswerTwoAndMove(pos, player);
+				handleAnswerTwoAndMove(newPos, player);
 				break;
 			case "flipTheQuestion":
 				/**
@@ -280,7 +284,7 @@ export default function DiceBoard({
 				 * handle the flip the question special effect
 				 */
 				handleFlipTheQuestion(
-					pos,
+					newPos,
 					player,
 					special.questionsRequired,
 					special.value
@@ -295,7 +299,7 @@ export default function DiceBoard({
 				/**
 				 * handle the extra turn special effect
 				 */
-				handleExtraTurn(pos, player, special.value);
+				handleExtraTurn(newPos, player);
 				break;
 
 			case "otherTeamAnswers":
@@ -403,8 +407,11 @@ export default function DiceBoard({
 			if (rollCount > 10) {
 				clearInterval(rollInterval);
 				const finalRoll = Math.floor(Math.random() * 6) + 1;
+				// const finalRoll = 2;
 				setDiceValue(finalRoll);
 				diceValueRef.current = finalRoll;
+
+        
 
         setRolling(false);
 
@@ -624,7 +631,7 @@ export default function DiceBoard({
         [currentPlayer]: Math.max(0, (prev[currentPlayer] || 0) - 1)
       }));
 
-      
+
       if(pendingMultiMoveRef.current[currentPlayer] === 0){
         switchTurn();
         diceValueRef.current = 0;
