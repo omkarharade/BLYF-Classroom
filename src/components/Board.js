@@ -10,7 +10,7 @@ export default function DiceBoard({
 	specialBlocks = {},
 }) {
 	// basic game state
-	const [positions, setPositions] = useState({ p1: 24, p2: 25 });
+	const [positions, setPositions] = useState({ p1: 22, p2: 25 });
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [diceValue, setDiceValue] = useState(null);
 	const [rolling, setRolling] = useState(false);
@@ -55,6 +55,7 @@ export default function DiceBoard({
 		setIsTimerRunning(false);
 	};
 
+
 	/** ---------------- Special-case states ---------------- */
 	const [deferredSpecial, setDeferredSpecial] = useState(null); // when landing via 6 on requiresAnswer special
 	const [extraChance, setExtraChance] = useState({ p1: 0, p2: 0 });
@@ -69,6 +70,55 @@ export default function DiceBoard({
   const extraTurnCountRef = useRef({ p1: 0, p2: 0 });
   const isQuestionModalDisabledRef = useRef(false);
   const diceValueRef = useRef(null);
+  const pendingMultiMoveRef = useRef({ p1: 0, p2: 0 });
+  const [pendingMultiMove, setPendingMultiMove] = useState({ p1: 0, p2: 0 });
+
+
+
+  useEffect(() => {
+
+
+    console.log("called pendingMultiMoveRef useEffect with current player: ", currentPlayer);
+    console.log("pendingMultiMoveRef current value: ", pendingMultiMoveRef.current);
+
+    if(pendingMultiMoveRef.current[currentPlayer] === 0){
+      console.log("No pending multi moves for any player.");
+      return;
+    }
+
+
+    if(pendingMultiMoveRef.current){
+      console.log("pendingMultiMoveRef current value changed: ", pendingMultiMoveRef.current);
+    }
+
+    if(pendingMultiMoveRef.current[currentPlayer] > 0){
+
+      rollbackStepsRef.current[currentPlayer] = 1;
+
+      console.log("Player ", currentPlayer, " has pending multi moves: ", pendingMultiMoveRef.current[currentPlayer]);
+
+      setTimeout(() => {
+
+        setPositions((prev) => {
+          const currentPos = prev[currentPlayer];
+          let newPos = currentPos + 1;
+
+          if(newPos > 100){
+            newPos = 100;
+          }
+
+          console.log("Moving player ", currentPlayer, " to new position: ", newPos);
+          return { ...prev, [currentPlayer]: newPos };
+        });
+
+      }, 4000);
+
+      showQuestionModal();
+
+    }
+
+  }, [pendingMultiMove]);
+
 
 	/** ------------------ Special handlers (modular) ------------------ */
 
@@ -126,7 +176,13 @@ export default function DiceBoard({
 
   };
 
-	const handleAnswerToMove = (pos, player, value) => {};
+	const handleAnswerToMove = (newPos, player, questionsCount, stepCount) => {
+
+    pendingMultiMoveRef.current[player] = questionsCount;
+    setPendingMultiMove((prev) => ({ ...prev, [player]: questionsCount }));
+    isQuestionModalDisabledRef.current = true;
+
+  };
 
 	const handleAnswerForOppositeTeam = (pos, player) => {};
 
@@ -182,7 +238,7 @@ export default function DiceBoard({
 				/**
 				 * handle the answer to move special effect
 				 */
-				handleAnswerToMove(pos, player, special.value);
+				handleAnswerToMove(newPos, player, special.questionsCount || 0, special?.stepCount || 0);
 				break;
 
 			case "answerForOppositeTeam":
@@ -424,7 +480,13 @@ export default function DiceBoard({
 					 * after processing special effect, show question modal
 					 */
 
-					showQuestionModal();
+					
+          if(!isQuestionModalDisabledRef.current){
+            showQuestionModal();
+          }
+          else{
+            isQuestionModalDisabledRef.current = false;
+          }
 				}, 100);
 			}
 		}, 300);
@@ -485,8 +547,7 @@ export default function DiceBoard({
      * if correct, close question modal and switch turn
      */
     if(isCorrect){
-      setShowQuestion(false);
-      switchTurn();
+
     }
     else {
 
@@ -518,46 +579,62 @@ export default function DiceBoard({
        * close question modal and switch turn
        */
 
-      setShowQuestion(false);
-      switchTurn();
     }
 
-    diceValueRef.current = 0;
+    closeQuestionModal();
+
+    /**
+     * check if there are pending multi moves for the player
+     * if yes, decrement the pending multi move count
+     * and do not switch turn
+     */
+
+    if((pendingMultiMoveRef.current[currentPlayer] || 0) > 0){
+      pendingMultiMoveRef.current[currentPlayer] = Math.max(0, (pendingMultiMoveRef.current[currentPlayer] || 0) - 1);
+
+      setPendingMultiMove((prev) => ({
+        ...prev,
+        [currentPlayer]: Math.max(0, (prev[currentPlayer] || 0) - 1)
+      }));
+
+      
+      if(pendingMultiMoveRef.current[currentPlayer] === 0){
+        switchTurn();
+        diceValueRef.current = 0;
+      }
+    }
+
+    else {
+      switchTurn();
+      diceValueRef.current = 0;
+    }
 	};
 
 	/** ⏳ Timeout Handling - treat as incorrect and switch turn */
 	const handleTimeout = () => {
-		// If multiQuestion was active, decrement requirement (treat timeout as incorrect -> just decrement or keep)
-		if ((multiQuestionReq[currentPlayer] || 0) > 0) {
-			// treat as failed attempt; decrement anyway to progress
-			setMultiQuestionReq((prev) => {
-				const remaining = Math.max(0, (prev[currentPlayer] || 0) - 1);
-				const updated = { ...prev, [currentPlayer]: remaining };
-				if (remaining === 0) {
-					const mv = pendingMultiMove[currentPlayer] || 0;
-					if (mv !== 0) {
-						handleMoveRelative(null, currentPlayer, mv);
-						setPendingMultiMove((pm) => ({ ...pm, [currentPlayer]: 0 }));
-					}
-				}
-				return updated;
-			});
 
-			closeQuestionModal();
-			switchTurn();
-			return;
-		}
+    closeQuestionModal();
 
-		closeQuestionModal();
-		// clear oppositeAnswerPending if it applied to this question
-		if (
-			oppositeAnswerPending &&
-			oppositeAnswerPending.player === currentPlayer
-		) {
-			setOppositeAnswerPending(null);
-		}
-		// apply deferred special only when next non-6 occurs (handled elsewhere)
-		switchTurn();
+    if((pendingMultiMoveRef.current[currentPlayer] || 0) > 0){
+      pendingMultiMoveRef.current[currentPlayer] = Math.max(0, (pendingMultiMoveRef.current[currentPlayer] || 0) - 1);
+
+      
+      setPendingMultiMove((prev) => ({
+        ...prev,
+        [currentPlayer]: Math.max(0, (prev[currentPlayer] || 0) - 1)
+      }));
+
+      
+      if(pendingMultiMoveRef.current[currentPlayer] === 0){
+        switchTurn();
+        diceValueRef.current = 0;
+      }
+    }
+
+    else {
+      switchTurn();
+      diceValueRef.current = 0;
+    }
 	};
 
 	/** Close modal & reset */
@@ -565,6 +642,7 @@ export default function DiceBoard({
 		setShowQuestion(false);
 		setCurrentQuestionIndex((prev) => Math.min(prev + 1, questions.length - 1));
 		stopTimer();
+    setTimer(30);
 	};
 
 	/** 🎨 Render Each Cell - simplified (no special colors rendering here) */
