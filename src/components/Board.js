@@ -10,7 +10,7 @@ export default function DiceBoard({
 	specialBlocks = {},
 }) {
 	// basic game state
-	const [positions, setPositions] = useState({ p1: 33, p2: 34 });
+	const [positions, setPositions] = useState({ p1: 64, p2: 34 });
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [diceValue, setDiceValue] = useState(null);
 	const [rolling, setRolling] = useState(false);
@@ -71,6 +71,7 @@ export default function DiceBoard({
   const isQuestionModalDisabledRef = useRef(false);
   const diceValueRef = useRef(null);
   const pendingMultiMoveRef = useRef({ p1: 0, p2: 0 });
+  const isRollbackStepsDisabledRef = useRef({p1: false, p2: false});
   const [pendingMultiMove, setPendingMultiMove] = useState({ p1: 0, p2: 0 });
 
 
@@ -184,7 +185,23 @@ export default function DiceBoard({
 
   };
 
-	const handleAnswerForOppositeTeam = (newPos, player) => {};
+	const handleAnswerForOppositeTeam = (newPos, player, stepCount) => {
+
+    setTimeout(() => {
+
+      const specialCaseAppliedPos = Math.min(100, newPos + stepCount);
+
+      setPositions((prev) => ({ ...prev, [player]: specialCaseAppliedPos }));
+
+    }, 4000);
+
+
+    const opponent = player === "p1" ? "p2" : "p1";
+
+    isRollbackStepsDisabledRef.current[opponent] = true;
+
+
+  };
 
 	const handleAnswerTwoAndMove = (newPos, player) => {};
 
@@ -196,7 +213,22 @@ export default function DiceBoard({
 
   };
 
-	const handleOtherTeamAnswers = (newPos, player, value) => {};
+	const handleOtherTeamAnswers = (newPos, player, stepCount) => {
+
+    
+    setTimeout(() => {
+
+      const specialCaseAppliedPos = Math.min(100, newPos + stepCount);
+
+      setPositions((prev) => ({ ...prev, [player]: specialCaseAppliedPos }));
+
+    }, 4000);
+
+
+    isRollbackStepsDisabledRef.current[player] = true;
+
+
+  };
 
 	/**
 	 * Centralized processor for special effects.
@@ -257,7 +289,7 @@ export default function DiceBoard({
 				/**
 				 * handle the answer for opposite team special effect
 				 */
-				handleAnswerForOppositeTeam(newPos, player);
+				handleAnswerForOppositeTeam(newPos, player, special?.stepCount);
 				break;
 
 			case "answerTwoAndMove":
@@ -311,7 +343,7 @@ export default function DiceBoard({
 				/**
 				 * handle the other team answers special effect
 				 */
-				handleOtherTeamAnswers(pos, player, special.value);
+				handleOtherTeamAnswers(newPos, player, special?.stepCount || 0);
 				break;
 
 			default:
@@ -406,8 +438,8 @@ export default function DiceBoard({
 			 */
 			if (rollCount > 10) {
 				clearInterval(rollInterval);
-				const finalRoll = Math.floor(Math.random() * 6) + 1;
-				// const finalRoll = 2;
+				// const finalRoll = Math.floor(Math.random() * 6) + 1;
+				const finalRoll = 3;
 				setDiceValue(finalRoll);
 				diceValueRef.current = finalRoll;
 
@@ -562,7 +594,17 @@ export default function DiceBoard({
        * if incorrect, there is some steps rollback to be done
        */
 
-      const stepsToRollback = rollbackStepsRef.current[currentPlayer] || 0;
+      let stepsToRollback = rollbackStepsRef.current[currentPlayer] || 0;
+
+
+      /**
+       * if rollback steps is disabled for this turn, set it to 0
+       */
+      if(isRollbackStepsDisabledRef.current[currentPlayer]){
+        stepsToRollback = 0;
+        isRollbackStepsDisabledRef.current[currentPlayer] = false;
+      }
+
 
       setTimeout(() => {
 
@@ -619,6 +661,47 @@ export default function DiceBoard({
 
 	/** ⏳ Timeout Handling - treat as incorrect and switch turn */
 	const handleTimeout = () => {
+
+
+
+    /**
+       * if timed out , there is some steps rollback to be done
+       */
+
+      let stepsToRollback = rollbackStepsRef.current[currentPlayer] || 0;
+
+
+      /**
+       * if rollback steps is disabled for this turn, set it to 0
+       */
+      if(isRollbackStepsDisabledRef.current[currentPlayer]){
+        stepsToRollback = 0;
+        isRollbackStepsDisabledRef.current[currentPlayer] = false;
+      }
+
+
+      setTimeout(() => {
+
+        console.log("Rolling back ", stepsToRollback, " steps for ", currentPlayer);
+
+
+        setPositions((prev) => {
+        const currentPos = prev[currentPlayer];
+        const newPos = Math.max(1, currentPos - stepsToRollback);
+
+        console.log("New position after rollback: ", newPos);
+        console.log("positions object before rollback ==> ",prev);
+        console.log("positions object after rollback ==> ", { ...prev, [currentPlayer]: newPos });
+        return { ...prev, [currentPlayer]: newPos };
+      });
+
+      }, 4000);
+
+
+      /**
+       * close question modal and switch turn
+       */
+
 
     closeQuestionModal();
 
