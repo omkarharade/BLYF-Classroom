@@ -10,7 +10,7 @@ export default function DiceBoard({
 	specialBlocks = {},
 }) {
 	// basic game state
-	const [positions, setPositions] = useState({ p1: 64, p2: 34 });
+	const [positions, setPositions] = useState({ p1: 1, p2: 1 });
 	const [currentPlayer, setCurrentPlayer] = useState("p1");
 	const [diceValue, setDiceValue] = useState(null);
 	const [rolling, setRolling] = useState(false);
@@ -205,7 +205,39 @@ export default function DiceBoard({
 
 	const handleAnswerTwoAndMove = (newPos, player) => {};
 
-	const handleFlipTheQuestion = (newPos, player, questionsRequired, value) => {};
+	const handleFlipTheQuestion = (newPos, player, stepCount) => {
+
+
+
+
+    const flipData = specialBlocks?.[newPos]?.flipQuestion || null;
+    if (!flipData) {
+      // no flip payload — nothing to do
+      return;
+    }
+
+    
+    
+    setTimeout(() => {
+
+      setTimeout(() => {
+
+      const specialCaseAppliedPos = Math.min(100, newPos + stepCount);
+
+      setPositions((prev) => ({ ...prev, [player]: specialCaseAppliedPos }));
+
+    }, 4000);
+
+    })
+
+    // activate flip mode for upcoming question modal
+    setFlippedQuestionActive(true);
+    setFlippedQuestionData(flipData);
+    setFlippedShowing(false);
+
+    showPopup("Flip Question", specialBlocks[newPos]?.message || "You can flip the question for this turn.");
+
+  };
 
 	const handleExtraTurn = (newPos, player) => {
 
@@ -318,10 +350,11 @@ export default function DiceBoard({
 				handleFlipTheQuestion(
 					newPos,
 					player,
-					special.questionsRequired,
-					special.value
+          special?.stepCount
 				);
 				break;
+
+
 			case "extraTurn":
 				/**
 				 * show popup for special block landed
@@ -438,8 +471,8 @@ export default function DiceBoard({
 			 */
 			if (rollCount > 10) {
 				clearInterval(rollInterval);
-				// const finalRoll = Math.floor(Math.random() * 6) + 1;
-				const finalRoll = 3;
+				const finalRoll = Math.floor(Math.random() * 6) + 1;
+				// const finalRoll = 3;
 				setDiceValue(finalRoll);
 				diceValueRef.current = finalRoll;
 
@@ -568,12 +601,6 @@ export default function DiceBoard({
 	 *  Supports: deferred special processing, multiQuestion requirements, opposite team answering, flip question display.
 	 */
 	const handleAnswer = (isCorrect) => {
-		
-
-    /**
-     * set the current question index to next question 
-     */
-    setCurrentQuestionIndex((prev) => Math.min(prev + 1, questions.length));
 
     /**
      * reset the timer 
@@ -807,7 +834,7 @@ export default function DiceBoard({
 							currentPlayer === "p1" ? "text-lime-400" : "text-purple-400"
 						}`}
 					>
-						{currentPlayer === "p1" ? "Team Prithu" : "Team Brahma"}
+						{currentPlayer === "p1" ? "Team Maitreya" : "Team Vidura"}
 					</p>
 				</div>
 
@@ -851,14 +878,14 @@ export default function DiceBoard({
 			{/* Question Modal */}
 			{showQuestion && (
 				<div className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-sm flex items-center justify-center z-50">
-					<div className="bg-white p-6 rounded-xl shadow-2xl w-full max-w-3xl text-black mx-6">
+					<div className="bg-white p-6 rounded-xl shadow-2xl w-full max-w-7xl text-black mx-6">
 						<h2 className="font-bold text-2xl mb-4">
-							{currentPlayer === "p1" ? "Team Prithu" : "Team Brahma"} Question
+							{currentPlayer === "p1" ? "Team Maitreya" : "Team Vidura"} Question
 						</h2>
 
 						{/* Timer */}
 						<div className="mb-4 flex items-center justify-between">
-							<span className="text-xl font-bold text-red-600">⏱ {timer}s</span>
+							<span className="text-2xl font-bold text-red-600">⏱ {timer}s</span>
 							<div className="flex gap-3">
 								<button
 									onClick={startTimer}
@@ -886,14 +913,14 @@ export default function DiceBoard({
 
 						{/* Question Text */}
 						<div className="mb-4">
-							<p className="text-2xl text-black">
+							<p className="text-3xl text-black">
 								{flippedQuestionActive &&
 								flippedShowing &&
 								flippedQuestionData?.q
 									? flippedQuestionData.q
 									: questions[currentQuestionIndex]?.q}
 							</p>
-							<p className="text-2xl text-black mt-1">
+							<p className="text-3xl text-black mt-1">
 								{flippedQuestionActive &&
 								flippedShowing &&
 								flippedQuestionData?.qHindi
@@ -929,13 +956,21 @@ export default function DiceBoard({
 									Reveal Answer
 								</summary>
 								<div className="mt-4 max-h-40 overflow-y-auto text-black">
-									<p className="text-xl">
-										{questions[currentQuestionIndex]?.ans ||
-											"No answer provided."}
+									<p className="text-2xl">
+										{flippedQuestionActive &&
+										flippedShowing &&
+										flippedQuestionData?.ans
+											? flippedQuestionData.ans
+											: questions[currentQuestionIndex]?.ans ||
+											  "No answer provided."}
 									</p>
-									<p className="text-xl mt-2">
-										{questions[currentQuestionIndex]?.ansHindi ||
-											"उत्तर उपलब्ध नहीं।"}
+									<p className="text-2xl mt-2">
+										{flippedQuestionActive &&
+										flippedShowing &&
+										flippedQuestionData?.ansHindi
+											? flippedQuestionData.ansHindi
+											: questions[currentQuestionIndex]?.ansHindi ||
+											  "उत्तर उपलब्ध नहीं।"}
 									</p>
 								</div>
 							</details>
@@ -960,14 +995,6 @@ export default function DiceBoard({
 								className="px-4 py-2 bg-gray-500 text-white rounded hover:bg-gray-600"
 							>
 								Timeout
-							</button>
-							<button
-								onClick={() => {
-									setShowQuestion(false);
-								}}
-								className="px-4 py-2 bg-white border rounded"
-							>
-								Close
 							</button>
 						</div>
 					</div>

@@ -17,7 +17,7 @@ export default function Home() {
 
 				<h1 className="text-2xl font-extrabold italic ">BLYF Classroom</h1>
 				<div>
-					<Link className="px-10 text-orange-600 hover:text-black" href="/games/boardGame">Games</Link>
+					<Link className="px-10 text-orange-600 hover:text-black" href="/games">Games</Link>
 					<Link className="px-10 text-orange-600 hover:text-black" href="/assessments">Assessments</Link>
 					<Link className="px-10 text-orange-600 hover:text-black" href="/about">About Us</Link>
 

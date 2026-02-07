@@ -1,7 +1,3 @@
-import DiceBoard from "../../../components/Board";
-
-export default function BoardGamePage() {
- 
   const questions = [
   {
     q: "King Prithu was greater than the greatest soul and was therefore worshipable by everyone. He performed many glorious activities in ruling over the surface of the universe and was always magnanimous.",
@@ -371,16 +367,3 @@ export default function BoardGamePage() {
       message: "Offended a Vaishnava, miss a question"
     }
   };
-
-
-
-  return (
-    <div className="p-4 flex justify-center align-items-center min-h-screen bg-gradient-to-br from-gray-900 via-gray-800 to-black">
-      <DiceBoard
-        questions={questions}
-        playerScores={{ p1: 0, p2: 0 }}
-        specialBlocks={specialBlocks}
-      />
-    </div>
-  );
-}

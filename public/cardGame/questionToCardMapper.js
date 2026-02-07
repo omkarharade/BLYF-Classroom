@@ -1,0 +1,15 @@
+export const QuestionToCardMapper = {
+    1: "ADI GURU",
+	2: "2",
+	3: "3",
+	4: "4",
+	5: "5",
+	6: "6",
+	7: "7",
+	8: "8",
+	9: "9",
+	10: "10",
+	11: "JAGGANNATHA",
+	12: "MAHARAJA",
+	13: "MAHARANI",
+};
